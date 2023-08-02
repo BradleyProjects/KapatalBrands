@@ -1,0 +1,3099 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      class="">
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        AjaxContainer: 'div.dmBody',
+        WrappingContainer: 'div.dmOuter',
+        HomeUrl: 'https://www.webshure.com/',
+        AccountUUID: '52fffdd495354f418ecfa045717ee96d',
+        SystemID: 'US_DIRECT_PRODUCTION',
+        SiteAlias: '088b40b3',
+        SiteType: atob('RFVEQU9ORQ=='),
+        PublicationDate: 'Wed Jun 21 09:17:00 UTC 2023',
+        ExternalUid: null,
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialDynamicItem: '',
+        DynamicPageInfo: {
+            isDynamicPage: false,
+            base64JsonRowData: 'null',
+        },
+        InitialPageAlias: 'artificial-intelligence-websites',
+        InitialPageUuid: '68622d824e3d43bbba51681f67075fd3',
+        InitialEncodedPageAlias: 'YXJ0aWZpY2lhbC1pbnRlbGxpZ2VuY2Utd2Vic2l0ZXM=',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: false,
+        AllowAjax: false,
+        AfterAjaxCommand: null,
+        HomeLinkText: 'Back To Home',
+        UseGalleryModule: false,
+        CurrentThemeName: 'Layout Theme',
+        ThemeVersion: '10175',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID: null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        IsBfs: true,
+        StorePageAlias: 'null',
+        StorePagesUrls: 'e30=',
+        IsNewStore: 'false',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        IsStoreSuspended: false,
+        NotificationSubDomain: 'webshure',
+        HasCustomDomain: true,
+        showCookieNotification: true,
+        cookiesNotificationMarkup: ' <div> <p class=\"rteBlock\">We use cookies to ensure that we give you the best experience on our website. To learn more, go to the <a value=\"privacyd982ea0f\" label=\"\" type=\"page\" href=\"\/privacyd982ea0f\" data-runtime-url=\"\/privacyd982ea0f\">Privacy Page<\/a>.<\/p> \n<\/div> \n',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'LEFT',
+        currentLanguage: 'en',
+        currentLocale: 'en',
+        NavItems: '{}',
+        errors: {
+            general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+            password: 'Incorrect name/password combination',
+            tryAgain: 'Try again'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: 4,
+            NavbarLiveHomePage: 'https://www.webshure.com/',
+            BlockContainerSelector: '.dmBody',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        hasCustomCode: true,
+        planID: '7',
+        customTemplateId: 'null',
+        siteTemplateId: 'null',
+        productId: 'DM_DIRECT',
+        disableTracking: false,
+        pageType: 'FROM_SCRATCH',
+        isRuntimeServer: true,
+        isInEditor: false,
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 6;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Injecting site-wide to the head -->
+
+
+
+
+<!-- End Injecting site-wide to the head -->
+
+<!-- Inject secured cdn script -->
+
+
+<!-- ========= Meta Tags ========= -->
+<!-- PWA settings -->
+<script>
+    function toHash(str) {
+        var hash = 5381, i = str.length;
+        while (i) {
+            hash = hash * 33 ^ str.charCodeAt(--i)
+        }
+        return hash >>> 0
+    }
+</script>
+<script>
+    (function (global) {
+    //const cacheKey = global.cacheKey;
+    const isOffline = 'onLine' in navigator && navigator.onLine === false;
+    const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+    if (isOffline) {
+        console.log('offline mode');
+    }
+    if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+    }
+    if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function () {
+            const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+            navigator.serviceWorker
+                .register(serviceWorkerPath, { scope: './' })
+                .then(
+                    function (registration) {
+                        // Registration was successful
+                        console.log(
+                            'ServiceWorker registration successful with scope: ',
+                            registration.scope
+                        );
+                    },
+                    function (err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                )
+                .catch(function (err) {
+                    console.log(err);
+                });
+        });
+
+        // helper function to refresh the page
+        var refreshPage = (function () {
+            var refreshing;
+            return function () {
+                if (refreshing) return;
+                // prevent multiple refreshes
+                var refreshkey = 'refreshed' + location.href;
+                var prevRefresh = localStorage.getItem(refreshkey);
+                if (prevRefresh) {
+                    localStorage.removeItem(refreshkey);
+                    if (Date.now() - prevRefresh < 30000) {
+                        return; // dont go into a refresh loop
+                    }
+                }
+                refreshing = true;
+                localStorage.setItem(refreshkey, Date.now());
+                console.log('refereshing page');
+                window.location.reload();
+            };
+        })();
+
+        function messageServiceWorker(data) {
+            return new Promise(function (resolve, reject) {
+                if (navigator.serviceWorker.controller) {
+                    var worker = navigator.serviceWorker.controller;
+                    var messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = replyHandler;
+                    worker.postMessage(data, [messageChannel.port2]);
+                    function replyHandler(event) {
+                        resolve(event.data);
+                    }
+                } else {
+                    resolve();
+                }
+            });
+        }
+    }
+})(window);
+</script>
+<!-- Add manifest -->
+<!-- End PWA settings -->
+
+
+<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.webshure.com/artificial-intelligence-websites">
+
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--Add favorites icons-->
+
+<link rel="apple-touch-icon" href="https://irp.cdn-website.com/088b40b3/dms3rep/multi/0218_WebShure_Logo_DA-01-844abb42.png"/>
+
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/088b40b3/site_favicon_16_1669283554705.ico"/>
+
+<!-- End favorite icons -->
+
+<link rel="preconnect" href="https://lirp.cdn-website.com/" crossorigin />
+
+
+
+<!-- render the required CSS and JS in the head section -->
+<script>
+    window.SystemID = 'US_DIRECT_PRODUCTION';
+
+    if(!window.dmAPI) {
+        window.dmAPI = {
+            registerExternalRuntimeComponent: function() {
+            },
+            getCurrentDeviceType: function() {
+                return window._currentDevice;
+            }
+        };
+    }
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+</script>
+<!-- loadCSS function -->
+<script>
+/**
+ * There are a few <link> tags with CSS resource in them that are preloaded in the page
+ * in each of those there is a "onload" handler which invokes the loaddCSS callback
+ * defined here.
+ * We are monitoring 3 main CSS files - the runtime, the global and the page,
+ * and once all of them are loaded we convert the <link> tag into a valid stylesheet type
+ * which then appends the styles to the page.
+ */
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+
+  function checkCss() {
+    if (cssLinks && cssLinks.runtime && cssLinks.global) {
+      loadCssLink(cssLinks.runtime);
+      loadCssLink(cssLinks.global);
+      cssLinks = null;
+    }
+  }
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      /* Never fail - this is just a tool for measurements */
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+<script data-role="deferred-init" type="text/javascript">
+    /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+    function Def(){this.promise=new Promise((function(a,b){this.resolve=a,this.reject=b}).bind(this))}
+    const defs={};
+    window.getDeferred=function(a){return null==defs[a]&&(defs[a]=new Def),defs[a]}
+    window.waitForDeferred = function (b, a, c) {
+      let d = window?.getDeferred?.(b);
+      d
+        ? d.promise.then(a)
+        : c && ["complete", "interactive"].includes(document.readyState)
+        ? setTimeout(a, 1)
+        : c
+        ? document.addEventListener("DOMContentLoaded", a)
+        : console.error(`Deferred  does not exist`);
+    };
+</script>
+<style id="forceCssIncludes">
+    /* This file is auto-generated from a `scss` file with the same name */
+
+.videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}#dm [data-show-on-page-only]{display:none!important}
+</style>
+<style id="cssVariables" type="text/css">
+    
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- loadCSS function -->
+<script>
+/**
+ * There are a few <link> tags with CSS resource in them that are preloaded in the page
+ * in each of those there is a "onload" handler which invokes the loaddCSS callback
+ * defined here.
+ * We are monitoring 3 main CSS files - the runtime, the global and the page,
+ * and once all of them are loaded we convert the <link> tag into a valid stylesheet type
+ * which then appends the styles to the page.
+ */
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+
+  function checkCss() {
+    if (cssLinks && cssLinks.runtime && cssLinks.global) {
+      loadCssLink(cssLinks.runtime);
+      loadCssLink(cssLinks.global);
+      cssLinks = null;
+    }
+  }
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      /* Never fail - this is just a tool for measurements */
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css?family=Abril+Fatface:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Roboto:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Montserrat:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Poppins:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Lato:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Oswald:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Source+Sans+Pro:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic&amp;subset=latin-ext&amp;display=swap"  />
+
+
+
+
+
+<!-- RT CSS Include d-css-runtime-desktop-one-package-structured-global-->
+<link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/3527/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-structured-global.min.css" />
+
+<!-- End of RT CSS Include -->
+
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/production_3527/19acdf310d2ef2d2ef5b2b12618ba0c1.css" id="widgetCSS" />
+
+
+<!-- Support `img` size attributes -->
+<style>img[width][height] {
+  height: auto;
+}</style>
+
+<!-- Support showing sticky element on page only -->
+<style>
+  body[data-page-alias="artificial-intelligence-websites"] #dm [data-show-on-page-only="artificial-intelligence-websites"] {
+    display: block !important;
+  }
+</style>
+
+<!-- This is populated in Ajax navigation -->
+<style id="pageAdditionalWidgetsCss" type="text/css">
+</style>
+
+
+
+
+<!-- Site CSS -->
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/088b40b3/files/088b40b3_1.min.css?v=3501" id="siteGlobalCss" />
+
+
+
+<style id="customWidgetStyle" type="text/css">
+    
+    .widget-1f5975 .copyright {
+    font-size: 13px;
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+}
+    
+    .widget-5bd886 .full {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.widget-5bd886 .iconBg {
+   display: block !important;
+   width: 100px;
+}
+
+.widget-5bd886 < .iconBg {
+   width: 66px;
+}
+
+.widget-5bd886 .whatsapp-fill { /* default color */
+   fill: currentColor;
+}
+
+.widget-5bd886 .wa-btn-transparent {
+    background: rgba(0,0,0,0) !important;
+    border-color: rgba(0,0,0,0) !important;
+    box-shadow: none !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.widget-5bd886 a {
+    padding: 0 !important;
+}
+
+.widget-5bd886 .green-wa {
+    flex: 1;
+    height: 80%;
+}
+
+.widget-5bd886 .green-wa img {
+    height: 100%;
+}
+
+.widget-5bd886 .wa-btns {
+    margin: 0 !important;
+}
+
+.widget-5bd886 .flex-text {
+    flex: 3;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+    text-align: left;
+}
+    
+    .widget-5bd886 {
+    /*overflow: hidden;*/
+    margin: 10px auto;
+    width: 278px;
+}
+    
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+
+<style
+        id="additionalGlobalCss" type="text/css"
+>
+</style>
+
+<style id="pagestyle" type="text/css">
+    *#dm *.dmBody div.u_1144784701 .dmwidget-title{
+color:rgba(234,168,8,1) !important;
+font-weight:bold !important}
+*#dm *.dmBody div.u_1922437096{
+background-repeat:no-repeat !important;
+background-image:url(https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+%2818%29-2880w.png) !important}
+*#dm *.dmBody *.u_1922437096:before{
+opacity:0.5 !important;
+background-color:rgb(255,255,255) !important}
+*#dm *.dmBody *.u_1922437096.before{
+opacity:0.5 !important;
+background-color:rgb(255,255,255) !important}
+*#dm *.dmBody *.u_1922437096>.bgExtraLayerOverlay{
+opacity:0.5 !important;
+background-color:rgb(255,255,255) !important}
+*#dm *.dmBody div.u_1922437096:before{
+background-color:rgba(8,51,76,1) !important;
+opacity:0.6 !important}
+*#dm *.dmBody div.u_1922437096.before{
+background-color:rgba(8,51,76,1) !important;
+opacity:0.6 !important}
+*#dm *.dmBody div.u_1922437096>.bgExtraLayerOverlay{
+background-color:rgba(8,51,76,1) !important;
+opacity:0.6 !important}
+*#dm *.dmBody div.u_1509804803{
+background-color:rgba(255,255,255,1) !important;
+box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important;
+-moz-box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important;
+-webkit-box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important;
+border-style:solid !important;
+border-width:2px !important;
+border-color:rgba(8,51,76,1) !important}
+*#dm *.dmBody div.u_1651145936{
+box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important;
+-moz-box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important;
+-webkit-box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important;
+border-color:rgba(8,51,76,1) !important;
+border-width:2px !important;
+border-style:solid !important}
+*#dm *.dmBody *.u_1396043766:before{
+opacity:0.5 !important;
+background-color:rgb(255,255,255) !important}
+*#dm *.dmBody *.u_1396043766.before{
+opacity:0.5 !important;
+background-color:rgb(255,255,255) !important}
+*#dm *.dmBody *.u_1396043766>.bgExtraLayerOverlay{
+opacity:0.5 !important;
+background-color:rgb(255,255,255) !important}
+*#dm *.dmBody div.u_1396043766:before{
+background-color:rgba(8,51,76,1) !important}
+*#dm *.dmBody div.u_1396043766.before{
+background-color:rgba(8,51,76,1) !important}
+*#dm *.dmBody div.u_1396043766>.bgExtraLayerOverlay{
+background-color:rgba(8,51,76,1) !important}
+*#dm *.dmBody div.u_1119054260{
+background-color:rgba(236,236,236,0.37) !important;
+background-repeat:no-repeat !important;
+background-image:url(https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+%2825%29-2880w.png) !important;
+background-size:cover !important}
+*#dm *.dmBody div.u_1158055478{
+background-color:rgba(255,255,255,1) !important;
+box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important;
+-moz-box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important;
+-webkit-box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important}
+*#dm *.dmBody *.u_1119054260:before{
+opacity:0.5 !important;
+background-color:rgb(255,255,255) !important}
+*#dm *.dmBody *.u_1119054260.before{
+opacity:0.5 !important;
+background-color:rgb(255,255,255) !important}
+*#dm *.dmBody *.u_1119054260>.bgExtraLayerOverlay{
+opacity:0.5 !important;
+background-color:rgb(255,255,255) !important}
+*#dm *.dmBody div.u_1973156202 hr{
+color:rgba(8,51,76,1) !important}
+*#dm *.dmBody div.u_1468444359{
+background-repeat:no-repeat !important;
+background-image:url(https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+%2826%29-2880w.png) !important;
+background-size:cover !important}
+*#dm *.dmBody div.u_1819049003 hr{
+color:rgba(37,170,224,1) !important}
+*#dm *.dmBody div.u_1950606193{
+box-shadow:none !important;
+-moz-box-shadow:none !important;
+-webkit-box-shadow:none !important}
+*#dm *.dmBody div.u_1449504804{
+box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important;
+-moz-box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important;
+-webkit-box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important;
+border-color:rgba(8,51,76,1) !important;
+border-width:2px !important;
+border-style:solid !important}
+*#dm *.dmBody div.u_1396043766{
+background-repeat:no-repeat !important;
+background-image:none !important;
+background-color:rgba(236,236,236,0.37) !important}
+*#dm *.dmBody div.u_1600852377{
+background-color:rgba(236,236,236,0.37) !important;
+background-repeat:no-repeat !important;
+background-image:url(https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+%2826%29-2880w.png) !important;
+background-size:cover !important}
+*#dm *.dmBody div.u_1824124506 hr{
+color:rgba(255,126,2,1) !important}
+*#dm *.dmBody *.u_1267917075:before{
+opacity:0.5 !important;
+background-color:rgb(255,255,255) !important}
+*#dm *.dmBody *.u_1267917075.before{
+opacity:0.5 !important;
+background-color:rgb(255,255,255) !important}
+*#dm *.dmBody *.u_1267917075>.bgExtraLayerOverlay{
+opacity:0.5 !important;
+background-color:rgb(255,255,255) !important}
+*#dm *.dmBody div.u_1267917075:before{
+background-color:rgba(234,234,234,1) !important;
+opacity:0.13 !important}
+*#dm *.dmBody div.u_1267917075.before{
+background-color:rgba(234,234,234,1) !important;
+opacity:0.13 !important}
+*#dm *.dmBody div.u_1267917075>.bgExtraLayerOverlay{
+background-color:rgba(234,234,234,1) !important;
+opacity:0.13 !important}
+*#dm *.dmBody div.u_1826280898{
+background-color:rgba(8,51,76,1) !important;
+box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important;
+-moz-box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important;
+-webkit-box-shadow:rgba(0,0,0,0.25) 0 0 11px 0 !important}
+*#dm *.dmBody div.u_1267917075{
+background-color:rgba(248,248,248,1) !important;
+background-repeat:no-repeat !important;
+background-image:none !important;
+background-size:cover !important}
+*#dm *.dmBody *.u_1746736370{
+width:100% !important}
+*#dm *.dmBody div.u_1592081328 hr{
+color:rgba(255,126,2,1) !important}
+*#dm *.dmBody div.u_1686252066{
+background-color:rgba(0,0,0,0) !important}
+*#dm *.dmBody a.u_1846459649 span.text{
+font-weight:bold !important}
+*#dm *.dmBody a.u_1016825316 span.text{
+font-weight:bold !important}
+*#dm *.dmBody a.u_1893379439 span.text{
+font-weight:bold !important}
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    *#dm *.dmBody div.u_1344232733{
+padding-top:80px !important;
+padding-right:40px !important;
+padding-bottom:80px !important;
+padding-left:40px !important}
+*#dm *.dmBody div.u_seoprice{
+padding-top:80px !important;
+padding-right:40px !important;
+padding-bottom:80px !important;
+padding-left:40px !important}
+*#dm *.dmBody div.u_1144784701 .dmwidget-title{
+font-size:24px !important}
+*#dm *.dmBody div.u_1144784701{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 0px) !important;
+position:relative !important;
+height:auto !important;
+padding-top:0 !important;
+padding-left:0 !important;
+padding-bottom:0 !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:100% !important;
+margin-top:35px !important;
+margin-bottom:0 !important;
+padding-right:0 !important;
+min-width:25px !important;
+text-align:start !important}
+*#dm *.dmBody div.u_1826280898{
+margin-left:0 !important;
+padding-top:25px !important;
+padding-left:40px !important;
+padding-bottom:25px !important;
+margin-top:0 !important;
+margin-bottom:0 !important;
+margin-right:0 !important;
+padding-right:40px !important;
+width:auto !important}
+*#dm *.dmBody div.u_1125734914{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:1434px !important;
+position:relative !important;
+height:auto !important;
+padding-top:2px !important;
+padding-left:0 !important;
+padding-bottom:2px !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:100% !important;
+margin-top:8px !important;
+margin-bottom:8px !important;
+padding-right:0 !important;
+min-width:0 !important;
+display:block !important}
+*#dm *.dmBody div.u_1740192687{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 377px) !important;
+position:relative !important;
+height:auto !important;
+padding-top:2px !important;
+padding-left:0 !important;
+padding-bottom:2px !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:1070px !important;
+margin-top:15px !important;
+margin-bottom:0 !important;
+padding-right:0 !important;
+min-width:25px !important}
+*#dm *.dmBody div.u_1102079739{
+height:5px !important}
+*#dm *.dmBody div.u_1396043766{
+background-repeat:no-repeat !important;
+background-size:contain !important;
+background-attachment:initial !important;
+background-position:100% 50% !important}
+*#dm *.dmBody a.u_1414838443{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 355px) !important;
+position:relative !important;
+height:60px !important;
+padding-top:0 !important;
+padding-left:0 !important;
+padding-bottom:0 !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:181px !important;
+margin-top:29px !important;
+margin-bottom:0 !important;
+padding-right:0 !important;
+min-width:25px !important;
+text-align:center !important;
+display:block !important}
+*#dm *.dmBody div.u_1158055478{
+margin-left:0 !important;
+padding-top:10px !important;
+padding-left:10px !important;
+padding-bottom:20px !important;
+margin-top:-150px !important;
+margin-bottom:0 !important;
+margin-right:0 !important;
+padding-right:10px !important}
+*#dm *.dmBody div.u_1394215969{
+display:block !important;
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 38px) !important;
+position:relative !important;
+height:auto !important;
+padding-top:2px !important;
+padding-left:0 !important;
+padding-bottom:2px !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:840px !important;
+margin-top:0 !important;
+margin-bottom:0 !important;
+padding-right:0 !important;
+min-width:25px !important}
+*#dm *.dmBody div.u_1283411590{
+display:block !important;
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 38px) !important;
+position:relative !important;
+height:auto !important;
+padding-top:2px !important;
+padding-left:0 !important;
+padding-bottom:2px !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:840px !important;
+margin-top:0 !important;
+margin-bottom:0 !important;
+padding-right:0 !important;
+min-width:25px !important}
+*#dm *.dmBody div.u_1468444359{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:auto !important;
+position:relative !important;
+height:auto !important;
+padding-top:65.5px !important;
+padding-left:40px !important;
+padding-bottom:65.5px !important;
+max-width:100% !important;
+padding-right:40px !important;
+min-width:0 !important;
+text-align:start !important;
+margin-right:0 !important;
+margin-left:0 !important;
+margin-top:0 !important;
+margin-bottom:0 !important;
+background-repeat:no-repeat !important;
+background-size:contain !important;
+background-position:100% 50% !important}
+*#dm *.dmBody div.u_1600852377{
+background-repeat:no-repeat !important;
+background-size:contain !important;
+background-position:0 50% !important}
+*#dm *.dmBody div.u_1824124506{
+display:block !important;
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 328px) !important;
+position:relative !important;
+height:auto !important;
+padding-top:0 !important;
+padding-left:0 !important;
+padding-bottom:0 !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:304px !important;
+margin-top:-8px !important;
+margin-bottom:0 !important;
+padding-right:0 !important;
+min-width:25px !important;
+text-align:start !important}
+*#dm *.dmBody div.u_1860173155{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 0px) !important;
+position:relative !important;
+height:auto !important;
+padding-top:0 !important;
+padding-left:0 !important;
+padding-bottom:0 !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:100% !important;
+margin-top:19px !important;
+justify-content:normal !important;
+align-items:center !important;
+margin-bottom:0 !important;
+padding-right:0 !important;
+min-width:25px !important;
+text-align:start !important}
+*#dm *.dmBody div.u_1267917075{
+background-repeat:no-repeat !important;
+background-size:contain !important;
+background-position:100% 0 !important}
+*#dm *.dmBody div.u_1119054260{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:auto !important;
+position:relative !important;
+height:auto !important;
+padding-top:0 !important;
+padding-left:40px !important;
+padding-bottom:0 !important;
+margin-right:0 !important;
+margin-left:0 !important;
+max-width:100% !important;
+margin-top:0 !important;
+margin-bottom:0 !important;
+padding-right:40px !important;
+min-width:0 !important;
+text-align:start !important;
+background-repeat:no-repeat !important;
+background-size:contain !important;
+background-position:0 50% !important}
+*#dm *.dmBody div.u_1922437096{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:auto !important;
+position:relative !important;
+height:auto !important;
+padding-top:40.5px !important;
+padding-left:40px !important;
+padding-bottom:40.5px !important;
+margin-right:0 !important;
+margin-left:0 !important;
+max-width:100% !important;
+margin-top:0 !important;
+margin-bottom:0 !important;
+padding-right:40px !important;
+min-width:0 !important;
+text-align:start !important;
+background-attachment:fixed !important;
+background-size:cover !important}
+*#dm *.dmBody div.u_1746736370{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 305px) !important;
+position:relative !important;
+padding-top:0 !important;
+padding-left:0 !important;
+padding-bottom:0 !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:330px !important;
+margin-top:11px !important;
+margin-bottom:0 !important;
+padding-right:0 !important;
+min-width:25px !important;
+text-align:start !important;
+display:block !important}
+*#dm *.dmBody div.u_1440729693{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 0px) !important;
+position:relative !important;
+height:auto !important;
+padding-top:2px !important;
+padding-left:0 !important;
+padding-bottom:2px !important;
+max-width:100% !important;
+padding-right:0 !important;
+min-width:25px !important;
+margin-right:auto !important;
+margin-left:auto !important;
+margin-top:0 !important;
+margin-bottom:0 !important}
+*#dm *.dmBody div.u_1651145936{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:auto !important;
+position:relative !important;
+height:auto !important;
+padding-top:25px !important;
+padding-left:40px !important;
+padding-bottom:25px !important;
+margin-right:0 !important;
+margin-left:0 !important;
+max-width:100% !important;
+margin-top:9px !important;
+margin-bottom:0 !important;
+padding-right:40px !important;
+min-width:0 !important;
+text-align:start !important}
+*#dm *.dmBody div.u_1973156202{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 362px) !important;
+position:relative !important;
+height:auto !important;
+padding-top:0 !important;
+padding-left:0 !important;
+padding-bottom:0 !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:216px !important;
+margin-top:0 !important;
+margin-bottom:0 !important;
+padding-right:0 !important;
+min-width:25px !important;
+text-align:start !important}
+*#dm *.dmBody div.u_1592081328{
+display:block !important;
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:173px !important;
+position:relative !important;
+height:auto !important;
+padding-top:0 !important;
+padding-left:0 !important;
+padding-bottom:0 !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:100% !important;
+margin-top:0 !important;
+margin-bottom:0 !important;
+padding-right:0 !important;
+min-width:0 !important;
+text-align:start !important}
+*#dm *.dmBody div.u_1819049003{
+display:block !important;
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 388px) !important;
+position:relative !important;
+height:auto !important;
+padding-top:0 !important;
+padding-left:0 !important;
+padding-bottom:0 !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:99px !important;
+margin-top:0 !important;
+margin-bottom:0 !important;
+padding-right:0 !important;
+min-width:25px !important;
+text-align:start !important}
+*#dm *.dmBody div.u_1186773942{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:100% !important;
+position:relative !important;
+height:auto !important;
+padding-top:2px !important;
+padding-left:0 !important;
+padding-bottom:2px !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:100% !important;
+margin-top:0 !important;
+margin-bottom:0 !important;
+padding-right:0 !important;
+min-width:0 !important}
+*#dm *.dmBody div.u_1292161555{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 0px) !important;
+position:relative !important;
+height:auto !important;
+padding-top:2px !important;
+padding-left:0 !important;
+padding-bottom:2px !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:100% !important;
+margin-top:0 !important;
+margin-bottom:8px !important;
+padding-right:0 !important;
+min-width:25px !important}
+*#dm *.dmBody div.u_1424889777{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:100% !important;
+position:relative !important;
+height:auto !important;
+padding-top:2px !important;
+padding-left:0 !important;
+padding-bottom:2px !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:100% !important;
+margin-top:0 !important;
+margin-bottom:0 !important;
+padding-right:0 !important;
+min-width:0 !important}
+*#dm *.dmBody div.u_1734924097{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:100% !important;
+position:relative !important;
+height:auto !important;
+padding-top:2px !important;
+padding-left:0 !important;
+padding-bottom:2px !important;
+margin-right:auto !important;
+margin-left:auto !important;
+max-width:100% !important;
+margin-top:0 !important;
+margin-bottom:0 !important;
+padding-right:0 !important;
+min-width:0 !important}
+*#dm *.dmBody div.u_1299710710{
+display:block !important;
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:100% !important;
+position:relative !important;
+height:auto !important;
+padding-top:2px !important;
+padding-left:0 !important;
+padding-bottom:2px !important;
+margin-right:auto !important;
+margin-left:0 !important;
+max-width:100% !important;
+margin-top:8px !important;
+margin-bottom:8px !important;
+padding-right:0 !important;
+min-width:0 !important}
+*#dm *.dmBody div.u_1231350238{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 0px) !important;
+position:relative !important;
+height:auto !important;
+padding-top:2px !important;
+padding-left:0 !important;
+padding-bottom:2px !important;
+max-width:420px !important;
+padding-right:0 !important;
+min-width:25px !important;
+display:block !important;
+margin-right:0 !important;
+margin-left:0 !important;
+margin-top:8px !important;
+margin-bottom:8px !important}
+*#dm *.dmBody div.u_1227217426{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:378px !important;
+position:relative !important;
+height:auto !important;
+padding-top:2px !important;
+padding-left:0 !important;
+padding-bottom:2px !important;
+max-width:100% !important;
+padding-right:0 !important;
+min-width:0 !important;
+margin-right:auto !important;
+margin-left:0 !important;
+margin-top:8px !important;
+margin-bottom:8px !important;
+display:block !important}
+*#dm *.dmBody div.u_1422556733{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:380px !important;
+position:relative !important;
+height:auto !important;
+padding-top:2px !important;
+padding-left:0 !important;
+padding-bottom:2px !important;
+max-width:100% !important;
+padding-right:0 !important;
+min-width:0 !important;
+margin-right:auto !important;
+margin-left:0 !important;
+margin-top:0 !important;
+margin-bottom:0 !important;
+display:block !important}
+*#dm *.dmBody div.u_1268027527{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 58px) !important;
+position:relative !important;
+height:auto !important;
+padding-top:2px !important;
+padding-left:0 !important;
+padding-bottom:2px !important;
+max-width:760px !important;
+padding-right:0 !important;
+min-width:25px !important;
+margin-right:auto !important;
+margin-left:auto !important;
+margin-top:0 !important;
+margin-bottom:0 !important}
+*#dm *.dmBody a.u_1846459649{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 123px) !important;
+position:relative !important;
+height:47px !important;
+padding-top:0 !important;
+padding-left:0 !important;
+padding-bottom:0 !important;
+margin-right:82.375px !important;
+margin-left:123px !important;
+max-width:244px !important;
+margin-top:10px !important;
+margin-bottom:10px !important;
+padding-right:0 !important;
+min-width:25px !important;
+text-align:center !important}
+*#dm *.dmBody a.u_1016825316 span.text{
+font-size:14px !important}
+*#dm *.dmBody a.u_1846459649 span.text{
+font-size:14px !important}
+*#dm *.dmBody a.u_1016825316{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:217.656px !important;
+position:relative !important;
+height:47px !important;
+padding-top:0 !important;
+padding-left:0 !important;
+padding-bottom:0 !important;
+max-width:100% !important;
+padding-right:0 !important;
+min-width:0 !important;
+text-align:center !important;
+margin-right:auto !important;
+margin-left:auto !important;
+margin-top:10px !important;
+margin-bottom:10px !important;
+display:block !important}
+*#dm *.dmBody a.u_1893379439 span.text{
+font-size:14px !important}
+*#dm *.dmBody a.u_1893379439{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:167.656px !important;
+position:relative !important;
+height:47px !important;
+padding-top:0 !important;
+padding-left:0 !important;
+padding-bottom:0 !important;
+max-width:100% !important;
+padding-right:0 !important;
+min-width:0 !important;
+text-align:center !important;
+display:block !important;
+margin-right:auto !important;
+margin-left:0 !important;
+margin-top:10px !important;
+margin-bottom:10px !important}
+*#dm *.dmBody a.u_1846459649{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:calc(100% - 123px) !important;
+position:relative !important;
+height:47px !important;
+padding-top:0 !important;
+padding-left:0 !important;
+padding-bottom:0 !important;
+margin-right:82.375px !important;
+margin-left:123px !important;
+max-width:244px !important;
+margin-top:10px !important;
+margin-bottom:10px !important;
+padding-right:0 !important;
+min-width:25px !important;
+text-align:center !important}
+*#dm *.dmBody a.u_1016825316 span.text{
+font-size:14px !important}
+*#dm *.dmBody a.u_1846459649 span.text{
+font-size:14px !important}
+*#dm *.dmBody a.u_1016825316{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:217.656px !important;
+position:relative !important;
+height:47px !important;
+padding-top:0 !important;
+padding-left:0 !important;
+padding-bottom:0 !important;
+max-width:100% !important;
+padding-right:0 !important;
+min-width:0 !important;
+text-align:center !important;
+margin-right:auto !important;
+margin-left:auto !important;
+margin-top:10px !important;
+margin-bottom:10px !important;
+display:block !important}
+*#dm *.dmBody a.u_1893379439 span.text{
+font-size:14px !important}
+*#dm *.dmBody a.u_1893379439{
+float:none !important;
+top:0 !important;
+left:0 !important;
+width:167.656px !important;
+position:relative !important;
+height:47px !important;
+padding-top:0 !important;
+padding-left:0 !important;
+padding-bottom:0 !important;
+max-width:100% !important;
+padding-right:0 !important;
+min-width:0 !important;
+text-align:center !important;
+display:block !important;
+margin-right:auto !important;
+margin-left:0 !important;
+margin-top:10px !important;
+margin-bottom:10px !important}
+</style>
+
+<!-- Flex Sections CSS -->
+
+
+
+
+
+<style id="globalFontSizeStyle" type="text/css">
+    .font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-40, .size-40, .size-40 > font { font-size: 40px !important; }.font-size-40, .size-40, .size-40 > font { font-size: 40px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }
+</style>
+<style id="pageFontSizeStyle" type="text/css">
+</style>
+
+
+
+
+<style id="hideAnimFix">
+  .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+    visibility: hidden;
+  }
+  .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+    visibility: hidden !important;
+  }
+</style>
+
+
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+
+  <link type="application/rss+xml" rel="alternate" href="https://www.webshure.com//feed/rss2"/>
+  <link type="application/atom+xml" rel="alternate" href="https://www.webshure.com//feed/atom"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/0218_WebShure_Logo_DA-01-1920w.jpg"/>
+  <title>
+    
+    Artificial Intelligence Websites
+  
+  </title>
+  <meta name="keywords" content="artificial intelligence websites,"/>
+  <meta name="description" content="Transform your website with artificial intelligence. Enhance user experience, increase conversions, and stay ahead of the competition. Learn more now."/>
+  <!-- Google Tag Manager -->  <script>
+
+
+
+
+
+
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4GKPH8');
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  </script>
+  <script async="" type="text/javascript" src="https://app.insites.com/js/lead-generation-widget.js">
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  </script>
+  <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+    window.onload = function() {
+        lead_generation_widget.getForm('2o55bN');
+    };
+  
+
+  
+
+  
+
+  
+
+  
+
+  </script>
+
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Artificial Intelligence Websites"/>
+  <meta name="twitter:description" content="Transform your website with artificial intelligence. Enhance user experience, increase conversions, and stay ahead of the competition. Learn more now."/>
+  <meta property="og:description" content="Transform your website with artificial intelligence. Enhance user experience, increase conversions, and stay ahead of the competition. Learn more now."/>
+  <meta property="og:title" content="Artificial Intelligence Websites"/>
+
+
+
+
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="artificial-intelligence-websites"  class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody responsiveTablet " style="padding:0;margin:0;"
+      
+      >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========= Site Content ========= -->
+<div id="dm" class='dmwr'>
+    
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+         <div dmwrapped="true" id="1757512085"> <div dmtemplateid="Hamburger" data-responsive-name="ResponsiveDesktopTopTabletHamburger" class="runtime-module-container dm-bfs dm-layout-sec hasAnimations hasStickyHeader inMiniHeaderMode hamburger-reverse layout-drawer_push-content dmPageBody d-page-1110425625 dmFreeHeader" id="dm-outer-wrapper" data-page-class="1110425625" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div id="site_content"> <div class="p_hfcontainer showOnMedium"> <div id="hamburger-drawer" class="u_hamburger-drawer hamburger-drawer layout-drawer" layout="2fef9973807a46bbbdad5938e9d68e93===header" data-origin="side-reverse" data-auto-height="true" data-push-content="true"> <div class="u_1576629228 dmRespRow middleDrawerRow" style="text-align: center;" id="1576629228"> <div class="dmRespColsWrapper" id="1446263766"> <div class="u_1644570303 dmRespCol small-12 medium-12 large-12 empty-column" id="1644570303"></div> 
+</div> 
+</div> 
+ <div class="u_1142312111 dmRespRow" style="text-align: center;" id="1142312111"> <div class="dmRespColsWrapper" id="1042406007"> <div class="u_1107449954 dmRespCol small-12 medium-12 large-12" id="1107449954"> <nav class="u_1575391266 effect-forward main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_1" layout-sub="" data-show-vertical-sub-items="SHOW" id="1575391266" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item  dmUDNavigationItem_010101376586  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         HOME
+        " data-auto="page-text-style">HOME<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/online-marketing" class="unifiednav__item  dmUDNavigationItem_010101428538  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         ABOUT US
+        " data-auto="page-text-style">ABOUT US<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/free-seo-audit" class="unifiednav__item  dmUDNavigationItem_010101519578  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           FREE SEO AUDIT
+          " data-auto="page-text-style">FREE SEO AUDIT<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/website-design-packages" class="unifiednav__item  dmUDNavigationItem_010101968796  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         PACKAGE DEALS
+        " data-auto="page-text-style">PACKAGE DEALS<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="#" class="unifiednav__item  dmUDNavigationItem_010101405153  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         OUR SERVICES
+        " data-auto="page-text-style">OUR SERVICES<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/digital-marketing-strategy" class="unifiednav__item  dmUDNavigationItem_010101189884  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           DIGITAL MARKETING
+          " data-auto="page-text-style">DIGITAL MARKETING<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/diy-website" class="unifiednav__item  dmUDNavigationItem_010101916131  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           DIY WEBSITE
+          " data-auto="page-text-style">DIY WEBSITE<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/ai-websites" class="unifiednav__item  dmUDNavigationItem_01010165654  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           A.I WEBSITE DESIGN
+          " data-auto="page-text-style">A.I WEBSITE DESIGN<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/a-i-examples" class="unifiednav__item  dmUDNavigationItem_010101352694  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             A.I. Examples
+            " data-auto="page-text-style">A.I. Examples<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/ecommerce-website-designer" class="unifiednav__item  dmUDNavigationItem_010101109494  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           ECOMMERCE
+          " data-auto="page-text-style">ECOMMERCE<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/Mobile-App-Development" class="unifiednav__item  dmUDNavigationItem_01010181328  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           MOBILE APPS DESIGN
+          " data-auto="page-text-style">MOBILE APPS DESIGN<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/DIY-SEO" class="unifiednav__item  dmUDNavigationItem_010101683879  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           DIY SEO
+          " data-auto="page-text-style">DIY SEO<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/local-seo" class="unifiednav__item  dmUDNavigationItem_010101408531  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           LOCAL SEO
+          " data-auto="page-text-style">LOCAL SEO<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/SEO" class="unifiednav__item  dmUDNavigationItem_0101014692  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           SEO (SEARCH ENGINE OPTIMISATION)
+          " data-auto="page-text-style">SEO (SEARCH ENGINE OPTIMISATION)<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/advertising-agency" class="unifiednav__item  dmUDNavigationItem_010101755271  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           SEM (SEARCH ENGINE MARKETING) GOOGLE ADS
+          " data-auto="page-text-style">SEM (SEARCH ENGINE MARKETING) GOOGLE ADS<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/software-for-social-media-management" class="unifiednav__item  dmUDNavigationItem_010101303095  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           DIY SOCIAL MEDIA MANAGEMENT
+          " data-auto="page-text-style">DIY SOCIAL MEDIA MANAGEMENT<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/social-media-agency" class="unifiednav__item  dmUDNavigationItem_010101398886  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           SOCIAL MEDIA MANAGEMENT
+          " data-auto="page-text-style">SOCIAL MEDIA MANAGEMENT<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/social-media-advertising" class="unifiednav__item  dmUDNavigationItem_01010169763  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           SOCIAL MEDIA ADVERTISING
+          " data-auto="page-text-style">SOCIAL MEDIA ADVERTISING<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/google-my-business" class="unifiednav__item  dmUDNavigationItem_010101668637  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           GOOGLE MY BUSINESS
+          " data-auto="page-text-style">GOOGLE MY BUSINESS<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/google-my-business#Waze" class="unifiednav__item  dmUDNavigationItem_010101468634  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Waze
+            " data-auto="page-text-style">Waze<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/google-my-business#Apple_Maps" class="unifiednav__item  dmUDNavigationItem_010101593150  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Apple_Maps
+            " data-auto="page-text-style">Apple_Maps<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/google-my-business#WhatsappBusiness" class="unifiednav__item  dmUDNavigationItem_010101847379  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Whatsapp Business
+            " data-auto="page-text-style">Whatsapp Business<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/chat-bot-for-whatsapp" class="unifiednav__item  dmUDNavigationItem_010101520581  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           WHATSAPP BOT
+          " data-auto="page-text-style">WHATSAPP BOT<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/chatbot-marketing-agency" class="unifiednav__item  dmUDNavigationItem_010101643370  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           CHATBOT MARKETING
+          " data-auto="page-text-style">CHATBOT MARKETING<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/graphic-design" class="unifiednav__item  dmUDNavigationItem_010101220456  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           GRAPHIC DESIGN
+          " data-auto="page-text-style">GRAPHIC DESIGN<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/email-marketing" class="unifiednav__item  dmUDNavigationItem_01010128745  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           EMAIL MARKETING
+          " data-auto="page-text-style">EMAIL MARKETING<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/content-writing" class="unifiednav__item  dmUDNavigationItem_010101777574  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           CONTENT WRITING
+          " data-auto="page-text-style">CONTENT WRITING<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/digital-reports" class="unifiednav__item  dmUDNavigationItem_010101300990  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           DIGITAL REPORTS
+          " data-auto="page-text-style">DIGITAL REPORTS<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="#" class="unifiednav__item  dmUDNavigationItem_010101343961  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         WEBSITES
+        " data-auto="page-text-style">WEBSITES<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-work" class="unifiednav__item  dmUDNavigationItem_010101591719  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           OUR WORK
+          " data-auto="page-text-style">OUR WORK<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="https://themes.webshure.com/" class="unifiednav__item  dmUDNavigationItem_010101363733  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           WEBSITE TEMPLATES
+          " data-auto="page-text-style">WEBSITE TEMPLATES<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="#" class="unifiednav__item  dmUDNavigationItem_010101549980  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         RESOURCES
+        " data-auto="page-text-style">RESOURCES<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/blogs" class="unifiednav__item  dmUDNavigationItem_010101676923  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           BLOG
+          " data-auto="page-text-style">BLOG<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/faqs" class="unifiednav__item  dmUDNavigationItem_01010132466  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           FAQ's
+          " data-auto="page-text-style">FAQ's<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/employment" class="unifiednav__item  dmUDNavigationItem_01010141527  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         EMPLOYMENT
+        " data-auto="page-text-style">EMPLOYMENT<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/employment#VACANCIES" class="unifiednav__item  dmUDNavigationItem_010101601525  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           VACANCIES
+          " data-auto="page-text-style">VACANCIES<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/employment#JOBOPPORTUNITIES" class="unifiednav__item  dmUDNavigationItem_010101537909  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           JOB OPPORTUNITIES
+          " data-auto="page-text-style">JOB OPPORTUNITIES<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact-us" class="unifiednav__item  dmUDNavigationItem_010101960562  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         CONTACT US
+        " data-auto="page-text-style">CONTACT US<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1443080879 dmRespRow" style="text-align: center;" id="1443080879"> <div class="dmRespColsWrapper" id="1291495164"> <div class="u_1534569370 dmRespCol small-12 medium-12 large-12" id="1534569370"> <a data-display-type="block" class="u_1909111135 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="mailto:info@webshure.co.za" data-element-type="dButtonLinkId" id="1909111135"> <span class="iconBg" id="1843172800"> <span class="icon hasFontIcon icon-star" id="1979215839"></span> 
+</span> 
+ <span class="text" id="1788611496">Contact us</span> 
+</a> 
+ <div class="u_1551590955 align-center text-align-center dmSocialHub" id="1551590955" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="https://facebook.com/Webshure" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style9" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://instagram.com/webshure/" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style9" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://www.linkedin.com/company/40677883/admin/" target="_blank" dm_dont_rewrite_url="true" aria-label="linkedin" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Linkedin&apos;)"> <span class="dmSocialLinkedin icon-linkedin oneIcon socialHubIcon style9" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="mailto:admin@webshure.co.za" dm_dont_rewrite_url="true" aria-label="email" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Email&apos;)"> <span class="dmSocialEmail dm-social-icons-email oneIcon socialHubIcon style9" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="layout-drawer-overlay" id="layout-drawer-overlay"></div> 
+</div> 
+ <div class="site_content"> <div id="hamburger-header-container" class="showOnMedium hamburger-header-container p_hfcontainer"> <div id="hamburger-header" class="hamburger-header p_hfcontainer" layout="44dc38f951e9489490b055748e10ba9f===header" data-scrollable-target="body" data-scroll-responder-id="hamburger-header" has-shadow="true"> <div class="u_1349891114 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1349891114"> <div class="dmRespColsWrapper" id="1920237511"> <div class="u_1157464015 dmRespCol small-12 medium-12 large-12" id="1157464015"> <div class="u_1469018421 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1469018421" data-binding="W3siYmluZGluZ05hbWUiOiJpbWFnZSIsInZhbHVlIjoic2l0ZV9pbWFnZXMubG9nbyJ9XQ=="> <a href="/" id="1700503163" file="false"><img src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/Screenshot-2022-11-23-at-19.19.34-1920w.png" id="1265650045" class="" data-dm-image-path="https://irp.cdn-website.com/088b40b3/dms3rep/multi/Screenshot-2022-11-23-at-19.19.34.png" alt="Webshure, the logo for a specialist web design company. (See the picture)" data-diy-image="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmHeaderContainer fHeader d-header-wrapper showOnLarge"> <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer" freeheader="true" headerlayout="b58ba5b5703b4cd7b5f5f7951565dc87===horizontal-layout-5" data-scrollable-target="body" data-scrollable-target-threshold="1" data-scroll-responder-id="1" preserve-sticky-header="true" logo-size-target="49%"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="u_1783767067 dmRespRow dmDefaultListContentRow fullBleedChanged fullBleedMode" style="text-align:center" id="1783767067"> <div class="dmRespColsWrapper" id="1527230018"> <div class="u_1952458124 small-12 dmRespCol large-4 medium-4" id="1952458124"> <div class="u_1623205752 imageWidget align-center" data-widget-type="image" id="1623205752" data-element-type="image"> <a href="/" id="1829253137" file="false"><img src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/0218_WebShure_Logo_DA-01-02953b43-08f621b5-1920w.png" id="1359157006" class="" data-dm-image-path="https://irp.cdn-website.com/088b40b3/dms3rep/multi/0218_WebShure_Logo_DA-01-02953b43-08f621b5.png" alt="Webshure Digital Marketing & Website Design Agency logo. (see the picture)" data-hover-effect="none" width="1234" height="399" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+ <div class="u_1323170091 dmRespCol small-12 large-5 medium-5" id="1323170091"> <a data-display-type="block" class="u_1014100330 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="/free-seo-audit" data-element-type="dButtonLinkId" id="1014100330"> <span class="iconBg" id="1146322805"> <span class="icon hasFontIcon icon-star" id="1155042718"></span> 
+</span> 
+ <span class="text" id="1627841017">FREE SEO AUDIT</span> 
+</a> 
+</div> 
+ <div class="u_1439539335 dmRespCol small-12 large-3 medium-3" id="1439539335"> <a data-display-type="block" class="u_1440767041 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="https://api.leadconnectorhq.com/widget/bookings/35minmarketing" data-element-type="dButtonLinkId" id="1440767041" target="_blank"> <span class="iconBg" aria-hidden="true" id="1322092186"> <span class="icon hasFontIcon icon-star" id="1922725582"></span> 
+</span> 
+ <span class="text" id="1661955648">Book an Appointment</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1059442339" id="1059442339"> <div class="dmRespColsWrapper" id="1061599038"> <div class="dmRespCol large-12 medium-12 small-12" id="1949046366"> <nav class="u_1783404857 effect-top-bottom main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="horizontal_nav_layout_3" layout-sub="submenu_horizontal_1" data-show-vertical-sub-items="HOVER" id="1783404857" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://lirp-cdn.multiscreensite.com/088b40b3/dms3rep/multi/opt/0218_WebShure_Logo_DA-01-721133cf-1920w.png" data-nav-structure="HORIZONTAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item  dmUDNavigationItem_010101376586  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         HOME
+        " data-auto="page-text-style">HOME<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/online-marketing" class="unifiednav__item  dmUDNavigationItem_010101428538  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         ABOUT US
+        " data-auto="page-text-style">ABOUT US<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/free-seo-audit" class="unifiednav__item  dmUDNavigationItem_010101519578  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           FREE SEO AUDIT
+          " data-auto="page-text-style">FREE SEO AUDIT<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/website-design-packages" class="unifiednav__item  dmUDNavigationItem_010101968796  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         PACKAGE DEALS
+        " data-auto="page-text-style">PACKAGE DEALS<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="#" class="unifiednav__item  dmUDNavigationItem_010101405153  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         OUR SERVICES
+        " data-auto="page-text-style">OUR SERVICES<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/digital-marketing-strategy" class="unifiednav__item  dmUDNavigationItem_010101189884  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           DIGITAL MARKETING
+          " data-auto="page-text-style">DIGITAL MARKETING<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/diy-website" class="unifiednav__item  dmUDNavigationItem_010101916131  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           DIY WEBSITE
+          " data-auto="page-text-style">DIY WEBSITE<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/ai-websites" class="unifiednav__item  dmUDNavigationItem_01010165654  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           A.I WEBSITE DESIGN
+          " data-auto="page-text-style">A.I WEBSITE DESIGN<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/a-i-examples" class="unifiednav__item  dmUDNavigationItem_010101352694  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             A.I. Examples
+            " data-auto="page-text-style">A.I. Examples<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/ecommerce-website-designer" class="unifiednav__item  dmUDNavigationItem_010101109494  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           ECOMMERCE
+          " data-auto="page-text-style">ECOMMERCE<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/Mobile-App-Development" class="unifiednav__item  dmUDNavigationItem_01010181328  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           MOBILE APPS DESIGN
+          " data-auto="page-text-style">MOBILE APPS DESIGN<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/DIY-SEO" class="unifiednav__item  dmUDNavigationItem_010101683879  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           DIY SEO
+          " data-auto="page-text-style">DIY SEO<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/local-seo" class="unifiednav__item  dmUDNavigationItem_010101408531  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           LOCAL SEO
+          " data-auto="page-text-style">LOCAL SEO<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/SEO" class="unifiednav__item  dmUDNavigationItem_0101014692  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           SEO (SEARCH ENGINE OPTIMISATION)
+          " data-auto="page-text-style">SEO (SEARCH ENGINE OPTIMISATION)<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/advertising-agency" class="unifiednav__item  dmUDNavigationItem_010101755271  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           SEM (SEARCH ENGINE MARKETING) GOOGLE ADS
+          " data-auto="page-text-style">SEM (SEARCH ENGINE MARKETING) GOOGLE ADS<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/software-for-social-media-management" class="unifiednav__item  dmUDNavigationItem_010101303095  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           DIY SOCIAL MEDIA MANAGEMENT
+          " data-auto="page-text-style">DIY SOCIAL MEDIA MANAGEMENT<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/social-media-agency" class="unifiednav__item  dmUDNavigationItem_010101398886  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           SOCIAL MEDIA MANAGEMENT
+          " data-auto="page-text-style">SOCIAL MEDIA MANAGEMENT<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/social-media-advertising" class="unifiednav__item  dmUDNavigationItem_01010169763  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           SOCIAL MEDIA ADVERTISING
+          " data-auto="page-text-style">SOCIAL MEDIA ADVERTISING<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/google-my-business" class="unifiednav__item  dmUDNavigationItem_010101668637  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           GOOGLE MY BUSINESS
+          " data-auto="page-text-style">GOOGLE MY BUSINESS<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/google-my-business#Waze" class="unifiednav__item  dmUDNavigationItem_010101468634  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Waze
+            " data-auto="page-text-style">Waze<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/google-my-business#Apple_Maps" class="unifiednav__item  dmUDNavigationItem_010101593150  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Apple_Maps
+            " data-auto="page-text-style">Apple_Maps<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/google-my-business#WhatsappBusiness" class="unifiednav__item  dmUDNavigationItem_010101847379  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Whatsapp Business
+            " data-auto="page-text-style">Whatsapp Business<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/chat-bot-for-whatsapp" class="unifiednav__item  dmUDNavigationItem_010101520581  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           WHATSAPP BOT
+          " data-auto="page-text-style">WHATSAPP BOT<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/chatbot-marketing-agency" class="unifiednav__item  dmUDNavigationItem_010101643370  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           CHATBOT MARKETING
+          " data-auto="page-text-style">CHATBOT MARKETING<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/graphic-design" class="unifiednav__item  dmUDNavigationItem_010101220456  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           GRAPHIC DESIGN
+          " data-auto="page-text-style">GRAPHIC DESIGN<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/email-marketing" class="unifiednav__item  dmUDNavigationItem_01010128745  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           EMAIL MARKETING
+          " data-auto="page-text-style">EMAIL MARKETING<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/content-writing" class="unifiednav__item  dmUDNavigationItem_010101777574  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           CONTENT WRITING
+          " data-auto="page-text-style">CONTENT WRITING<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/digital-reports" class="unifiednav__item  dmUDNavigationItem_010101300990  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           DIGITAL REPORTS
+          " data-auto="page-text-style">DIGITAL REPORTS<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="#" class="unifiednav__item  dmUDNavigationItem_010101343961  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         WEBSITES
+        " data-auto="page-text-style">WEBSITES<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/our-work" class="unifiednav__item  dmUDNavigationItem_010101591719  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           OUR WORK
+          " data-auto="page-text-style">OUR WORK<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="https://themes.webshure.com/" class="unifiednav__item  dmUDNavigationItem_010101363733  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           WEBSITE TEMPLATES
+          " data-auto="page-text-style">WEBSITE TEMPLATES<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="#" class="unifiednav__item  dmUDNavigationItem_010101549980  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         RESOURCES
+        " data-auto="page-text-style">RESOURCES<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/blogs" class="unifiednav__item  dmUDNavigationItem_010101676923  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           BLOG
+          " data-auto="page-text-style">BLOG<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/faqs" class="unifiednav__item  dmUDNavigationItem_01010132466  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           FAQ's
+          " data-auto="page-text-style">FAQ's<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/employment" class="unifiednav__item  dmUDNavigationItem_01010141527  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         EMPLOYMENT
+        " data-auto="page-text-style">EMPLOYMENT<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/employment#VACANCIES" class="unifiednav__item  dmUDNavigationItem_010101601525  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           VACANCIES
+          " data-auto="page-text-style">VACANCIES<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/employment#JOBOPPORTUNITIES" class="unifiednav__item  dmUDNavigationItem_010101537909  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           JOB OPPORTUNITIES
+          " data-auto="page-text-style">JOB OPPORTUNITIES<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact-us" class="unifiednav__item  dmUDNavigationItem_010101960562  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         CONTACT US
+        " data-auto="page-text-style">CONTACT US<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-new="true"></div> 
+ <div dmwrapped="true" id="1757512085" class="dmBody u_dmStyle_template_artificial-intelligence-websites"> <div id="allWrapper" class="allWrapper"> <div id="dm_content" class="dmContent"> <div dm:templateorder="1" class="dmDefaultRespTmpl" id="1110425625"> <div class="innerPageTmplBox dmDefaultPage  dmRespRowsWrapper" id="1069969804"> <div class="u_1922437096 dmRespRow fullBleedChanged fullBleedMode dmSectionParallaxNew hasBackgroundOverlay" id="1922437096"> <div class="dmRespColsWrapper" id="1420505584"> <div class="dmRespCol empty-column small-12 medium-12 large-12" id="1925870036"></div> 
+</div> 
+</div> 
+ <div class="u_1468444359 dmRespRow" id="1468444359"> <div class="dmRespColsWrapper" id="1689873193"> <div class="dmRespCol large-12 medium-12 small-12 u_1158055478" id="1158055478"> <div class="u_1746736370 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1746736370"><img src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/Untitled-design-eb116797-1920w.png" alt="Webshure logo" id="1628552015" class="" data-dm-image-path="https://irp.cdn-website.com/088b40b3/dms3rep/multi/Untitled-design-eb116797.png" width="795" height="342" onerror="handleImageLoadError(this)"/></div> 
+ <div class="u_1394215969 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1394215969" style="transition: none 0s ease 0s; text-align: left; display: block;"> <h1 class="m-size-36 text-align-center"><span class="m-font-size-36" m-font-size-set="true" style="color: rgb(81, 164, 254); display: initial; font-weight: bold;">Artificial Intelligence Websites</span></h1> 
+</div> 
+ <div class="u_1973156202 dmDividerWrapper clearfix" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1973156202"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1744887766"/></div> 
+ <div class="u_1283411590 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1283411590" style="text-align: left; transition: none 0s ease 0s; display: block;"><p class="text-align-center m-size-14 size-18"><span class="m-font-size-14 font-size-18" style="display: initial;">As the world continues to become more digitally connected, businesses and individuals alike are turning to artificial intelligence (</span><a href="/ai-websites" runtime_url="/ai-websites" type="page" class="m-font-size-14 font-size-18" style="display: initial;">AI</a><span class="m-font-size-14 font-size-18" style="display: initial;"><span class="m-font-size-14 font-size-18" style="display: initial;">) to enhance their websites and improve their online presence.</span> 
+</span><span class="m-font-size-14 font-size-18" style="display: initial; font-weight: bold;">Artificial intelligence websites</span><span class="m-font-size-14 font-size-18" style="display: initial;"> <span class="m-font-size-14 font-size-18" style="display: initial;">benefit from chatbots to personalized recommendations, revolutionizing the way we interact online.</span></span></p><p class="text-align-center"><span style="display: initial;"><br/></span></p><p class="m-size-14 text-align-center size-18"><span class="m-font-size-14 font-size-18" style="display: initial;"><span class="m-font-size-14 font-size-18" style="display: initial;">At</span> 
+</span><a href="/" runtime_url="/" type="page" class="m-font-size-14 font-size-18" style="display: initial;">Webshure Digital Marketing &amp; Website Design Agency</a><span class="m-font-size-14 font-size-18" style="display: initial;">, we understand the importance of keeping up with the latest technological trends to stay ahead of the competition. In this blog post, we'll explore the ways in which artificial intelligence can benefit websites and help them to succeed in today's digital landscape.</span></p></div> 
+ <div class="dmRespRow u_1686252066" id="1686252066"> <div class="dmRespColsWrapper" id="1761633788"> <div class="dmRespCol small-12 large-4 medium-4" id="1783177893"> <a data-display-type="block" class="u_1846459649 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="/contact-us" data-element-type="dButtonLinkId" id="1846459649"> <span class="iconBg" aria-hidden="true" id="1179346553"> <span class="icon hasFontIcon icon-star" id="1143662598"></span> 
+</span> 
+ <span class="text" id="1382108037">Contact us</span> 
+</a> 
+</div> 
+ <div class="dmRespCol small-12 large-4 medium-4" id="1095674983"> <a data-display-type="block" class="u_1016825316 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="https://api.leadconnectorhq.com/widget/bookings/35minmarketing" data-element-type="dButtonLinkId" id="1016825316" target="_blank"> <span class="iconBg" aria-hidden="true" id="1111434806"> <span class="icon hasFontIcon icon-star" id="1992727079"></span> 
+</span> 
+ <span class="text" id="1283229060">Book an Appointment</span> 
+</a> 
+</div> 
+ <div class="dmRespCol large-4 medium-4 small-12" id="1529284583"> <a data-display-type="block" class="u_1893379439 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="tel:+27 84 407 5950" data-element-type="dButtonLinkId" id="1893379439"> <span class="iconBg" aria-hidden="true" id="1960987709"> <span class="icon hasFontIcon icon-star" id="1701187418"></span> 
+</span> 
+ <span class="text" id="1721902342">Call us</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1119054260 dmRespRow" id="1119054260"> <div class="dmRespColsWrapper" id="1194189538"> <div class="dmRespCol large-12 medium-12 small-12" id="1821826218"> <div class="u_1592081328 dmDividerWrapper clearfix" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1592081328"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1830548356"/></div> 
+ <div class="u_1651145936 dmRespRow" id="1651145936"> <div class="dmRespColsWrapper" id="1637673171"> <div class="dmRespCol small-12 large-6 medium-6" id="1492847023"> <div class="u_1299710710 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1299710710" style="transition: opacity 1s ease-in-out 0s;"> <h2 class="m-size-24 size-30"><span class="m-font-size-24 font-size-30" style="color: rgb(255, 126, 2); display: unset;">1.</span></h2> 
+</div> 
+ <div class="u_1231350238 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1231350238" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="m-size-14 size-18"><span class="m-font-size-14 font-size-18" style="display: initial; font-weight: bold;">Personalized Recommendations</span></p><p><span class="" style="display: initial;"><span style="display: initial;">One of the most significant benefits of</span> 
+</span><span class="" style="display: initial; font-weight: bold;"><span style="display: initial; font-weight: bold;">artificial intelligence</span> 
+</span><span style="display: initial;">for websites is the ability to offer personalized recommendations to users. By analyzing a user's browsing history and behavior, AI algorithms can suggest content, products, or services that are tailored to their individual interests and preferences.</span></p><p><br/></p><p><span class="" style="display: initial;"><span style="display: initial;">This not only improves the user experience but also increases the likelihood of conversion and customer loyalty. With the help of AI,</span> 
+</span><a href="https://en.wikipedia.org/wiki/Website" runtime_url="https://en.wikipedia.org/wiki/Website" type="url" target="_blank" style="display: initial;">websites</a><span class="" style="display: initial;"> <span style="display: initial;">can build a deeper understanding of their audience and create a more personalized experience for each user.<br/></span></span></p></div> 
+</div> 
+ <div class="dmRespCol large-6 medium-6 small-12" id="1168005221"> <div class="u_1424889777 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1424889777" data-styletopreserve="{" background-image":""}"=""> <h2 class="m-size-24 size-30"><span class="m-font-size-24 font-size-30" style="color: rgb(255, 126, 2); display: unset;">2.</span></h2> 
+</div> 
+ <div class="u_1734924097 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1734924097" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="m-size-14 size-18"><span class="m-font-size-14 font-size-18" style="font-weight: bold; display: initial;">Chatbots</span></p><p><span class="" style="display: initial;"><span style="display: initial;">Another way in which</span> 
+</span><span style="display: initial; font-weight: bold;">AI</span><span class="" style="display: initial;"> <span style="display: initial;">can benefit websites is through the use of chatbots. Chatbots are computer programs that simulate conversation with human users, providing assistance and answering questions in real-time.</span></span></p><p><span style="display: initial;"><br/></span></p><p><a href="/chatbot-marketing-agency" runtime_url="/chatbot-marketing-agency" type="page" style="display: initial;">Chatbots</a><span class="" style="display: initial;"> <span style="display: initial;">can handle a wide range of queries, from simple FAQs to more complex customer support issues. They can also be programmed to learn from previous interactions, improving their responses over time and providing a more seamless experience for users.</span></span></p><p><span style="display: initial;"><br/></span></p><p><span style="display: initial;">By incorporating chatbots into their websites, businesses can provide 24/7 support and reduce the workload on their customer service teams, ultimately saving time and money.<br/></span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1396043766 dmSectionNoParallax" id="1396043766"> <div class="dmRespColsWrapper" id="1562333314"> <div class="dmRespCol small-12 medium-12 large-12" id="1472845503"> <div class="dmRespRow u_1509804803" id="1509804803"> <div class="dmRespColsWrapper" id="1897504257"> <div class="dmRespCol small-12 large-6 medium-6" id="1013034149"> <div class="u_1292161555 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1292161555" style="transition: opacity 1s ease-in-out 0s;"> <h2 class="m-size-24 size-30"><span class="font-size-30 m-font-size-24" style="display: unset; color: rgb(255, 126, 2);">3.</span></h2> 
+</div> 
+ <div class="u_1227217426 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1227217426" background-image":""}"="" style="transition: none 0s ease 0s; text-align: left;"><p class="m-size-14 size-18"><span class="m-font-size-14 font-size-18" style="font-weight: bold; display: initial;">Predictive Analytics</span></p><p><span style="display: initial;">AI can also be used to provide predictive analytics, allowing businesses to anticipate customer behavior and make more informed decisions. By analyzing data from website traffic, user behavior, and other sources, AI algorithms can predict future trends and patterns, providing valuable insights for businesses.</span></p><p><br/></p><p><span class="" style="display: initial;"><span style="display: initial;">This information can be used to improve marketing strategies, optimize</span> 
+</span><a href="https://en.wikipedia.org/wiki/Web_design" runtime_url="https://en.wikipedia.org/wiki/Web_design" type="url" target="_blank" style="display: initial;">website design</a><span class="" style="display: initial;"> <span style="display: initial;">and content, and develop new products and services that better meet the needs of customers.<br/></span></span></p></div> 
+</div> 
+ <div class="dmRespCol large-6 medium-6 small-12" id="1297685897"> <div class="u_1186773942 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1186773942" data-styletopreserve="{" background-image":""}"=""> <h2 class="m-size-24 size-30"><span class="m-font-size-24 font-size-30" style="color: rgb(255, 126, 2); display: unset;">4.</span></h2> 
+</div> 
+ <div class="u_1422556733 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1422556733" style="transition: none 0s ease 0s; text-align: left;"><p class="m-size-14 size-18"><span class="m-font-size-14 font-size-18" style="font-weight: bold; display: initial;">Image and Voice Recognition</span></p><p><span class="" style="display: initial;"><span style="display: initial;">Finally, AI technology can be used for image and voice recognition, improving the accessibility and functionality of websites, particularly</span> 
+</span><span style="display: initial; font-weight: bold;">artificial intelligence websites</span><span style="display: initial;">. Image recognition can be used to identify and categorize images on a website, making it easier for users to find what they're looking for</span></p><p><span style="display: initial;"><br/></span></p><p><span style="display: initial;">Voice recognition, on the other hand, can be used to provide hands-free navigation and control of websites, improving accessibility for users with disabilities or those who prefer to use voice commands.<br/></span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1600852377" id="1600852377"> <div class="dmRespColsWrapper" id="1597676192"> <div class="dmRespCol large-12 medium-12 small-12" id="1902547401"> <div class="dmRespRow u_1449504804" id="1449504804"> <div class="dmRespColsWrapper" id="1412285617"> <div class="dmRespCol small-12 u_1950606193 medium-12 large-12" id="1950606193"> <div class="u_1440729693 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1440729693" style="transition: none 0s ease 0s; text-align: left; display: block;"> <h2 class="text-align-center size-24 m-size-19"><span class="font-size-24 m-font-size-19" m-font-size-set="true" style="display: unset; color: rgb(8, 51, 76);">Conclusion</span></h2> 
+</div> 
+ <div class="u_1819049003 dmDividerWrapper clearfix" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1819049003"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1316164726"/></div> 
+ <div class="u_1268027527 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1268027527" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="m-size-14 text-align-center size-18"><span class="m-font-size-14 font-size-18" style="display: initial;"><span class="m-font-size-14 font-size-18" m-font-size-set="true" style="display: initial;">In conclusion,</span> 
+</span><a href="https://en.wikipedia.org/wiki/Artificial_intelligence" runtime_url="https://en.wikipedia.org/wiki/Artificial_intelligence" type="url" m-font-size-set="true" class="m-font-size-14 font-size-18" target="_blank" style="display: initial;">artificial intelligence</a><span class="m-font-size-14 font-size-18" style="display: initial;"> <span class="m-font-size-14 font-size-18" m-font-size-set="true" style="display: initial;">has the potential to transform websites and revolutionize the way we interact with the online world. By incorporating AI technology into their websites, businesses can improve the user experience, increase customer loyalty, and stay ahead of the competition. At</span> 
+</span><a href="https://goo.gl/maps/TMExjHFy5CXahKH86" runtime_url="https://goo.gl/maps/TMExjHFy5CXahKH86" type="url" m-font-size-set="true" class="m-font-size-14 font-size-18" style="display: initial;" target="_blank">Webshure Digital Marketing &amp; Website Design Agency</a><span class="m-font-size-14 font-size-18" m-font-size-set="true" style="display: initial;">, we're committed to helping our clients leverage the latest technological trends to achieve their goals and succeed in today's digital landscape.</span><span style="display: initial;"><br/></span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1267917075" id="1267917075"> <div class="dmRespColsWrapper" id="1274758987"> <div class="dmRespCol large-12 medium-12 small-12" id="1181452414"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1819809536" style="transition: opacity 1s ease-in-out 0s;"> <h3 class="text-align-center"><span style="font-weight: bold; color: rgb(8, 51, 76); display: unset;">Learn More About This Service</span></h3> 
+</div> 
+ <div class="u_1824124506 dmDividerWrapper clearfix" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1824124506"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1206062641"/></div> 
+ <div class="u_1860173155 default mainBlog layout4" id="1860173155" dmle_extension="internal_blog_list" data-element-type="internal_blog_list" show-images="true" wr="true" trim-title="false" show-blog-title="false" show-action-text="false" text-align="left" icon="true" surround="true" adwords="" list-layout="layout4" visible-items="10" visible-post-lines="4" search-tags="SEO" search-term="" more-posts-text="Show More" header-type="H2" posts-padding="10" posts-per-row="3" show-author="false" text-box-padding="true" action-text="Read More" skip-post-index="-1" blog-posts-feature-flag="true" data-image-hover-effect="zoomout" show-more-posts-text="false"> <div class="inner "> <div style="-ms-grid-column:1; -ms-grid-row:1" class="postArticle "> <div class="inner clearfix wow" style="animation-delay: 200.0ms;"> <a class="blogImgLink" dont-color-link="true" href="/the-top-10-seo-trends" data-blog-post-alias="the-top-10-seo-trends"> <div class="blogImg" style="background-image: url('https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+copy+2-1920w.png');"><img src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+copy+2-1920w.png" alt="the top 10 SEO trends" onerror="handleImageLoadError(this)"/></div> 
+</a> 
+ <div class="postTextContainer"> <div class="postText clearfix"> <div class="postTitle"> <h3> <a dont-color-link="true" href="/the-top-10-seo-trends" data-blog-post-alias="the-top-10-seo-trends">The Top 10 SEO Trends</a> 
+</h3> 
+</div> 
+ <div class="authorBar"> <span>By Marius  Coetzee</span> 
+ <span>&bull;</span> 
+ <span>29 May, 2023</span> 
+</div> 
+ <div class="postDescription">The Top 10 SEO Trends: Gain insights into the evolving digital marketing landscape and stay ahead of the curve with Webshure's observations and reflections</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div style="-ms-grid-column:2; -ms-grid-row:1" class="postArticle "> <div class="inner clearfix wow" style="animation-delay: 400.0ms;"> <a class="blogImgLink" dont-color-link="true" href="/ai-driven-trends" data-blog-post-alias="ai-driven-trends"> <div class="blogImg" style="background-image: url('https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+copy-eb1e0eae-1920w.png');"><img src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+copy-eb1e0eae-1920w.png" alt="AI-Driven Trends: Revolutionizing SEO Strategies in 2023" onerror="handleImageLoadError(this)"/></div> 
+</a> 
+ <div class="postTextContainer"> <div class="postText clearfix"> <div class="postTitle"> <h3> <a dont-color-link="true" href="/ai-driven-trends" data-blog-post-alias="ai-driven-trends">AI-driven trends and strategies to shape Search Engine Optimization</a> 
+</h3> 
+</div> 
+ <div class="authorBar"> <span>By Marius  Coetzee</span> 
+ <span>&bull;</span> 
+ <span>26 May, 2023</span> 
+</div> 
+ <div class="postDescription">Discover AI-driven trends remolding SEO in 2023. Learn strategies for UX, semantic search, voice search, and predictive SEO optimization.</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div style="-ms-grid-column:3; -ms-grid-row:1" class="postArticle "> <div class="inner clearfix wow" style="animation-delay: 600.0ms;"> <a class="blogImgLink" dont-color-link="true" href="/content-strategy-for-podcast" data-blog-post-alias="content-strategy-for-podcast"> <div class="blogImg" style="background-image: url('https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/45-d08f183c-1920w.png');"><img src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/45-d08f183c-1920w.png" alt="content-strategy-for-podcast" onerror="handleImageLoadError(this)"/></div> 
+</a> 
+ <div class="postTextContainer"> <div class="postText clearfix"> <div class="postTitle"> <h3> <a dont-color-link="true" href="/content-strategy-for-podcast" data-blog-post-alias="content-strategy-for-podcast">Content Strategy For Podcast</a> 
+</h3> 
+</div> 
+ <div class="authorBar"> <span>By Marius  Coetzee</span> 
+ <span>&bull;</span> 
+ <span>17 May, 2023</span> 
+</div> 
+ <div class="postDescription">Join the discussion on the Page One or Bust Podcast as we explore the peaks and troughs of content strategy in SEO and digital marketing.</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div style="-ms-grid-column:1; -ms-grid-row:2" class="postArticle "> <div class="inner clearfix wow" style="animation-delay: 800.0ms;"> <a class="blogImgLink" dont-color-link="true" href="/optimizing-listings" data-blog-post-alias="optimizing-listings"> <div class="blogImg" style="background-image: url('https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+copy-1920w.png');"><img src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+copy-1920w.png" alt="Optimizing Listings for Airbnb Success: Pro Tips" onerror="handleImageLoadError(this)"/></div> 
+</a> 
+ <div class="postTextContainer"> <div class="postText clearfix"> <div class="postTitle"> <h3> <a dont-color-link="true" href="/optimizing-listings" data-blog-post-alias="optimizing-listings">Optimizing Listings</a> 
+</h3> 
+</div> 
+ <div class="authorBar"> <span>By Marius  Coetzee</span> 
+ <span>&bull;</span> 
+ <span>08 May, 2023</span> 
+</div> 
+ <div class="postDescription">Optimizing listings made it easy! Boost your visibility and bookings with our expert strategies. Let us help you climb the SEO ladder today.</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div style="-ms-grid-column:2; -ms-grid-row:2" class="postArticle "> <div class="inner clearfix wow" style="animation-delay: 1000.0ms;"> <a class="blogImgLink" dont-color-link="true" href="/multilingual-seo" data-blog-post-alias="multilingual-seo"> <div class="blogImg" style="background-image: url('https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+%283%29-7beeb08f-1920w.png');"><img src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+%283%29-7beeb08f-1920w.png" alt="Multilingual SEO" onerror="handleImageLoadError(this)"/></div> 
+</a> 
+ <div class="postTextContainer"> <div class="postText clearfix"> <div class="postTitle"> <h3> <a dont-color-link="true" href="/multilingual-seo" data-blog-post-alias="multilingual-seo">Role of Social Media in Multilingual SEO</a> 
+</h3> 
+</div> 
+ <div class="authorBar"> <span>By Webshure</span> 
+ <span>&bull;</span> 
+ <span>28 Apr, 2023</span> 
+</div> 
+ <div class="postDescription">Discover the challenges, best practices, and tips for leveraging multilingual SEO in building brand awareness through social media. Learn More</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div style="-ms-grid-column:3; -ms-grid-row:2" class="postArticle "> <div class="inner clearfix wow" style="animation-delay: 1200.0ms;"> <a class="blogImgLink" dont-color-link="true" href="/outsourcing-link-building" data-blog-post-alias="outsourcing-link-building"> <div class="blogImg" style="background-image: url('https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/Untitled+design+2-1920w.png');"><img src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/Untitled+design+2-1920w.png" alt="Outsourcing Link Building with Webshure digital marketing and website design agency." onerror="handleImageLoadError(this)"/></div> 
+</a> 
+ <div class="postTextContainer"> <div class="postText clearfix"> <div class="postTitle"> <h3> <a dont-color-link="true" href="/outsourcing-link-building" data-blog-post-alias="outsourcing-link-building">Outsourcing Link Building: A Boon or a Bane for Your Business?</a> 
+</h3> 
+</div> 
+ <div class="authorBar"> <span>By Marius  Coetzee</span> 
+ <span>&bull;</span> 
+ <span>09 Apr, 2023</span> 
+</div> 
+ <div class="postDescription">Effective link building is an essential component of a successful search engine optimization (SEO) strategy.  Learn more in this Blog.</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div style="-ms-grid-column:1; -ms-grid-row:3" class="postArticle "> <div class="inner clearfix wow" style="animation-delay: 1400.0ms;"> <a class="blogImgLink" dont-color-link="true" href="/seo-optimizing-for-e-commerce" data-blog-post-alias="seo-optimizing-for-e-commerce"> <div class="blogImg" style="background-image: url('https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+%2884%29-1920w.png');"><img src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+%2884%29-1920w.png" alt="Optimizing a Product Page for SEO" onerror="handleImageLoadError(this)"/></div> 
+</a> 
+ <div class="postTextContainer"> <div class="postText clearfix"> <div class="postTitle"> <h3> <a dont-color-link="true" href="/seo-optimizing-for-e-commerce" data-blog-post-alias="seo-optimizing-for-e-commerce">The Ultimate Guide to Optimizing a Product Page for SEO</a> 
+</h3> 
+</div> 
+ <div class="authorBar"> <span>By Marius  Coetzee</span> 
+ <span>&bull;</span> 
+ <span>28 Feb, 2023</span> 
+</div> 
+ <div class="postDescription">Learn how to optimize your e-commerce product pages for SEO, drive organic traffic, and increase sales. Find the perfect balance between CRO and SEO.</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div style="-ms-grid-column:2; -ms-grid-row:3" class="postArticle "> <div class="inner clearfix wow" style="animation-delay: 1600.0ms;"> <a class="blogImgLink" dont-color-link="true" href="/types-of-seo-marketing" data-blog-post-alias="types-of-seo-marketing"> <div class="blogImg" style="background-image: url('https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure-1--2882-29-1920w.png');"><img src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure-1--2882-29-1920w.png" alt="Difference between normal SEO and local SEO marketing" onerror="handleImageLoadError(this)"/></div> 
+</a> 
+ <div class="postTextContainer"> <div class="postText clearfix"> <div class="postTitle"> <h3> <a dont-color-link="true" href="/types-of-seo-marketing" data-blog-post-alias="types-of-seo-marketing">Difference Between normal SEO and local SEO marketing</a> 
+</h3> 
+</div> 
+ <div class="authorBar"> <span>By Marius  Coetzee</span> 
+ <span>&bull;</span> 
+ <span>23 Jan, 2023</span> 
+</div> 
+ <div class="postDescription">Understand the key differences between normal SEO and local SEO marketing. Improve your website's visibility and target the right audience effectively.</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div style="-ms-grid-column:3; -ms-grid-row:3" class="postArticle "> <div class="inner clearfix wow" style="animation-delay: 1800.0ms;"> <a class="blogImgLink" dont-color-link="true" href="/seo-services" data-blog-post-alias="seo-services"> <div class="blogImg" style="background-image: url('https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+%2858%29-1920w.png');"><img src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+%2858%29-1920w.png" alt="SEO services" onerror="handleImageLoadError(this)"/></div> 
+</a> 
+ <div class="postTextContainer"> <div class="postText clearfix"> <div class="postTitle"> <h3> <a dont-color-link="true" href="/seo-services" data-blog-post-alias="seo-services">Seo Services</a> 
+</h3> 
+</div> 
+ <div class="authorBar"> <span>By Webshure</span> 
+ <span>&bull;</span> 
+ <span>10 Jan, 2023</span> 
+</div> 
+ <div class="postDescription">Discover the power of local SEO services for your business. Dominate local search results and reach more customers. Contact us today!</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div style="-ms-grid-column:1; -ms-grid-row:4" class="postArticle lastArticle"> <div class="inner clearfix wow" style="animation-delay: 2000.0ms;"> <a class="blogImgLink" dont-color-link="true" href="/top-seo-tools" data-blog-post-alias="top-seo-tools"> <div class="blogImg" style="background-image: url('https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+%2869%29-1920w.png');"><img src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/webshure+1+%2869%29-1920w.png" alt="Top SEO tools" onerror="handleImageLoadError(this)"/></div> 
+</a> 
+ <div class="postTextContainer"> <div class="postText clearfix"> <div class="postTitle"> <h3> <a dont-color-link="true" href="/top-seo-tools" data-blog-post-alias="top-seo-tools">Top SEO Tools</a> 
+</h3> 
+</div> 
+ <div class="authorBar"> <span>By Marius  Coetzee</span> 
+ <span>&bull;</span> 
+ <span>09 Jan, 2023</span> 
+</div> 
+ <div class="postDescription">Top SEO tools: Boost your website's visibility and drive more traffic with the best SEO tools on the market. Try them out today!</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1826280898 fullBleedChanged fullBleedMode" id="1826280898"> <div class="dmRespColsWrapper" id="1884577858"> <div class="dmRespCol small-12 medium-12 large-12 u_1944300025" id="1944300025"> <div class="u_1125734914 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1125734914" style="transition: none 0s ease 0s; text-align: left;"> <h3 class="text-align-center m-size-32 size-40" style="letter-spacing: -0.125rem; line-height: 1.2;"><span class="m-font-size-32 font-size-40" style="display: unset; color: rgb(255, 255, 255); font-weight: bold;">&ldquo;Ignoring online marketing is like opening a business but not telling anyone.&rdquo;</span></h3> 
+</div> 
+ <div class="u_1740192687 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1740192687" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="text-align-center m-size-19 size-24"><span class="font-size-24 m-font-size-19" style="display: unset; color: rgb(255, 255, 255); font-weight: normal;">Lift your Business to New Heights with Webshure as your Digital Marketing Agency.</span></p></div> 
+ <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1716991715" style="transition: opacity 1s ease-in-out 0s;"><p class="text-align-center m-size-19 size-24"><span class="font-size-24 m-font-size-19" style="font-weight: bold; display: unset; color: rgb(255, 255, 255);">Contact us today and we will Set up a Meeting with You!</span></p></div> 
+ <a data-display-type="block" class="u_1414838443 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="tel:+27 84 407 5950" data-element-type="dButtonLinkId" id="1414838443"> <span class="iconBg" aria-hidden="true" id="1776736102"> <span class="icon hasFontIcon icon-star" id="1406446693"></span> 
+</span> 
+ <span class="text" id="1759685373">Call Us Now</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow" id="1887833515"> <div class="dmRespColsWrapper" id="1910657192"> <div class="dmRespCol large-12 medium-12 small-12" id="1859848956"> <div data-element-type="spacer" class="dmSpacer u_1102079739" id="1102079739"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="sticky-widgets-container-global" id="1949648483"> <div class="widget-5bd886 u_1101134261 sticky-desktop-position-bottom-left sticky-mobile-position-bottom-left dmCustomWidget" data-lazy-load="" data-title="" id="1101134261" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="5bd886efb15a44fd98f083f461519ec8" data-widget-version="224" data-widget-config="eyJ3YU51bWJlciI6IisyNzg0NDA3NTk1MCIsImJ0blRleHQiOiIgV2hhdHNBcHAgdXMiLCJkZWZhdWx0TWVzc2FnZSI6IkhlbGxvLCBpIHZpc2l0ZWQgeW91ciB3ZWJzaXRlLiBDb3VsZCB5b3UgcGxlYXNlIGdldCBiYWNrIHRvIG1lPyIsImFsdCI6Ik1lc3NhZ2UgdXMgb24gV2hhdHNBcHAiLCJ3YUxheW91dCI6Imljb25Pbmx5In0="> <a class="align-center full" target="_blank" data-display-type="block"> <span class="full iconBg"> <span class="full icon"><img class="full" src="https://dd-cdn.multiscreensite.com/editor/whatsApp/whatsapp_layout_5.svg" alt="Message us on WhatsApp" onerror="handleImageLoadError(this)"/></span> 
+</span> 
+</a> 
+</div> 
+</div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="u_1488125413 dmRespRow dmSectionParallaxNew fullBleedChanged fullBleedMode" id="1488125413"> <div class="dmRespColsWrapper" id="1702362570"> <div class="u_1782817247 dmRespCol small-12 large-9 medium-9" id="1782817247"> <div class="u_1389371441 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1389371441" style="transition: none 0s ease 0s; text-align: left;"> <h5 class="m-size-19 text-align-left size-24" style="line-height: 1.5;"><span class="font-size-24 m-font-size-19" m-font-size-set="true" style="display: initial; color: rgb(255, 255, 255); text-transform: uppercase;">ARE YOU IN GAUTENG? DO YOU NEED TO SPEAK TO A DIGITAL MARKETER, LET US COME TO YOU OR VISIT US.</span></h5> 
+ <h5 class="m-size-16 text-align-left" style="line-height: 1.5;"><span class="m-font-size-16" m-font-size-set="true" style="color: rgb(255, 255, 255); font-weight: normal; display: initial; text-transform: none;">Simply complete this Appointment form.</span></h5> 
+</div> 
+</div> 
+ <div class="u_1887629818 dmRespCol small-12 large-3 medium-3" id="1887629818"> <a data-display-type="block" class="u_1948081212 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="https://www.google.com/maps/place/Webshure+-+Web+Design+and+Digital+Marketing+Agency/@-26.2852041,28.1090969,17z/data=!3m1!4b1!4m5!3m4!1s0x1e95058cc8810eaf:0xeedd176db829c440!8m2!3d-26.2852041!4d28.1112856" data-element-type="dButtonLinkId" id="1948081212" target="_blank"> <span class="iconBg" id="1281514780"> <span class="icon hasFontIcon icon-star" id="1739563036"></span> 
+</span> 
+ <span class="text" id="1512931436">VIEW ON MAP</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1767115268 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1767115268"> <div class="dmRespColsWrapper" id="1032803237"> <div class="u_1148242774 dmRespCol small-12 large-4 medium-4" id="1148242774"> <div class="u_1977796869 imageWidget align-center" data-widget-type="image" id="1977796869" data-element-type="image"> <a href="/" id="1902900524" file="false"><img src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/Screenshot-2022-11-23-at-19.19.34-1920w.png" id="1966669919" class="" data-dm-image-path="https://irp.cdn-website.com/088b40b3/dms3rep/multi/Screenshot-2022-11-23-at-19.19.34.png" alt="Webshure Digital Marketing & Website Design Agency logo. (see the picture)" data-hover-effect="none" width="1084" height="466" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="u_1999818264 align-center text-align-center dmSocialHub" id="1999818264" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="https://facebook.com/Webshure/?_rdc=1&amp;_rdr" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://www.instagram.com/webshure_digital_marketing/" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://www.linkedin.com/company/webshure-digital-marketing/" target="_blank" dm_dont_rewrite_url="true" aria-label="linkedin" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Linkedin&apos;)"> <span class="dmSocialLinkedin icon-linkedin oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="mailto:info@webshure.co.za" dm_dont_rewrite_url="true" aria-label="email" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Email&apos;)"> <span class="dmSocialEmail dm-social-icons-email oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://web.whatsapp.com/send?phone=+27844075950" target="_blank" dm_dont_rewrite_url="true" aria-label="whatsapp" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Whatsapp&apos;)"> <span class="dmSocialWhatsapp dm-social-icons-whatsapp oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://www.google.com/maps/place/Webshure+-+Web+Design+and+Digital+Marketing+Agency/@-26.2852041,28.1090969,17z/data=!3m1!4b1!4m5!3m4!1s0x1e95058cc8810eaf:0xeedd176db829c440!8m2!3d-26.2852041!4d28.1112856" target="_blank" dm_dont_rewrite_url="true" aria-label="google_my_business" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;GoogleMyBusiness&apos;)"> <span class="dmSocialGoogleMyBusiness dm-social-icons-google-my-business oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1726299363 dmRespCol small-12 large-4 medium-4" id="1726299363"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1527533189" style="transition: opacity 1s ease-in-out 0s;"><p class="text-align-center"><span style="font-weight: 700; display: unset;">CONTACT US:</span></p></div> 
+ <div class="u_1457083072 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1457083072" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="text-align-center"><a href="tel:+27 84 407 5950" target="_blank" type="call" style="display: initial;">084 407 5950</a></p><p class="text-align-center"><a href="mailto:info@webshure.co.za" target="_blank" type="email" style="display: initial;">info@webshure.co.za</a></p><p class="text-align-center"><span style="display: initial;"><br/></span></p><p class="text-align-center"><span style="display: initial;">65 Nelson Mandela Drive, Randhart, Alberton 1449</span></p></div> 
+</div> 
+ <div class="u_1305560999 dmRespCol small-12 large-4 medium-4" id="1305560999"> <div class="u_1662963322 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1662963322" style="transition: opacity 1s ease-in-out 0s; text-align: left;"><p class="text-align-center"><span style="display: unset; font-weight: 700;">BUSINESS HOURS:</span></p></div> 
+ <div class="u_1690852888 default dmHoursOfOperation" id="1690852888" dmle_extension="open_hours" data-element-type="open_hours" time_format="12" wr="true" displaytitle="false" lang="" forcedisplay="false" icon="true" surround="true" adwords=""> <dl class="open-hours-data"> <div class="open-hours-item"> <dt day="0">Mon - Fri</dt> 
+ <dd> <time>8:30 am</time> 
+- <time>4:30 pm</time> 
+</dd> 
+</div> 
+ <div class="open-hours-item"> <dt day="5">Sat - Sun</dt> 
+ <dd>Closed</dd> 
+</div> 
+</dl> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow fullBleedChanged fullBleedMode u_1063365577" id="1063365577"> <div class="dmRespColsWrapper" id="1711967425"> <div class="dmRespCol large-12 medium-12 small-12 u_1394300974" id="1394300974"> <div class="u_1002708045 dmDividerWrapper clearfix" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1002708045" layout="divider-style-4"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1862655852"/></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1948711133 dmRespRow" id="1948711133"> <div class="dmRespColsWrapper" id="1925191536"> <div class="dmRespCol large-12 medium-12 small-12 u_1775043675" id="1775043675"> <div class="u_1080546512 flex-container dmImageSlider dmNoMargin dmNoMark hasFullWidth" data-widget-type="imageSlider" dmle_volatile_widget="true" data-element-type="dSliderId" id="1080546512"> <div class="flexslider ed-version nav-layout-2" sliderscriptparams="{'stretch':false,'animation':true,'randomize':false,'directionNav':true,'isAutoPlay':true,'isFade':false,'controlNav':false,'slideshowSpeed':5000,'animationDuration':600,'pausePlay':true}" id="1311368538" layout="empty"> <ul class="slides" id="1426502704"> <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1342919402"> <a id="1649807425" class=""><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/Partner-CMYK-67d41d6a-1920w.jpg" id="1490822520" class="" alt="Google Partner Logo" onerror="handleImageLoadError(this)"/></a> 
+ <div class="color-overlay" id="1884605283"></div> 
+ <div class="slide-inner" id="1440503058"> <div class="text-wrapper" id="1299622134"> <h3 class="slide-title" id="1936468543">Slide title</h3> 
+ <div class="slide-text richText" id="1028128811">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1584984220"> <span class="iconBg" id="1571592531"> <span class="icon hasFontIcon icon-star" id="1801672486"></span> 
+</span> 
+ <span class="text" id="1088845367">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1829497013"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/Blam_CP_Badge_final_v1_2021-04dbd146-1920w.png" id="1998554995" class="" alt="Blam Partner logo" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1354113058"></div> 
+ <div class="slide-inner" id="1772912087"> <div class="text-wrapper" id="1213718596"> <h3 class="slide-title" id="1195109619">Slide title</h3> 
+ <div class="slide-text richText" id="1634038116">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1083041089"> <span class="iconBg" id="1802882684"> <span class="icon hasFontIcon icon-star" id="1666793638"></span> 
+</span> 
+ <span class="text" id="1462229580">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1614160021"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/certified-search-marketing-specialist-1920w.png" id="1894328743" class="" alt="Webshure is search marketing specialist certified" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1356964442"></div> 
+ <div class="slide-inner" id="1062395414"> <div class="text-wrapper" id="1076204878"> <h3 class="slide-title" id="1485824887">Slide title</h3> 
+ <div class="slide-text richText" id="1795323330">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1220235518"> <span class="iconBg" id="1373673999"> <span class="icon hasFontIcon icon-star" id="1080830524"></span> 
+</span> 
+ <span class="text" id="1667819612">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1868947337"><img dm="true" src="https://lirp.cdn-website.com/0dcd1823/import/clib/blam_online/dms3rep/multi/opt/cvo-badge-600x600-1920w.png" id="1847458345" class="" alt="Webshure is customer value optimization specialist certified" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1783343112"></div> 
+ <div class="slide-inner" id="1976807628"> <div class="text-wrapper" id="1478091916"> <h3 class="slide-title" id="1205716347">Slide title</h3> 
+ <div class="slide-text richText" id="1839605170">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1300364263"> <span class="iconBg" id="1451266952"> <span class="icon hasFontIcon icon-star" id="1267955837"></span> 
+</span> 
+ <span class="text" id="1876237317">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1390709089"><img dm="true" src="https://lirp.cdn-website.com/0dcd1823/import/clib/blam_online/dms3rep/multi/opt/customer-acquisition-badge-280x313-1920w.png" id="1893299172" class="" alt="Webshure is customer acquisition specialist certified" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1187427354"></div> 
+ <div class="slide-inner" id="1494949667"> <div class="text-wrapper" id="1283629303"> <h3 class="slide-title" id="1495983521">Slide title</h3> 
+ <div class="slide-text richText" id="1013944713">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1514569055"> <span class="iconBg" id="1761288096"> <span class="icon hasFontIcon icon-star" id="1762308074"></span> 
+</span> 
+ <span class="text" id="1088684204">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1916857977"><img dm="true" src="https://lirp.cdn-website.com/0dcd1823/import/clib/blam_online/dms3rep/multi/opt/ecommerce-badge-280x313-1920w.png" id="1124260668" class="" alt="Webshure is ecommerce marketing specialist certified" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1676299990"></div> 
+ <div class="slide-inner" id="1430491195"> <div class="text-wrapper" id="1947941397"> <h3 class="slide-title" id="1896843502">Slide title</h3> 
+ <div class="slide-text richText" id="1360238513">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1348411240"> <span class="iconBg" id="1124944599"> <span class="icon hasFontIcon icon-star" id="1735437057"></span> 
+</span> 
+ <span class="text" id="1739986480">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1519060783"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/optimization-badge-600x600-640w-1920w.png" id="1623884312" class="" alt="Webshure is optimization & testing  specialist certified" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1758772107"></div> 
+ <div class="slide-inner" id="1388220849"> <div class="text-wrapper" id="1724586562"> <h3 class="slide-title" id="1548379608">Slide title</h3> 
+ <div class="slide-text richText" id="1219368930">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1442987036"> <span class="iconBg" id="1962454358"> <span class="icon hasFontIcon icon-star" id="1086934121"></span> 
+</span> 
+ <span class="text" id="1187967900">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1326282818"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/email-marketing-badge-d520979f-397x397-640w-1920w.png" id="1025555538" class="" alt="Webshure is email marketing specialist certified" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1467408406"></div> 
+ <div class="slide-inner" id="1898133517"> <div class="text-wrapper" id="1102133150"> <h3 class="slide-title" id="1486077095">Slide title</h3> 
+ <div class="slide-text richText" id="1901015553">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1535765251"> <span class="iconBg" id="1366111004"> <span class="icon hasFontIcon icon-star" id="1824290819"></span> 
+</span> 
+ <span class="text" id="1513616154">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1831289162"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/copywriting-badge-1000x1000-640w-1920w.png" id="1833170977" class="" alt="Webshure is direct-response copywriting specialist certified" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1764479584"></div> 
+ <div class="slide-inner" id="1659351796"> <div class="text-wrapper" id="1475430176"> <h3 class="slide-title" id="1409182326">Slide title</h3> 
+ <div class="slide-text richText" id="1288519630">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1439934936"> <span class="iconBg" id="1350151042"> <span class="icon hasFontIcon icon-star" id="1720414694"></span> 
+</span> 
+ <span class="text" id="1996235502">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1802975825"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/comm-management-badge-800x800-640w-1920w.png" id="1852039783" class="" alt="Webshure is community management specialist certified" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1684452137"></div> 
+ <div class="slide-inner" id="1037192075"> <div class="text-wrapper" id="1278995228"> <h3 class="slide-title" id="1971287188">Slide title</h3> 
+ <div class="slide-text richText" id="1611727229">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1376228832"> <span class="iconBg" id="1496878951"> <span class="icon hasFontIcon icon-star" id="1025500303"></span> 
+</span> 
+ <span class="text" id="1348994956">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1427617485"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/analytics-badge-600x600-640w-1920w.png" id="1608232664" class="" alt="Webshure is Analytics & data specialist certified" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1586139290"></div> 
+ <div class="slide-inner" id="1578490325"> <div class="text-wrapper" id="1167536606"> <h3 class="slide-title" id="1723799319">Slide title</h3> 
+ <div class="slide-text richText" id="1569152783">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1505181923"> <span class="iconBg" id="1952028179"> <span class="icon hasFontIcon icon-star" id="1459084821"></span> 
+</span> 
+ <span class="text" id="1401389807">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1068775209"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/content-badge-600x600-640w-1920w.png" id="1584360796" class="" alt="Webshure is content marketing  specialist certified" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1942379987"></div> 
+ <div class="slide-inner" id="1550325909"> <div class="text-wrapper" id="1743511839"> <h3 class="slide-title" id="1715665378">Slide title</h3> 
+ <div class="slide-text richText" id="1969299701">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1438965505"> <span class="iconBg" id="1336888453"> <span class="icon hasFontIcon icon-star" id="1011034201"></span> 
+</span> 
+ <span class="text" id="1150538135">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1800939835"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/february-19-2019-blog-6c7488d8-ec00a2a1-1920w.png" id="1488368091" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1050349470"></div> 
+ <div class="slide-inner" id="1698207486"> <div class="text-wrapper" id="1751781485"> <h3 class="slide-title" id="1670808631">Slide title</h3> 
+ <div class="slide-text richText" id="1690640153">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1109796279"> <span class="iconBg" id="1483987456"> <span class="icon hasFontIcon icon-star" id="1882687260"></span> 
+</span> 
+ <span class="text" id="1690295594">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1982372509"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/Partner-CMYK-67d41d6a-1920w.jpg" id="1007235309" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1715004410"></div> 
+ <div class="slide-inner" id="1788240915"> <div class="text-wrapper" id="1387716670"> <h3 class="slide-title" id="1031884588">Slide title</h3> 
+ <div class="slide-text richText" id="1586852324">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1634752415"> <span class="iconBg" id="1458457321"> <span class="icon hasFontIcon icon-star" id="1909599715"></span> 
+</span> 
+ <span class="text" id="1227982537">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1558521411"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/Blam_CP_Badge_final_v1_2021-04dbd146-1920w.png" id="1011082279" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1704656485"></div> 
+ <div class="slide-inner" id="1205658048"> <div class="text-wrapper" id="1370036800"> <h3 class="slide-title" id="1706044203">Slide title</h3> 
+ <div class="slide-text richText" id="1807731744">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1114785295"> <span class="iconBg" id="1743217029"> <span class="icon hasFontIcon icon-star" id="1045357672"></span> 
+</span> 
+ <span class="text" id="1667994387">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1917903222"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/certified-search-marketing-specialist-1920w.png" id="1520158024" class="" alt="Webshure is search marketing specialist certified" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1930855557"></div> 
+ <div class="slide-inner" id="1673555779"> <div class="text-wrapper" id="1375074839"> <h3 class="slide-title" id="1728460305">Slide title</h3> 
+ <div class="slide-text richText" id="1078624616">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1342049691"> <span class="iconBg" id="1861816910"> <span class="icon hasFontIcon icon-star" id="1818813762"></span> 
+</span> 
+ <span class="text" id="1889642008">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1132658544"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/certified-ecommerce-marketing-specialist-3cc18a94-1920w.png" id="1478650639" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1627810956"></div> 
+ <div class="slide-inner" id="1026125865"> <div class="text-wrapper" id="1648737889"> <h3 class="slide-title" id="1506316310">Slide title</h3> 
+ <div class="slide-text richText" id="1636281857">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1206028909"> <span class="iconBg" id="1208329334"> <span class="icon hasFontIcon icon-star" id="1873388066"></span> 
+</span> 
+ <span class="text" id="1766480578">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1505558017"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/DM-Badges-1920w.png" id="1293120035" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1618235934"></div> 
+ <div class="slide-inner" id="1083711607"> <div class="text-wrapper" id="1700359339"> <h3 class="slide-title" id="1194051490">Slide title</h3> 
+ <div class="slide-text richText" id="1408566639">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1928576266"> <span class="iconBg" id="1786618335"> <span class="icon hasFontIcon icon-star" id="1118602743"></span> 
+</span> 
+ <span class="text" id="1404979586">Button</span> 
+</div> 
+</div> 
+</li> 
+ <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1108969279"><img dm="true" src="https://lirp.cdn-website.com/088b40b3/dms3rep/multi/opt/certified-customer-acquisition-specialist-1920w.png" id="1703570277" onerror="handleImageLoadError(this)"/> <div class="color-overlay" id="1780333041"></div> 
+ <div class="slide-inner" id="1354183359"> <div class="text-wrapper" id="1964006097"> <h3 class="slide-title" id="1991497407">Slide title</h3> 
+ <div class="slide-text richText" id="1967526015">Write your caption here</div> 
+</div> 
+ <div class="slide-button dmWidget clearfix" id="1172760695"> <span class="iconBg" id="1381386423"> <span class="icon hasFontIcon icon-star" id="1752141727"></span> 
+</span> 
+ <span class="text" id="1097045387">Button</span> 
+</div> 
+</div> 
+</li> 
+</ul> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1031340953 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1031340953"> <div class="dmRespColsWrapper" id="1232613790"> <div class="dmRespCol small-12 medium-12 large-12" id="1064254848"> <div class="u_1307708733 widget-1f5975 dmCustomWidget" data-lazy-load="" data-title="" id="1307708733" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="1f5975986930429f819d4cd2154b5c4a" data-widget-version="22" data-widget-config="eyJjb3B5cmlnaHRUZXh0IjoiPHAgY2xhc3M9XCJydGVCbG9ja1wiPkFsbCBSaWdodHMgUmVzZXJ2ZWQgfCBXZWJzaHVyZSB8IDxzdHJvbmc+PGEgdmFsdWU9XCJwcml2YWN5ZDk4MmVhMGZcIiBsYWJlbD1cIlwiIHR5cGU9XCJwYWdlXCIgaHJlZj1cIi9wcml2YWN5ZDk4MmVhMGZcIiBkYXRhLXJ1bnRpbWUtdXJsPVwiL3ByaXZhY3lkOTgyZWEwZlwiPlByaXZhY3kgUG9saWN5PC9hPjwvc3Ryb25nPjwvcD4ifQ=="> <div class="copyright"> <div>&copy; 2023&nbsp;</div> 
+ <div><p class="rteBlock">All Rights Reserved | Webshure | <strong><a value="privacyd982ea0f" label="" type="page" href="/privacyd982ea0f" data-runtime-url="/privacyd982ea0f">Privacy Policy</a></strong></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="showOnMedium layout-drawer-hamburger hamburger-on-header" id="layout-drawer-hamburger" role="button" aria-label="menu opener" tabindex="0"> <span class="hamburger__slice"></span> 
+ <span class="hamburger__slice"></span> 
+ <span class="hamburger__slice"></span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+    </div>
+</div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+<!-- ========= JS Section ========= -->
+
+<script>
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "ENGLISH"
+    window.isSitePreview = false;
+</script>
+<script>
+    window.customWidgetsFunctions["5bd886efb15a44fd98f083f461519ec8~224"] = function (element, data, api) {
+        
+$(element).find('a').each(function() {
+    var href = buildNewHref(cleanPhoneText(data.config.waNumber), cleanAndEncodeText(data.config.defaultMessage));
+    $(this).attr('href', href);
+    
+    function handleClick(){
+        dm_gaq_push_event && dm_gaq_push_event('Whatsapp', 'click')
+        window.dmsnowplow && window.snowplow('trackStructEvent', 'Whatsapp-share','click')
+    }
+    
+    element.addEventListener("click", handleClick)
+
+})
+
+function cleanPhoneText(phone) {
+    return phone ? phone.replace(/[^0-9]/g, '') : "";
+}
+
+function cleanAndEncodeText(text) {
+    var returnString="";
+    if (text) {
+        returnString = text.replace(/<br>/g, '\n');
+        returnString = encodeURIComponent(returnString);
+    }
+    return returnString;
+}
+
+function buildNewHref (phone, text) {
+    var href;
+    if (data.inEditor) {
+        //editor is on touch device
+        if (window.isMobileDevice || window.parent.isTouchDevice) {
+            href = "https://wa.me/" + ( phone ? ( phone + '?' ) : '?' ) + "text=" + text;
+        }
+        //etitor on desktop
+        else {
+            href = "https://web.whatsapp.com/send?phone=" + phone + "&text=" + text;
+        }
+    }
+    // not in editor - runtime
+    else {
+         if (data.device === "desktop") {
+             href = "https://web.whatsapp.com/send?phone=" + phone + "&text=" + text;
+         }
+         //on touch device
+         else {
+             href = "https://wa.me/" + ( phone ? ( phone + '?' ) : '?' ) + "text=" + text;
+         }
+    }
+    return href;
+}
+
+    };
+</script>
+<script type="text/javascript">
+
+    var d_version = "22..86";
+    var build = "2023-06-21T06_55_20";
+    window['v' + 'ersion'] = d_version;
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2023-06-21T06_55_20";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            } else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+
+
+</script>
+<!-- Load jQuery -->
+<script type="text/javascript" id='d-js-jquery'
+        src="https://static.cdn-website.com/libs/jquery/jquery-3.7.0.min.js"></script>
+<!-- End Load jQuery -->
+
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+
+
+<script>
+    var _jquery = window.$;
+
+    var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+    jqueryAliases.forEach((alias) => {
+        Object.defineProperty(window, alias, {
+            get() {
+                return _jquery;
+            },
+            set() {
+                console.warn("Trying to over-write the global jquery object!");
+            }
+        });
+    });
+
+</script>
+<script>
+    window.cookiesNotificationMarkupPreview = ' <div> <p class=\"rteBlock\">We use cookies to ensure that we give you the best experience on our website. To learn more, go to the <a value=\"privacyd982ea0f\" label=\"\" type=\"page\" href=\"\/privacyd982ea0f\" data-runtime-url=\"\/privacyd982ea0f\">Privacy Page<\/a>.<\/p> \n<\/div> \n';
+</script>
+
+<!-- HEAD RT JS Include -->
+<script id='d-js-params'>
+    window.jQuery.migrateMute = true;
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["google.places.key"] = 'AIzaSyBAwUOqPUB1CU31yDztoZYaUE7sPv4ktEI';
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.opencage.token"] = '319e14f32bcce967ba55cd263478796d';
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    rtCommonProps["common.resources.dist.cdn"] =true;
+    rtCommonProps["common.build.dist.folder"] = 'production/3527';
+    rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/3527';
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] =true;
+    rtCommonProps["feature.flag.runtime.photoswipe.fix"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.respectCssAnimationProps.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"] =true;
+    rtCommonProps["feature.flag.runOnReadyNewTask"] =true;
+    rtCommonProps["feature.flag.addTargetBlankToExternalLinks"] =true;
+    rtCommonProps["unsuspendEcwidStoreOnRuntime.enabled"] =true;
+    rtCommonProps["keyboard.navigation.enabled"] =true;
+    rtCommonProps["runtime.navigationWidget.menu.clipPath"] =true;
+    rtCommonProps["scripts.widgetCount.enabled"] =true;
+    rtCommonProps["maps.cookiebot.enabled"] =true;
+
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'here';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["modules.resources.cdn"] =true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+    rtCommonProps["ecom.ecwid.categoryPage.modifyLinks"] = true;
+    rtCommonProps["ecom.ecwidNewUrlStructure.enabled"] = false;
+    rtCommonProps["ecom.ecwid.fixFacebookLink"] = true;
+    rtCommonProps["facebook.api.version"] = '7.0';
+    rtCommonProps["runtime.save.restore.function.bind"] =true;
+    rtCommonProps["feature.flag.photo.gallery.exact.size"] =false;
+    rtCommonProps["new.store.fix.ecwid.back.bug"] =true;
+    rtCommonProps["new.store.accountPage.ecwid.signIn.fix"] =true;
+    rtCommonProps["fix.ecwid.sign.in.page.with.return.url"] =true;
+    rtCommonProps["site.runtime.video.background.ssr"] =true;
+    rtCommonProps["geocode.search.localize"] =false;
+    rtCommonProps["facebook.runtime.widgets.upgrade"] =true;
+    rtCommonProps["feature.flag.runtime.inp.threshold"] =150;
+    rtCommonProps["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] =false;
+    rtCommonProps["feature.flag.performance.logs"] =true;
+    rtCommonProps["site.contact.form.fix.for.attribute"] =true;
+    rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+    rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+    rtCommonProps["contact.form.date.format.enabled"] = true;
+    rtCommonProps["platform.monolith.personalization.userVisitsCondition.inClient.enabled"] = true;
+    rtCommonProps["ecom.widgets.menu.categories.toggles.enabled"] =  true;
+    rtCommonProps["filestack.uploadToTempBucket.enabled"] = true;
+    rtCommonProps["platform.monolith.loginBar.getUserLoggedIn.enabled"] = true;
+</script>
+<script src="https://static.cdn-website.com/mnlt/production/3527/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js"  id="d-js-core"></script>
+<!-- End of HEAD RT JS Include -->
+<script src="https://static.cdn-website.com/mnlt/production/3527/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js" ></script>
+<script>jQuery.DM.updateWidthAndHeight();
+$(window).resize(function () {
+    
+});
+$(window).bind("orientationchange", function (e) {
+    $.layoutManager.initLayout();
+    
+});
+$(document).resize(function () {
+    
+});
+</script>
+<script type="text/javascript" id="d_track_campaign">
+(function() {
+ 	var campaign = (/utm_campaign=([^&]*)/).exec(window.location.search);
+
+ 	if (campaign && campaign != null && campaign.length > 1) {
+ 		campaign = campaign[1];
+ 		document.cookie = "_dm_rt_campaign=" + campaign + ";expires=" + new Date().getTime() + 24*60*60*1000 + ";domain=" + window.location.hostname + ";path=/";
+ 	}
+}());
+</script>
+<script type="text/javascript" >
+  var _dm_gaq = {};
+  var _gaq = _gaq || [];
+  var _dm_insite = [];
+</script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149872083-1"></script>
+	<script type="text/javascript" id="d_track_ga">
+	  _dm_gaq.siteAlias = '088b40b3';
+	  _dm_gaq.systemAggregatedGaqID = '';
+	  _dm_gaq.externalGaqID = 'UA-149872083-1';
+	  _dm_gaq.gaAggregatedEventAttributes = {
+		  'site_alias':  _dm_gaq.siteAlias,
+		  'product': 'DM_DIRECT',
+		  'plan': 'BUSINESS_PLUS',
+		  'dfooter': 'false',
+		  'sitetype': '1',
+		  'pwaEnabled': 'true'
+	  }
+
+	  _dm_gaq.pushEvent = function(trackingId, event, category, label, value, additionalParams) {
+	  	  var initialProps = {
+			  send_to: trackingId,
+			  event_category: category,
+			  event_label: label,
+			  value: value
+		  }
+		  additionalParams = additionalParams || {};
+	  	  var eventProps = $.extend({}, initialProps, additionalParams, trackingId === _dm_gaq.systemAggregatedGaqID?_dm_gaq.gaAggregatedEventAttributes:{});
+		  gtag('event', event, eventProps);
+	  }
+
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+	  function pushInsiteImpressions(id) {
+		  $.each(_dm_insite, function(idx, rule) {
+			  _dm_gaq.pushEvent(id, 'insite_impression', 'insite', rule.ruleType + '__' + rule.ruleId);
+		  });
+	  }
+
+	if(_dm_gaq.systemAggregatedGaqID){
+		// track aggregated account
+		gtag('config', '', {
+			'send_page_view': false,
+			'anonymize_ip': true,
+			'transport_type': 'beacon',
+			'custom_map': {'dimension1': 'site_alias', 'dimension2': 'product', 'dimension3': 'dFooter', 'dimension4': 'sitetype'}
+		});
+		gtag('set', 'developer_id.dMDU5Nj', true);
+
+		_dm_gaq.pushEvent('', 'page_view');
+		pushInsiteImpressions(_dm_gaq.systemAggregatedGaqID);
+	}
+
+	if(_dm_gaq.externalGaqID && _dm_gaq.externalGaqID!= '') {
+		gtag('config', 'UA-149872083-1', {
+			'send_page_view': false,
+			'anonymize_ip': true,
+			'transport_type': 'beacon',
+			'linker': {
+				'domains': ['webshure.com']
+			}
+		});
+		_dm_gaq.pushEvent('UA-149872083-1', 'page_view');
+		pushInsiteImpressions(_dm_gaq.externalGaqID);
+	}
+
+  </script>
+<script type="text/javascript" id="d_track_sp">
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+window.dmsnowplow  = window.snowplow;
+
+dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+  appId: '088b40b3'
+});
+
+dmsnowplow('trackPageView')
+$.each(_dm_insite, function(idx, rule) {
+	//('trackStructEvent', 'category','action','label','property','value');
+			// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+	        // the tracking is in popup.js
+			if (rule.actionName !== "popup") {
+                dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+            }
+ 			$(document).ready(function(){
+ 				$.DM.events.trigger('event-ruleTriggered', {value: rule})}
+ 			);
+ 		});
+</script>
+   <div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root"
+        data-locale="en"></div>
+<!-- Alias: 088b40b3 -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization">
+// Collects client data and updates cookies used by smart sites
+var expireDays = 365,visitLength = 30 * 60000;
+$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), expireDays);
+function setSmartSiteCookies() {
+	setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+}
+$.DM.events.on("afterAjax", setSmartSiteCookies);
+setSmartSiteCookies();
+</script>
+<script type="text/javascript">
+    
+    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+    
+    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+    Parameters.HomeLinkText = 'Home';
+    </script>
+<script>
+    jQuery(window).on('load', function () {
+        try {
+            jQuery.DM.updateIOSHeight();
+        } catch (e) {
+        }
+    });
+</script>
+<script>
+    dmAPI.loadScript(
+        window.rtCommonProps['common.resources.cdn.host'] + '/libs/lozad/1.15.0/lozad.min.js',
+        function () {
+            dmAPI.runOnReady('lozadInit', function () {
+                window.document.querySelectorAll('img.lazy').forEach(function (img) {
+                    img.addEventListener('load', function (event) {
+                        var img = event.target;
+                        img.style.filter = 'blur(0)';
+                        setTimeout(function () {
+                            $(img).closest('.imageWidget').addClass('lazyLoaded');
+                        }, 250)
+                    });
+                });
+                lozad('.lazy', {
+                    threshold: 0.1,
+                    loaded: function (element) {
+                        if (element.getAttribute('data-background-image')) {
+                            element.style.setProperty(
+                                'background-image',
+                                "url('" + element.getAttribute('data-background-image') + "')",
+                                "important"
+                            );
+                        }
+                    }
+                }).observe();
+            });
+        }
+    );
+</script>
+<!--  End Script tags -->
+
+<!--  Begin Body End Markup -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4GKPH8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!--  Clickcease.com tracking-->
+<script type='text/javascript'>var script = document.createElement('script');
+script.async = true; script.type = 'text/javascript';
+var target = 'https://www.clickcease.com/monitor/stat.js';
+script.src = target;var elem = document.head;elem.appendChild(script);
+</script>
+<noscript>
+<a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com/stats/stats.aspx' alt='ClickCease'/></a>
+</noscript>
+<!--  Clickcease.com tracking-->
+
+<chat-widget style="--chat-widget-primary-color: #25aae0; --chat-widget-active-color:#25aae0 ;--chat-widget-bubble-color: #25aae0" location-id="iXRfunWhXh8IeImycNEr" Chat to us to learn more about our services." legal-msg="By submitting you agree to receive SMS or e-mails for the provided channel." show-prompt="false" use-email-field="true" support-contact="info@webshure.co.za" agency-name="Blam Websites Ltd" agency-website="blam.online" ></chat-widget> <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" > </script>
+<!--  End Body End Markup -->
+
+<!--  Site Wide Html Markup -->
+<!--  Site Wide Html Markup -->
+</body>
+</html>

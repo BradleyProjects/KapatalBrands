@@ -1,0 +1,3013 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">
+
+<head>
+
+  <script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+      AjaxContainer: 'div.dmBody',
+      WrappingContainer: 'div.dmOuter',
+      HomeUrl: 'https://www.kapatal.co.za/',
+      AccountUUID: '52fffdd495354f418ecfa045717ee96d',
+      SystemID: 'US_DIRECT_PRODUCTION',
+      SiteAlias: 'e02d5775',
+      SiteType: atob('RFVEQU9ORQ=='),
+      PublicationDate: 'Fri Apr 21 06:41:35 UTC 2023',
+      ExternalUid: null,
+      IsSiteMultilingual: false,
+      InitialPostAlias: '',
+      InitialDynamicItem: '',
+      DynamicPageInfo: {
+        isDynamicPage: false,
+        base64JsonRowData: 'null',
+      },
+      InitialPageAlias: 'about-us',
+      InitialPageUuid: '75e3f8f50b814b9ca7c00c1f2ff1150d',
+      InitialEncodedPageAlias: 'YWJvdXQtdXM=',
+      CurrentPageUrl: '',
+      IsCurrentHomePage: false,
+      AllowAjax: false,
+      AfterAjaxCommand: null,
+      HomeLinkText: 'Back To Home',
+      UseGalleryModule: false,
+      CurrentThemeName: 'Layout Theme',
+      ThemeVersion: '9540',
+      DefaultPageAlias: '',
+      RemoveDID: true,
+      WidgetStyleID: null,
+      IsHeaderFixed: false,
+      IsHeaderSkinny: false,
+      IsBfs: true,
+      StorePageAlias: 'null',
+      StorePagesUrls: 'e30=',
+      IsNewStore: 'false',
+      StorePath: '',
+      StoreId: 'null',
+      StoreVersion: 0,
+      StoreBaseUrl: '',
+      StoreCleanUrl: true,
+      StoreDisableScrolling: true,
+      IsStoreSuspended: false,
+      NotificationSubDomain: 'kapatal',
+      HasCustomDomain: true,
+      showCookieNotification: true,
+      cookiesNotificationMarkup: ' <div> <p class=\"rteBlock\">We use cookies to ensure that we give you the best experience on our website. To learn more, go to the <a value=\"privacy\" label=\"\" type=\"page\" href=\"\/privacy\" data-runtime-url=\"\/privacy\">Privacy Page.<\/a> \n<\/p> \n<\/div> \n',
+      translatedPageUrl: '',
+      isFastMigrationSite: false,
+      sidebarPosition: 'NA',
+      currentLanguage: 'en',
+      currentLocale: 'en',
+      NavItems: '{}',
+      errors: {
+        general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+        password: 'Incorrect name/password combination',
+        tryAgain: 'Try again'
+      },
+      NavigationAreaParams: {
+        ShowBackToHomeOnInnerPages: true,
+        NavbarSize: 4,
+        NavbarLiveHomePage: 'https://www.kapatal.co.za/',
+        BlockContainerSelector: '.dmBody',
+        NavbarSelector: '#dmNav:has(a)',
+        SubNavbarSelector: '#subnav_main'
+      },
+      hasCustomCode: true,
+      planID: '7',
+      customTemplateId: 'null',
+      siteTemplateId: 'null',
+      productId: 'DM_DIRECT',
+      disableTracking: false,
+      pageType: 'FROM_SCRATCH',
+      isRuntimeServer: true,
+      isInEditor: false,
+    };
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 6;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+  </script>
+
+  <!-- Injecting site-wide to the head -->
+
+  <!-- End Injecting site-wide to the head -->
+
+  <!-- Inject secured cdn script -->
+
+  <!-- ========= Meta Tags ========= -->
+  <!-- PWA settings -->
+  <script>
+    function toHash(str) {
+      var hash = 5381,
+        i = str.length;
+      while (i) {
+        hash = hash * 33 ^ str.charCodeAt(--i)
+      }
+      return hash >>> 0
+    }
+  </script>
+  <script>
+    (function(global) {
+      //const cacheKey = global.cacheKey;
+      const isOffline = 'onLine' in navigator && navigator.onLine === false;
+      const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+      if (isOffline) {
+        console.log('offline mode');
+      }
+      if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+      }
+      if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function() {
+          const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+          navigator.serviceWorker
+            .register(serviceWorkerPath, {
+              scope: './'
+            })
+            .then(
+              function(registration) {
+                // Registration was successful
+                console.log(
+                  'ServiceWorker registration successful with scope: ',
+                  registration.scope
+                );
+              },
+              function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+              }
+            )
+            .catch(function(err) {
+              console.log(err);
+            });
+        });
+        // helper function to refresh the page
+        var refreshPage = (function() {
+          var refreshing;
+          return function() {
+            if (refreshing) return;
+            // prevent multiple refreshes
+            var refreshkey = 'refreshed' + location.href;
+            var prevRefresh = localStorage.getItem(refreshkey);
+            if (prevRefresh) {
+              localStorage.removeItem(refreshkey);
+              if (Date.now() - prevRefresh < 30000) {
+                return; // dont go into a refresh loop
+              }
+            }
+            refreshing = true;
+            localStorage.setItem(refreshkey, Date.now());
+            console.log('refereshing page');
+            window.location.reload();
+          };
+        })();
+
+        function messageServiceWorker(data) {
+          return new Promise(function(resolve, reject) {
+            if (navigator.serviceWorker.controller) {
+              var worker = navigator.serviceWorker.controller;
+              var messageChannel = new MessageChannel();
+              messageChannel.port1.onmessage = replyHandler;
+              worker.postMessage(data, [messageChannel.port2]);
+
+              function replyHandler(event) {
+                resolve(event.data);
+              }
+            } else {
+              resolve();
+            }
+          });
+        }
+      }
+    })(window);
+  </script>
+  <!-- Add manifest -->
+  <!-- End PWA settings -->
+
+  <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+  <meta charset="utf-8">
+
+  <link rel="canonical" href="https://www.kapatal.co.za/about-us">
+
+  <meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!--Add favorites icons-->
+
+  <link rel="apple-touch-icon" href="https://irp.cdn-website.com/e02d5775/dms3rep/multi/logo+%282%29.png" />
+
+  <link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/e02d5775/site_favicon_16_1655319736618.ico" />
+
+  <!-- End favorite icons -->
+
+  <link rel="preconnect" href="https://lirp.cdn-website.com/" crossorigin />
+
+  <!-- render the required CSS and JS in the head section -->
+  <script>
+    window.SystemID = 'US_DIRECT_PRODUCTION';
+    if (!window.dmAPI) {
+      window.dmAPI = {
+        registerExternalRuntimeComponent: function() {},
+        getCurrentDeviceType: function() {
+          return window._currentDevice;
+        }
+      };
+    }
+    if (!window.requestIdleCallback) {
+      window.requestIdleCallback = function(fn) {
+        setTimeout(fn, 0);
+      }
+    }
+  </script>
+  <!-- loadCSS function -->
+  <script>
+    /**
+     * There are a few <link> tags with CSS resource in them that are preloaded in the page
+     * in each of those there is a "onload" handler which invokes the loaddCSS callback
+     * defined here.
+     * We are monitoring 3 main CSS files - the runtime, the global and the page,
+     * and once all of them are loaded we convert the <link> tag into a valid stylesheet type
+     * which then appends the styles to the page.
+     */
+    (function() {
+      let cssLinks = {};
+
+      function loadCssLink(link) {
+        link.onload = null;
+        link.rel = "stylesheet";
+        link.type = "text/css";
+      }
+
+      function checkCss() {
+        if (cssLinks && cssLinks.runtime && cssLinks.global) {
+          loadCssLink(cssLinks.runtime);
+          loadCssLink(cssLinks.global);
+          cssLinks = null;
+        }
+      }
+
+      function loadCSS(link) {
+        try {
+          var urlParams = new URLSearchParams(window.location.search);
+          var noCSS = !!urlParams.get("nocss");
+          var cssTimeout = urlParams.get("cssTimeout") || 0;
+          if (noCSS) {
+            return;
+          }
+          if (link.href.includes("d-css-runtime")) {
+            cssLinks.runtime = link;
+            checkCss();
+          } else if (link.id === "siteGlobalCss") {
+            cssLinks.global = link;
+            checkCss();
+          } else {
+            requestIdleCallback(function() {
+              window.setTimeout(function() {
+                loadCssLink(link);
+              }, parseInt(cssTimeout, 10));
+            });
+          }
+        } catch (e) {
+          /* Never fail - this is just a tool for measurements */
+        }
+      }
+      window.loadCSS = window.loadCSS || loadCSS;
+    })();
+  </script>
+
+  <script data-role="deferred-init" type="text/javascript">
+    /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+    function Def() {
+      this.promise = new Promise((function(a, b) {
+        this.resolve = a, this.reject = b
+      }).bind(this))
+    }
+    const defs = {};
+    window.getDeferred = function(a) {
+      return null == defs[a] && (defs[a] = new Def), defs[a]
+    }
+    window.waitForDeferred = function(b, a, c) {
+      let d = window?.getDeferred?.(b);
+      d
+        ?
+        d.promise.then(a) :
+        c && ["complete", "interactive"].includes(document.readyState) ?
+        setTimeout(a, 1) :
+        c ?
+        document.addEventListener("DOMContentLoaded", a) :
+        console.error(`Deferred  does not exist`);
+    };
+  </script>
+  <style id="forceCssIncludes">
+    /* This file is auto-generated from a `scss` file with the same name */
+    .videobgwrapper {
+      overflow: hidden;
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      border-radius: inherit
+    }
+
+    .videobgframe {
+      position: absolute;
+      width: 101%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      object-fit: fill
+    }
+
+    #dm video.videobgframe {
+      margin: 0
+    }
+
+    @media (max-width:767px) {
+      .dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+        min-height: 80vh
+      }
+    }
+
+    @media (min-width:1025px) {
+      .dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+        min-height: 45vh
+      }
+    }
+
+    @media (min-width:768px) and (max-width:1024px) {
+      .responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done) {
+        min-height: 45vh
+      }
+    }
+
+    #dm [data-show-on-page-only] {
+      display: none !important
+    }
+  </style>
+  <style id="cssVariables" type="text/css">
+
+  </style>
+
+  <!-- Google Fonts Include -->
+
+  <!-- loadCSS function -->
+  <script>
+    /**
+     * There are a few <link> tags with CSS resource in them that are preloaded in the page
+     * in each of those there is a "onload" handler which invokes the loaddCSS callback
+     * defined here.
+     * We are monitoring 3 main CSS files - the runtime, the global and the page,
+     * and once all of them are loaded we convert the <link> tag into a valid stylesheet type
+     * which then appends the styles to the page.
+     */
+    (function() {
+      let cssLinks = {};
+
+      function loadCssLink(link) {
+        link.onload = null;
+        link.rel = "stylesheet";
+        link.type = "text/css";
+      }
+
+      function checkCss() {
+        if (cssLinks && cssLinks.runtime && cssLinks.global) {
+          loadCssLink(cssLinks.runtime);
+          loadCssLink(cssLinks.global);
+          cssLinks = null;
+        }
+      }
+
+      function loadCSS(link) {
+        try {
+          var urlParams = new URLSearchParams(window.location.search);
+          var noCSS = !!urlParams.get("nocss");
+          var cssTimeout = urlParams.get("cssTimeout") || 0;
+          if (noCSS) {
+            return;
+          }
+          if (link.href.includes("d-css-runtime")) {
+            cssLinks.runtime = link;
+            checkCss();
+          } else if (link.id === "siteGlobalCss") {
+            cssLinks.global = link;
+            checkCss();
+          } else {
+            requestIdleCallback(function() {
+              window.setTimeout(function() {
+                loadCssLink(link);
+              }, parseInt(cssTimeout, 10));
+            });
+          }
+        } catch (e) {
+          /* Never fail - this is just a tool for measurements */
+        }
+      }
+      window.loadCSS = window.loadCSS || loadCSS;
+    })();
+  </script>
+
+  <link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css?family=Roboto:100,200,300,400,500,600,700,800,900|Montserrat:100,200,300,400,500,600,700,800,900|Lato:100,200,300,400,500,600,700,800,900|Barlow:100,200,300,400,500,600,700,800,900|Source+Sans+Pro:100,200,300,400,500,600,700,800,900|Open+Sans:100,200,300,400,500,600,700,800,900&amp;subset=latin-ext&amp;display=swap" />
+
+  <!-- RT CSS Include d-css-runtime-desktop-one-package-new-->
+  <link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/3514/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-new.min.css" />
+
+  <!-- End of RT CSS Include -->
+
+  <link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/production_3514/78acaadbfad15d97f22c4fe01ab3231f.css" id="widgetCSS" />
+
+  <!-- Support `img` size attributes -->
+  <style>
+    img[width][height] {
+      height: auto;
+    }
+  </style>
+
+  <!-- Support showing sticky element on page only -->
+  <style>
+    body[data-page-alias="about-us"] #dm [data-show-on-page-only="about-us"] {
+      display: block !important;
+    }
+  </style>
+
+  <!-- This is populated in Ajax navigation -->
+  <style id="pageAdditionalWidgetsCss" type="text/css">
+  </style>
+
+  <!-- Site CSS -->
+  <link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/e02d5775/files/e02d5775_1.min.css?v=83" id="siteGlobalCss" />
+
+  <style id="customWidgetStyle" type="text/css">
+    .widget-f6a6cd {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      width: 200px;
+      height: 200px;
+    }
+
+    .widget-f6a6cd.noCursor {
+      cursor: initial;
+    }
+
+    .widget-f6a6cd .lottie-link {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .widget-f6a6cd .lottie-link a {
+      width: 100%;
+      height: 100%;
+    }
+
+    .widget-1f5975 .copyright {
+      font-size: 13px;
+      display: flex;
+      text-align: left;
+      justify-content: flex-start;
+    }
+  </style>
+  <style id="innerPagesStyle" type="text/css">
+
+  </style>
+
+  <style id="additionalGlobalCss" type="text/css">
+  </style>
+
+  <style id="pagestyle" type="text/css">
+    *#dm *.dmBody div.u_1900687984 {
+      background-color: rgba(0, 0, 0, 0) !important;
+    }
+
+    *#dm *.dmBody *.u_1640311487:before {
+      opacity: 0.5 !important;
+      background-color: rgb(255, 255, 255) !important;
+    }
+
+    *#dm *.dmBody *.u_1640311487.before {
+      opacity: 0.5 !important;
+      background-color: rgb(255, 255, 255) !important;
+    }
+
+    *#dm *.dmBody *.u_1640311487>.bgExtraLayerOverlay {
+      opacity: 0.5 !important;
+      background-color: rgb(255, 255, 255) !important;
+    }
+
+    *#dm *.dmBody div.u_1640311487:before {
+      background-color: rgba(10, 15, 41, 1) !important;
+      opacity: 0.7 !important;
+    }
+
+    *#dm *.dmBody div.u_1640311487.before {
+      background-color: rgba(10, 15, 41, 1) !important;
+      opacity: 0.7 !important;
+    }
+
+    *#dm *.dmBody div.u_1640311487>.bgExtraLayerOverlay {
+      background-color: rgba(10, 15, 41, 1) !important;
+      opacity: 0.7 !important;
+    }
+
+    .u_1835569252 {}
+
+    *#dm *.dmBody div.u_1835569252 {
+      background-color: rgba(255, 255, 255, 1) !important;
+    }
+
+    *#dm *.dmBody div.u_1640311487 {
+      background-color: rgba(10, 15, 41, 1) !important;
+      background-repeat: no-repeat !important;
+      background-image: none !important;
+      background-size: cover !important;
+    }
+
+    .u_1215167274 {}
+
+    *#dm *.dmBody div.u_1215167274 {
+      background-color: rgba(255, 255, 255, 1) !important;
+    }
+
+    *#dm *.dmBody div.u_1303286331 .slides .slide-button {
+      border-style: solid !important;
+      border-width: 0 !important;
+    }
+
+    *#dm *.dmBody div.u_1303286331 *.flexslider .flex-viewport {
+      width: 150px !important;
+      overflow: visible !important;
+    }
+
+    *#dm *.dmBody div.u_1303286331 *.flexslider .slides>li {
+      background-size: contain !important;
+      margin-left: 10px !important;
+      margin-right: 10px !important;
+      border: 1px solid #e1e1e1 !important;
+    }
+
+    *#dm *.dmBody div.u_1303286331 .flexslider .slides>li .slide-inner {
+      visibility: visible !important;
+    }
+
+    *#dm *.dmBody div.u_1303286331 *.flexslider:not([position]) .slides>li[layout="bottom"] {
+      background-color: transparent !important;
+    }
+
+    *#dm *.dmBody div.u_1303286331 *.flexslider ul.flex-direction-nav li {
+      margin: 0 !important;
+      float: right !important;
+    }
+
+    *#dm *.dmBody div.u_1303286331 *.flexslider ul.flex-direction-nav li:first-child {
+      float: left !important;
+    }
+
+    *#dm *.dmBody div.u_1303286331 .color-overlay {
+      background-color: rgba(0, 0, 0, 0) !important;
+    }
+
+    *#dm *.dmBody *.u_1621376135 {
+      background-image: url(https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/Tuba+logo-2880w.png) !important;
+    }
+
+    *#dm *.dmBody div.u_1562165050 {
+      background-repeat: no-repeat !important;
+      background-image: none !important;
+      background-size: cover !important;
+      box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+    }
+
+    *#dm *.dmBody *.u_1053499902 {
+      width: 100% !important;
+    }
+
+    *#dm *.dmBody *.u_1325151477:before {
+      opacity: 0.5 !important;
+      background-color: rgb(255, 255, 255) !important;
+    }
+
+    *#dm *.dmBody *.u_1325151477.before {
+      opacity: 0.5 !important;
+      background-color: rgb(255, 255, 255) !important;
+    }
+
+    *#dm *.dmBody *.u_1325151477>.bgExtraLayerOverlay {
+      opacity: 0.5 !important;
+      background-color: rgb(255, 255, 255) !important;
+    }
+
+    *#dm *.dmBody div.u_1325151477:before {
+      background-color: rgba(43, 43, 43, 1) !important;
+      opacity: 0.7 !important;
+    }
+
+    *#dm *.dmBody div.u_1325151477.before {
+      background-color: rgba(43, 43, 43, 1) !important;
+      opacity: 0.7 !important;
+    }
+
+    *#dm *.dmBody div.u_1325151477>.bgExtraLayerOverlay {
+      background-color: rgba(43, 43, 43, 1) !important;
+      opacity: 0.7 !important;
+    }
+
+    *#dm *.dmBody div.u_1325151477 {
+      background-color: rgba(10, 15, 41, 1) !important;
+      background-repeat: no-repeat !important;
+      background-image: none !important;
+      background-size: cover !important;
+    }
+
+    *#dm *.dmBody div.u_1730571227 {
+      background-repeat: no-repeat !important;
+      background-image: none !important;
+      background-size: cover !important;
+      box-shadow: rgba(0, 0, 0, 0.25) 0 3px 11px 0 !important;
+      -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 3px 11px 0 !important;
+      -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 3px 11px 0 !important;
+      background-color: rgba(10, 15, 41, 1) !important;
+    }
+
+    *#dm *.dmBody *.u_1849693312 {
+      width: 100% !important;
+    }
+
+    *#dm *.dmBody div.u_1511640900 {
+      background-color: rgba(255, 255, 255, 1) !important;
+      background-repeat: no-repeat !important;
+      background-image: url(https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/9-1920w.jpg) !important;
+      background-size: cover !important;
+    }
+
+    *#dm *.dmBody div.u_1588863408 {
+      background-color: rgba(255, 255, 255, 1) !important;
+    }
+
+    *#dm *.dmBody div.u_1743880298 {
+      background-color: rgba(255, 255, 255, 1) !important;
+    }
+
+    *#dm *.dmBody div.u_1415869778 {
+      background-repeat: no-repeat !important;
+      background-image: url(https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/2-2880w.png) !important;
+    }
+  </style>
+
+  <style id="pagestyleDevice" type="text/css">
+    *#dm *.dmBody div.u_1621698449 {
+      margin-left: 0 !important;
+      padding-top: 40px !important;
+      padding-left: 0 !important;
+      padding-bottom: 40px !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      margin-right: 0 !important;
+      padding-right: 40px !important;
+    }
+
+    *#dm *.dmBody div.u_1562165050 {
+      background-position: 50% 50% !important;
+    }
+
+    *#dm *.d-page-1683814473 DIV.dmInner {
+      background-repeat: no-repeat !important;
+      background-image: none !important;
+      background-size: cover !important;
+      background-attachment: fixed !important;
+      background-color: rgba(255, 255, 255, 1) !important;
+      background-position: 100% 100% !important;
+    }
+
+    *#dm *.d-page-1683814473 DIV#dmSlideRightNavRight {
+      background-repeat: no-repeat !important;
+      background-image: none !important;
+      background-size: cover !important;
+      background-attachment: fixed !important;
+      background-color: rgba(255, 255, 255, 1) !important;
+      background-position: 100% 100% !important;
+    }
+
+    *#dm *.dmBody div.u_1640311487 {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      float: none !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: auto !important;
+      position: relative !important;
+      height: auto !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      max-width: none !important;
+      min-width: 0 !important;
+      text-align: center !important;
+      margin-left: 0 !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      margin-right: 0 !important;
+      background-position: 50% 50% !important;
+    }
+
+    *#dm *.dmBody div.u_1900687984 {
+      margin-right: 0 !important;
+      padding-top: 100px !important;
+      padding-left: 0 !important;
+      padding-bottom: 20px !important;
+      margin-left: 0 !important;
+      padding-right: 40px !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+
+    *#dm *.dmBody div.u_1388272068 {
+      float: none !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: calc(100% - 0px) !important;
+      position: relative !important;
+      height: auto !important;
+      padding-top: 2px !important;
+      padding-left: 0 !important;
+      padding-bottom: 2px !important;
+      max-width: 100% !important;
+      padding-right: 0 !important;
+      min-width: 25px !important;
+      margin-right: auto !important;
+      margin-left: auto !important;
+      margin-top: 0 !important;
+      margin-bottom: 8px !important;
+    }
+
+    *#dm *.dmBody div.u_1215167274 {
+      padding-top: 60px !important;
+      padding-left: 40px !important;
+      padding-bottom: 60px !important;
+      padding-right: 40px !important;
+      width: auto !important;
+      margin-left: 0 !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    *#dm *.dmBody div.u_1053499902 {
+      float: none !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: calc(100% - 0px) !important;
+      position: relative !important;
+      padding-top: 0 !important;
+      padding-left: 0 !important;
+      padding-bottom: 0 !important;
+      margin-right: 584px !important;
+      margin-left: 0 !important;
+      max-width: 703.688px !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      padding-right: 0 !important;
+      min-width: 25px !important;
+      text-align: start !important;
+      display: block !important;
+    }
+
+    *#dm *.dmBody div.u_1303286331 {
+      height: 125px !important;
+      float: none !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: calc(100% - 121px) !important;
+      position: relative !important;
+      padding-top: 0 !important;
+      padding-left: 0 !important;
+      padding-bottom: 0 !important;
+      margin-right: auto !important;
+      margin-left: auto !important;
+      max-width: 1220px !important;
+      margin-top: 31px !important;
+      margin-bottom: 0 !important;
+      padding-right: 0 !important;
+      min-width: 25px !important;
+      text-align: start !important;
+    }
+
+    *#dm *.dmBody div.u_1835569252 {
+      padding-top: 43.5px !important;
+      padding-left: 40px !important;
+      padding-bottom: 43.5px !important;
+      padding-right: 40px !important;
+      width: auto !important;
+      margin-left: 0 !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      margin-right: 0 !important;
+      float: none !important;
+      top: 0 !important;
+      left: 0 !important;
+      position: relative !important;
+      height: auto !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      text-align: start !important;
+    }
+
+    *#dm *.dmBody div.u_1588863408 {
+      float: none !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: auto !important;
+      position: relative !important;
+      height: auto !important;
+      padding-top: 33.5px !important;
+      padding-left: 40px !important;
+      padding-bottom: 33.5px !important;
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+      max-width: 100% !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      padding-right: 40px !important;
+      min-width: 0 !important;
+      text-align: start !important;
+    }
+
+    *#dm *.dmBody div.u_1325151477 {
+      padding-top: 80px !important;
+      padding-left: 40px !important;
+      padding-bottom: 80px !important;
+      padding-right: 40px !important;
+      width: auto !important;
+      background-position: 50% 50% !important;
+      background-attachment: fixed !important;
+    }
+
+    *#dm *.dmBody div.u_1730571227 {
+      background-position: 50% 50% !important;
+      background-repeat: no-repeat !important;
+      background-size: contain !important;
+    }
+
+    *#dm *.dmBody div.u_1511640900 {
+      margin-left: 0 !important;
+      padding-top: 40px !important;
+      padding-left: 40px !important;
+      padding-bottom: 40px !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      margin-right: 0 !important;
+      padding-right: 0 !important;
+      background-position: 50% 50% !important;
+    }
+
+    *#dm *.dmBody div.u_1825016937 {
+      height: 237px !important;
+    }
+
+    *#dm *.dmBody div.u_1903788713 {
+      float: none !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: calc(100% - 0px) !important;
+      position: relative !important;
+      height: auto !important;
+      padding-top: 2px !important;
+      padding-left: 0 !important;
+      padding-bottom: 2px !important;
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+      max-width: 486px !important;
+      margin-top: 12px !important;
+      margin-bottom: 0 !important;
+      padding-right: 0 !important;
+      min-width: 25px !important;
+      display: block !important;
+    }
+
+    *#dm *.dmBody div.u_1849693312 {
+      float: none !important;
+      top: 0px !important;
+      left: 0px !important;
+      width: calc(100% - 0px) !important;
+      position: relative !important;
+      padding-top: 0px !important;
+      padding-left: 0px !important;
+      padding-bottom: 0px !important;
+      margin-right: 0px !important;
+      margin-left: 0px !important;
+      max-width: 532px !important;
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+      padding-right: 0px !important;
+      min-width: 25px !important;
+      text-align: start !important;
+      height: auto !important;
+    }
+
+    *#dm *.dmBody div.u_1415869778 {
+      background-attachment: initial !important;
+      background-size: cover !important;
+      float: none !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: auto !important;
+      position: relative !important;
+      height: auto !important;
+      padding-top: 72px !important;
+      padding-left: 40px !important;
+      padding-bottom: 72px !important;
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+      max-width: 100% !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      padding-right: 40px !important;
+      min-width: 0 !important;
+      text-align: start !important;
+      background-position: 50% 50% !important;
+    }
+
+    *#dm *.dmBody div.u_1956611239 {
+      display: block !important;
+      float: none !important;
+      top: 0px !important;
+      left: 0px !important;
+      width: 1558px !important;
+      position: relative !important;
+      height: auto !important;
+      padding-top: 0px !important;
+      padding-left: 100px !important;
+      padding-bottom: 0px !important;
+      max-width: 100% !important;
+      padding-right: 0px !important;
+      min-width: 0 !important;
+      margin-right: 0px !important;
+      margin-left: 0px !important;
+      margin-top: -6px !important;
+      margin-bottom: 8px !important;
+    }
+
+    *#dm *.dmBody div.u_1002009148 {
+      float: none !important;
+      top: 0px !important;
+      left: 0px !important;
+      width: calc(100% - 0px) !important;
+      position: relative !important;
+      height: 360px !important;
+      padding-top: 0px !important;
+      padding-left: 0px !important;
+      padding-bottom: 0px !important;
+      margin-right: 0px !important;
+      margin-left: 0px !important;
+      max-width: 100% !important;
+      margin-top: 35px !important;
+      margin-bottom: 0px !important;
+      padding-right: 0px !important;
+      min-width: 25px !important;
+      text-align: start !important;
+    }
+
+    *#dm *.dmBody div.u_1672302523 {
+      float: none !important;
+      top: 0px !important;
+      left: 0px !important;
+      width: 577.8px !important;
+      position: relative !important;
+      height: auto !important;
+      padding-top: 2px !important;
+      padding-left: 0px !important;
+      padding-bottom: 2px !important;
+      margin-right: auto !important;
+      margin-left: 0 !important;
+      max-width: 100% !important;
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+      padding-right: 0px !important;
+      min-width: 0 !important;
+      display: block !important;
+    }
+
+    *#dm *.dmBody div.u_1505639096 {
+      float: none !important;
+      top: 0px !important;
+      left: 0px !important;
+      width: 577.8px !important;
+      position: relative !important;
+      height: auto !important;
+      padding-top: 2px !important;
+      padding-left: 0px !important;
+      padding-bottom: 2px !important;
+      max-width: 100% !important;
+      padding-right: 0px !important;
+      min-width: 0 !important;
+      margin-right: auto !important;
+      margin-left: 0 !important;
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+      display: block !important;
+    }
+
+    *#dm *.dmBody div.u_1758604060 {
+      float: none !important;
+      top: 0px !important;
+      left: 0px !important;
+      width: 560px !important;
+      position: relative !important;
+      height: auto !important;
+      padding-top: 2px !important;
+      padding-left: 0px !important;
+      padding-bottom: 2px !important;
+      max-width: 100% !important;
+      padding-right: 0px !important;
+      min-width: 0 !important;
+      margin-right: auto !important;
+      margin-left: 0 !important;
+      margin-top: 0px !important;
+      margin-bottom: 8px !important;
+      display: block !important;
+    }
+
+    *#dm *.dmBody div.u_1465700246 {
+      float: none !important;
+      top: 0px !important;
+      left: 0px !important;
+      width: 543px !important;
+      position: relative !important;
+      height: auto !important;
+      padding-top: 2px !important;
+      padding-left: 0px !important;
+      padding-bottom: 2px !important;
+      margin-right: auto !important;
+      margin-left: 0 !important;
+      max-width: 100% !important;
+      margin-top: 8px !important;
+      margin-bottom: 8px !important;
+      padding-right: 0px !important;
+      min-width: 0 !important;
+      display: block !important;
+    }
+
+    *#dm *.dmBody div.u_1019975624 {
+      float: none !important;
+      top: 0px !important;
+      left: 0px !important;
+      width: 560px !important;
+      position: relative !important;
+      height: auto !important;
+      padding-top: 2px !important;
+      padding-left: 0px !important;
+      padding-bottom: 2px !important;
+      max-width: 100% !important;
+      padding-right: 0px !important;
+      min-width: 0 !important;
+      margin-right: auto !important;
+      margin-left: 0 !important;
+      margin-top: 40px !important;
+      margin-bottom: 0px !important;
+      display: block !important;
+    }
+  </style>
+
+  <!-- Flex Sections CSS -->
+
+  <style id="globalFontSizeStyle" type="text/css">
+    .font-size-50,
+    .size-50,
+    .size-50>font {
+      font-size: 50px !important;
+    }
+
+    .font-size-50,
+    .size-50,
+    .size-50>font {
+      font-size: 50px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-14,
+    .size-14,
+    .size-14>font {
+      font-size: 14px !important;
+    }
+
+    .font-size-12,
+    .size-12,
+    .size-12>font {
+      font-size: 12px !important;
+    }
+
+    .font-size-12,
+    .size-12,
+    .size-12>font {
+      font-size: 12px !important;
+    }
+
+    .font-size-12,
+    .size-12,
+    .size-12>font {
+      font-size: 12px !important;
+    }
+
+    .font-size-12,
+    .size-12,
+    .size-12>font {
+      font-size: 12px !important;
+    }
+  </style>
+  <style id="pageFontSizeStyle" type="text/css">
+  </style>
+
+  <style id="hideAnimFix">
+    .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']),
+    .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+      visibility: hidden;
+    }
+
+    .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']),
+    .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+      visibility: hidden !important;
+    }
+  </style>
+
+  <!-- End render the required css and JS in the head section -->
+
+  <link type="application/rss+xml" rel="alternate" href="https://www.kapatal.co.za//feed/rss2" />
+  <link type="application/atom+xml" rel="alternate" href="https://www.kapatal.co.za//feed/atom" />
+  <meta property="og:type" content="website" />
+  <title>
+
+    Kapatal Brands | About Us
+
+  </title>
+  <meta name="keywords" content="Kapatal Brands, Brands in South Africa, Car coatings in South Africa, Car coatings South Africa, Car coatings, Car Abrasives South Africa, Car abrasives in South Africa, Car abrasives, Car consumables South Africa, Car consumables in South Africa, Car Spray guns for sale South Africa, Car spray guns South Africa, Car accessories for sale South Africa, Car accessories in South Africa, About" />
+  <meta name="description" content="A relatively young company is a pioneer in the coatings market sector, established as a wholesaled company with the vision of being Southern Africa's leading strategic importing partner for international brands of excellence." />
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-N77KDK9');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Kapatal Brands | About Us" />
+  <meta name="twitter:description" content="A relatively young company is a pioneer in the coatings market sector, established as a wholesaled company with the vision of being Southern Africa's leading strategic importing partner for international brands of excellence." />
+  <meta property="og:description" content="A relatively young company is a pioneer in the coatings market sector, established as a wholesaled company with the vision of being Southern Africa's leading strategic importing partner for international brands of excellence." />
+  <meta property="og:title" content="Kapatal Brands | About Us" />
+
+  <!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+
+<body id="dmRoot" data-page-alias="about-us" class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite mac dmLargeBody " style="padding:0;margin:0;">
+
+  <!-- ========= Site Content ========= -->
+  <div id="dm" class='dmwr'>
+
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+      <div dmwrapped="true" id="1582363842" themewaschanged="true" desktop-global-classes="" tablet-global-classes="" mobile-global-classes="">
+        <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-sec hasAnimations rows-1200 hasStickyHeader dmPageBody d-page-1683814473 dmFreeHeader" id="dm-outer-wrapper" data-page-class="1683814473" data-buttonstyle="ROUND_SIDES" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex">
+          <div id="dmStyle_outerContainer" class="dmOuter">
+            <div id="dmStyle_innerContainer" class="dmInner">
+              <div class="dmLayoutWrapper standard-var dmStandardDesktop">
+                <div>
+                  <div id="iscrollBody">
+                    <div id="site_content">
+                      <div class="dmHeaderContainer fHeader d-header-wrapper">
+                        <div id="hcontainer" class="dmHeader p_hfcontainer u_hcontainer" freeheader="true" headerlayout="720" layout="78f5c343822e4eb3aac27f4ad5d13812===header" data-scrollable-target="body" data-scrollable-target-threshold="1" data-scroll-responder-id="1" logo-size-target="83%">
+                          <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236">
+                            <div class="dmRespRow dmDefaultListContentRow u_1610528234 fullBleedChanged fullBleedMode" style="text-align:center" id="1610528234">
+                              <div class="dmRespColsWrapper" id="1436300486">
+                                <div class="u_1316153450 small-12 dmRespCol large-1 medium-1" id="1316153450">
+                                  <div class="u_1722176203 imageWidget align-center" data-widget-type="image" id="1722176203" data-element-type="image"> <a href="/" id="1069706541"><img src="https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/logo+%282%29-1920w.png" id="1886395471" class="" data-dm-image-path="https://irp.cdn-website.com/e02d5775/dms3rep/multi/logo+%282%29.png" width="154" height="111" onerror="handleImageLoadError(this)" /></a>
+                                  </div>
+                                </div>
+                                <div class="u_1231555465 dmRespCol small-12 large-11 medium-11" id="1231555465">
+                                  <nav class="u_1018309692 effect-bottom main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="horizontal_nav_layout_1" layout-sub="submenu_horizontal_1" data-show-vertical-sub-items="HOVER" id="1018309692" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-nav-structure="HORIZONTAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav">
+                                    <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages">
+                                      <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item  dmUDNavigationItem_00  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Home
+        " data-auto="page-text-style">Home<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/about-us" class="unifiednav__item  dmNavItemSelected  dmUDNavigationItem_010101661768  unifiednav__item_has-sub-nav" target="" data-target-page-alias="" data-auto="selected-page"> <span class="nav-item-text " data-link-text="
+         About Us
+        " data-auto="page-text-style">About Us<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                        <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages">
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/#Contactus" class="unifiednav__item  dmUDNavigationItem_01010110059  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Contact us
+          " data-auto="page-text-style">Contact us<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                      <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="#" class="unifiednav__item  dmUDNavigationItem_01010199194  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Paints
+        " data-auto="page-text-style">Paints<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                        <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages">
+                                          <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/automotive-paint" class="unifiednav__item  dmUDNavigationItem_010101723297  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Automotive Paint
+          " data-auto="page-text-style">Automotive Paint<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                            <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages">
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#Auto-Basecoat" class="unifiednav__item  dmUDNavigationItem_010101107537  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Basecoat
+            " data-auto="page-text-style">Basecoat<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#PearlBaseCoat" class="unifiednav__item  dmUDNavigationItem_0101014605  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Pearl Base Coat
+            " data-auto="page-text-style">Pearl Base Coat<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#Oc" class="unifiednav__item  dmUDNavigationItem_010101242053  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             O/C " Once Coat" " data-auto=" page-text-style">O/C &quot;Once Coat&quot;<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#ClearCoats" class="unifiednav__item  dmUDNavigationItem_01010165619  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Clear Coats
+            " data-auto="page-text-style">Clear Coats<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#Hardener" class="unifiednav__item  dmUDNavigationItem_0101014829  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Hardener
+            " data-auto="page-text-style">Hardener<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#NeonPaint" class="unifiednav__item  dmUDNavigationItem_010101179475  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Neon Paint
+            " data-auto="page-text-style">Neon Paint<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#ChromeSilver" class="unifiednav__item  dmUDNavigationItem_010101363191  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Chrome Silver
+            " data-auto="page-text-style">Chrome Silver<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/automotive-paint#Primer" class="unifiednav__item  dmUDNavigationItem_010101664248  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Primer
+            " data-auto="page-text-style">Primer<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                            </ul>
+                                          </li>
+                                          <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/signage-paint" class="unifiednav__item  dmUDNavigationItem_010101704177  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Signage Paint
+          " data-auto="page-text-style">Signage Paint<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                            <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages">
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-paint#oc" class="unifiednav__item  dmUDNavigationItem_010101374198  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             O/C " Once Coat" " data-auto=" page-text-style">O/C &quot;Once Coat&quot;<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-paint#ClearCoat" class="unifiednav__item  dmUDNavigationItem_010101657892  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Clear Coat
+            " data-auto="page-text-style">Clear Coat<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-paint#Hardener" class="unifiednav__item  dmUDNavigationItem_010101909116  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Hardener
+            " data-auto="page-text-style">Hardener<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-paint#Primer" class="unifiednav__item  dmUDNavigationItem_010101768583  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Primer
+            " data-auto="page-text-style">Primer<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-paint#PMI" class="unifiednav__item  dmUDNavigationItem_010101637228  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             PMI
+            " data-auto="page-text-style">PMI<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/signage-paint#PMA" class="unifiednav__item  dmUDNavigationItem_010101431262  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             PMA
+            " data-auto="page-text-style">PMA<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                            </ul>
+                                          </li>
+                                          <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/industrial-paint" class="unifiednav__item  dmUDNavigationItem_010101149581  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Industrial Paint
+          " data-auto="page-text-style">Industrial Paint<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                            <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages">
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/industrial-paint#Ind-Basecoat" class="unifiednav__item  dmUDNavigationItem_010101972804  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             O/C " Once Coat" " data-auto=" page-text-style">O/C &quot;Once Coat&quot;<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/industrial-paint#Ind-Clearcoat" class="unifiednav__item  dmUDNavigationItem_010101593749  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Clear Coat
+            " data-auto="page-text-style">Clear Coat<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/industrial-paint#Ind-Bodyfiller" class="unifiednav__item  dmUDNavigationItem_010101791712  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Hardener
+            " data-auto="page-text-style">Hardener<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/industrial-paint#Ind-Primers" class="unifiednav__item  dmUDNavigationItem_010101422845  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Primer
+            " data-auto="page-text-style">Primer<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/industrial-paint#PMI" class="unifiednav__item  dmUDNavigationItem_010101283038  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             PMI
+            " data-auto="page-text-style">PMI<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/industrial-paint#A-OneCoat" class="unifiednav__item  dmUDNavigationItem_010101669003  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             PMA
+            " data-auto="page-text-style">PMA<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                            </ul>
+                                          </li>
+                                          <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/commercial-paint" class="unifiednav__item  dmUDNavigationItem_01010130958  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Commercial Paint
+          " data-auto="page-text-style">Commercial Paint<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                            <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages">
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/commercial-paint#oc" class="unifiednav__item  dmUDNavigationItem_010101146395  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             O/C " Once Coat" " data-auto=" page-text-style">O/C &quot;Once Coat&quot;<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/commercial-paint#Clearcoats" class="unifiednav__item  dmUDNavigationItem_0101016042  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Clear Coats
+            " data-auto="page-text-style">Clear Coats<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/commercial-paint#Hardener" class="unifiednav__item  dmUDNavigationItem_010101583087  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Hardener
+            " data-auto="page-text-style">Hardener<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/commercial-paint#Primer" class="unifiednav__item  dmUDNavigationItem_010101328496  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Primer
+            " data-auto="page-text-style">Primer<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/commercial-paint#PMI" class="unifiednav__item  dmUDNavigationItem_010101771624  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             PMI
+            " data-auto="page-text-style">PMI<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/commercial-paint#PMA" class="unifiednav__item  dmUDNavigationItem_010101762108  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             PMA
+            " data-auto="page-text-style">PMA<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                            </ul>
+                                          </li>
+                                          <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/aerosol-cans" class="unifiednav__item  dmUDNavigationItem_010101776111  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Aerosol Cans
+          " data-auto="page-text-style">Aerosol Cans<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                            <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages">
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/aerosol-cans#AutoSpray" class="unifiednav__item  dmUDNavigationItem_010101875129  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Auto Spray
+            " data-auto="page-text-style">Auto Spray<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/aerosol-cans#LackSpray" class="unifiednav__item  dmUDNavigationItem_010101730165  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Lack Spray
+            " data-auto="page-text-style">Lack Spray<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/aerosol-cans#Haftpromoter" class="unifiednav__item  dmUDNavigationItem_010101918547  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             1K - Haftpromoter
+            " data-auto="page-text-style">1K - Haftpromoter<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/aerosol-cans#P60S" class="unifiednav__item  dmUDNavigationItem_01010163326  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             P60S
+            " data-auto="page-text-style">P60S<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/aerosol-cans#RapidPrimerSpray" class="unifiednav__item  dmUDNavigationItem_010101929153  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Rapid Primer Spray
+            " data-auto="page-text-style">Rapid Primer Spray<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/aerosol-cans#Winner" class="unifiednav__item  dmUDNavigationItem_010101690639  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Winner
+            " data-auto="page-text-style">Winner<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/aerosol-cans#WBSReiniger" class="unifiednav__item  dmUDNavigationItem_010101588253  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             WBS Reiniger
+            " data-auto="page-text-style">WBS Reiniger<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/aerosol-cans#MipaTherm" class="unifiednav__item  dmUDNavigationItem_010101272998  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Mipa Therm
+            " data-auto="page-text-style">Mipa Therm<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/aerosol-cans#HBSpray" class="unifiednav__item  dmUDNavigationItem_010101298529  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Etch -  Filler HB Spray
+            " data-auto="page-text-style">Etch - Filler HB Spray<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/aerosol-cans#FillerSpray" class="unifiednav__item  dmUDNavigationItem_010101270528  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             2K - EP Grundier Filler Spray
+            " data-auto="page-text-style">2K - EP Grundier Filler Spray<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/aerosol-cans#BumperPaint" class="unifiednav__item  dmUDNavigationItem_010101843318  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Bumper Paint
+            " data-auto="page-text-style">Bumper Paint<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/aerosol-cans#Miparox" class="unifiednav__item  dmUDNavigationItem_010101421952  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Miparox
+            " data-auto="page-text-style">Miparox<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/aerosol-cans#Spray" class="unifiednav__item  dmUDNavigationItem_010101313142  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             2K - HS Löser Spray
+            " data-auto="page-text-style">2K - HS L&ouml;ser Spray<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/aerosol-cans#PrefilledSpray" class="unifiednav__item  dmUDNavigationItem_01010129989  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             2K - Prefilled Spray
+            " data-auto="page-text-style">2K - Prefilled Spray<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                      <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/ancillaries-and-solvents" class="unifiednav__item  dmUDNavigationItem_010101139591  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Ancillaries & Solvents
+        " data-auto="page-text-style">Ancillaries &amp; Solvents<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                        <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages">
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/ancillaries-and-solvents#Protectors" class="unifiednav__item  dmUDNavigationItem_01010139208  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Protectors
+          " data-auto="page-text-style">Protectors<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/ancillaries-and-solvents#StoneChip" class="unifiednav__item  dmUDNavigationItem_010101883708  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Stone Chip
+          " data-auto="page-text-style">Stone Chip<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/ancillaries-and-solvents#Putty" class="unifiednav__item  dmUDNavigationItem_010101688137  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Putty's
+          " data-auto="page-text-style">Putty's<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/ancillaries-and-solvents#Fillers" class="unifiednav__item  dmUDNavigationItem_010101255614  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Fillers
+          " data-auto="page-text-style">Fillers<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/ancillaries-and-solvents#MIPA" class="unifiednav__item  dmUDNavigationItem_010101569484  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           MIPA - (High Heat Paint)
+          " data-auto="page-text-style">MIPA - (High Heat Paint)<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/ancillaries-and-solvents#Silicone" class="unifiednav__item  dmUDNavigationItem_010101580372  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Silicon
+          " data-auto="page-text-style">Silicon<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/ancillaries-and-solvents#AntiSilicone" class="unifiednav__item  dmUDNavigationItem_010101149037  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Anti Silicon
+          " data-auto="page-text-style">Anti Silicon<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/ancillaries-and-solvents#Solvents" class="unifiednav__item  dmUDNavigationItem_010101649506  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Solvents
+          " data-auto="page-text-style">Solvents<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                      <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/abrasives" class="unifiednav__item  dmUDNavigationItem_010101240851  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Abrasives
+        " data-auto="page-text-style">Abrasives<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                        <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages">
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#AloxSheets" class="unifiednav__item  dmUDNavigationItem_010101708495  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Abrasoft Sponge Rolls
+          " data-auto="page-text-style">Abrasoft Sponge Rolls<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#Aloxsheets" class="unifiednav__item  dmUDNavigationItem_010101113816  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Alox sheets
+          " data-auto="page-text-style">Alox sheets<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#Waterproofsheets" class="unifiednav__item  dmUDNavigationItem_01010142007  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Waterproof sheets
+          " data-auto="page-text-style">Waterproof sheets<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#Wet-Dry" class="unifiednav__item  dmUDNavigationItem_010101643951  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Wet - Dry
+          " data-auto="page-text-style">Wet - Dry<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#DuroflexRolls" class="unifiednav__item  dmUDNavigationItem_010101186222  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Duroflex Rolls
+          " data-auto="page-text-style">Duroflex Rolls<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#WhiteLine" class="unifiednav__item  dmUDNavigationItem_010101174279  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           White Line
+          " data-auto="page-text-style">White Line<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#SuperflexRolls" class="unifiednav__item  dmUDNavigationItem_010101349560  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Superflex Rolls
+          " data-auto="page-text-style">Superflex Rolls<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#J-FlexEconomyRolls" class="unifiednav__item  dmUDNavigationItem_010101938347  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           J-Flex Economy Rolls
+          " data-auto="page-text-style">J-Flex Economy Rolls<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#CeramicLine" class="unifiednav__item  dmUDNavigationItem_010101170805  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Ceramic Line
+          " data-auto="page-text-style">Ceramic Line<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#CeramicNet" class="unifiednav__item  dmUDNavigationItem_010101221316  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Ceramic Net
+          " data-auto="page-text-style">Ceramic Net<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#YellowLine" class="unifiednav__item  dmUDNavigationItem_01010180322  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Yellow Line
+          " data-auto="page-text-style">Yellow Line<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#FilmDiscsVelcroDiscs" class="unifiednav__item  dmUDNavigationItem_010101969218  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Film Discs, Velcro Discs
+          " data-auto="page-text-style">Film Discs, Velcro Discs<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#MetalCuttingWheels" class="unifiednav__item  dmUDNavigationItem_010101977758  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Metal Cutting Wheels
+          " data-auto="page-text-style">Metal Cutting Wheels<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#MetalGrindingWheels" class="unifiednav__item  dmUDNavigationItem_010101925332  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Metal Grinding Wheels
+          " data-auto="page-text-style">Metal Grinding Wheels<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#ZirconiaFlapDiscs" class="unifiednav__item  dmUDNavigationItem_010101461866  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           100% Zirconia Flap Discs
+          " data-auto="page-text-style">100% Zirconia Flap Discs<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#SandingSponges" class="unifiednav__item  dmUDNavigationItem_010101176672  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Sanding Sponges (1x1)
+          " data-auto="page-text-style">Sanding Sponges (1x1)<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#Sadning" class="unifiednav__item  dmUDNavigationItem_010101312824  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Sanding Sponges (4x4)
+          " data-auto="page-text-style">Sanding Sponges (4x4)<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#Matvelcro" class="unifiednav__item  dmUDNavigationItem_010101501892  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Mat Velcro Discs
+          " data-auto="page-text-style">Mat Velcro Discs<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#Nonw" class="unifiednav__item  dmUDNavigationItem_010101834822  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Non-Woven Abrasives
+          " data-auto="page-text-style">Non-Woven Abrasives<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#Alox" class="unifiednav__item  dmUDNavigationItem_010101590873  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Alox Fiber Discs
+          " data-auto="page-text-style">Alox Fiber Discs<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#Fibre" class="unifiednav__item  dmUDNavigationItem_010101973424  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Fibre Discs
+          " data-auto="page-text-style">Fibre Discs<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#FiberBackingPad" class="unifiednav__item  dmUDNavigationItem_010101466540  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Fiber Backing Pad
+          " data-auto="page-text-style">Fiber Backing Pad<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#BackingPad" class="unifiednav__item  dmUDNavigationItem_010101124091  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Backing Pad
+          " data-auto="page-text-style">Backing Pad<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#MPFolienradierer" class="unifiednav__item  dmUDNavigationItem_0101012728  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           MP Folienradierer
+          " data-auto="page-text-style">MP Folienradierer<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#MetalHandSander" class="unifiednav__item  dmUDNavigationItem_01010116275  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           MP Flusennadel
+          " data-auto="page-text-style">MP Flusennadel<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#MPPaintNoseRemover" class="unifiednav__item  dmUDNavigationItem_010101428504  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           MP Paint Nose Remover
+          " data-auto="page-text-style">MP Paint Nose Remover<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#SandingBlockCarbonP1500" class="unifiednav__item  dmUDNavigationItem_010101238035  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Sanding Block Carbon P1500
+          " data-auto="page-text-style">Sanding Block Carbon P1500<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#SandingBlockCarbonP3000" class="unifiednav__item  dmUDNavigationItem_010101478588  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Sanding Block Carbon P3000
+          " data-auto="page-text-style">Sanding Block Carbon P3000<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#SandingBlockCarbonP1000" class="unifiednav__item  dmUDNavigationItem_010101306283  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Sanding Block Carbon P1000
+          " data-auto="page-text-style">Sanding Block Carbon P1000<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/abrasives#SandingBlockCarbonP800" class="unifiednav__item  dmUDNavigationItem_010101883709  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Sanding Block Carbon P800
+          " data-auto="page-text-style">Sanding Block Carbon P800<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                      <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/spray-guns-and-accessories" class="unifiednav__item  dmUDNavigationItem_010101528380  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Spray Guns and Accessories
+        " data-auto="page-text-style">Spray Guns and Accessories<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                        <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages">
+                                          <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/spray-guns-and-accessories#SprayGuns" class="unifiednav__item  dmUDNavigationItem_010101553218  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Spray Guns
+          " data-auto="page-text-style">Spray Guns<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                            <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages">
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-guns-and-accessories#HVLPSprayGuns" class="unifiednav__item  dmUDNavigationItem_010101187988  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             HVLP Spray Guns
+            " data-auto="page-text-style">HVLP Spray Guns<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-guns-and-accessories#MPSprayGuns" class="unifiednav__item  dmUDNavigationItem_010101611263  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             MP Spray Guns
+            " data-auto="page-text-style">MP Spray Guns<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/spray-guns-and-accessories#PartsAccessories" class="unifiednav__item  dmUDNavigationItem_010101741280  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Industrial Spray Guns
+            " data-auto="page-text-style">Industrial Spray Guns<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                            </ul>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/spray-guns-and-accessories#PartsAccessories" class="unifiednav__item  dmUDNavigationItem_010101900227  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Parts & Accessories
+          " data-auto="page-text-style">Parts &amp; Accessories<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                      <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/air-tools-and-equipment" class="unifiednav__item  dmUDNavigationItem_0101019449  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Air Tool's & Equipment
+        " data-auto="page-text-style">Air Tool's &amp; Equipment<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                        <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages">
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/air-tools-and-equipment#OrbitalSander" class="unifiednav__item  dmUDNavigationItem_010101552435  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Orbital Sander
+          " data-auto="page-text-style">Orbital Sander<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/air-tools-and-equipment#OurIndustrialSandingBlock" class="unifiednav__item  dmUDNavigationItem_010101818240  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Industrial Air Sanding Block
+          " data-auto="page-text-style">Industrial Air Sanding Block<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/air-tools-and-equipment#MaskingPlasticStand" class="unifiednav__item  dmUDNavigationItem_010101112805  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Masking Plastic Stand
+          " data-auto="page-text-style">Masking Plastic Stand<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                      <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/consumables" class="unifiednav__item  dmUDNavigationItem_010101713400  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Consumables
+        " data-auto="page-text-style">Consumables<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                        <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages">
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#Mops" class="unifiednav__item  dmUDNavigationItem_010101777672  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Mops
+          " data-auto="page-text-style">Mops<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#MPSponges" class="unifiednav__item  dmUDNavigationItem_010101282811  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           MP Sponges
+          " data-auto="page-text-style">MP Sponges<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#FlattingBlock" class="unifiednav__item  dmUDNavigationItem_010101899256  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Flatting Blocks & Files
+          " data-auto="page-text-style">Flatting Blocks &amp; Files<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#BackingPads" class="unifiednav__item  dmUDNavigationItem_010101454622  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Backing Pads
+          " data-auto="page-text-style">Backing Pads<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#Polisher" class="unifiednav__item  dmUDNavigationItem_01010118980  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Polisher
+          " data-auto="page-text-style">Polisher<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#MaskingPlastic" class="unifiednav__item  dmUDNavigationItem_010101737800  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Masking Plastic
+          " data-auto="page-text-style">Masking Plastic<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#MixingCups" class="unifiednav__item  dmUDNavigationItem_010101510975  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Mixing Cups
+          " data-auto="page-text-style">Mixing Cups<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#Tapes" class="unifiednav__item  dmUDNavigationItem_010101873063  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Tapes
+          " data-auto="page-text-style">Tapes<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#FineTapes" class="unifiednav__item  dmUDNavigationItem_010101321307  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Foam Tape
+          " data-auto="page-text-style">Foam Tape<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#MiacoTape" class="unifiednav__item  dmUDNavigationItem_010101444521  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Miaco Tape
+          " data-auto="page-text-style">Miaco Tape<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#SprayPaintingOveralls" class="unifiednav__item  dmUDNavigationItem_01010121749  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Spray Painting Overalls
+          " data-auto="page-text-style">Spray Painting Overalls<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#PaintStrainers" class="unifiednav__item  dmUDNavigationItem_010101456874  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Paint Strainers
+          " data-auto="page-text-style">Paint Strainers<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#LatexGloves" class="unifiednav__item  dmUDNavigationItem_010101703424  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Latex Gloves
+          " data-auto="page-text-style">Latex Gloves<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#MeasuringSticks" class="unifiednav__item  dmUDNavigationItem_010101394235  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Measuring Sticks
+          " data-auto="page-text-style">Measuring Sticks<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#BlendingTape" class="unifiednav__item  dmUDNavigationItem_010101151042  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Blending Tape
+          " data-auto="page-text-style">Blending Tape<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#CleaningCloths" class="unifiednav__item  dmUDNavigationItem_010101500679  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Cleaning Cloths
+          " data-auto="page-text-style">Cleaning Cloths<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#MetalPlates" class="unifiednav__item  dmUDNavigationItem_010101282074  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Metal Plates
+          " data-auto="page-text-style">Metal Plates<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#PlasticApplicators" class="unifiednav__item  dmUDNavigationItem_010101369057  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Plastic Applicators
+          " data-auto="page-text-style">Plastic Applicators<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#MPPowderWithApplicator" class="unifiednav__item  dmUDNavigationItem_01010110731  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           MP Powder With Applicator
+          " data-auto="page-text-style">MP Powder With Applicator<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/consumables#TackRag" class="unifiednav__item  dmUDNavigationItem_01010148875  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Tack Rag
+          " data-auto="page-text-style">Tack Rag<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                      <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="#" class="unifiednav__item  dmUDNavigationItem_01010135719  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Our Brands
+        " data-auto="page-text-style">Our Brands<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                        <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages">
+                                          <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/contact" class="unifiednav__item  dmUDNavigationItem_010101567797  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           International
+          " data-auto="page-text-style">International<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                            <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages">
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/contact#Mipa" class="unifiednav__item  dmUDNavigationItem_01010149990  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Mipa
+            " data-auto="page-text-style">Mipa<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/contact#Smirdex" class="unifiednav__item  dmUDNavigationItem_010101125706  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Smirdex
+            " data-auto="page-text-style">Smirdex<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/contact#Miarco" class="unifiednav__item  dmUDNavigationItem_01010129536  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Miarco
+            " data-auto="page-text-style">Miarco<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/contact#Tuba" class="unifiednav__item  dmUDNavigationItem_010101989736  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Tuba
+            " data-auto="page-text-style">Tuba<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                            </ul>
+                                          </li>
+                                          <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/in-house" class="unifiednav__item  dmUDNavigationItem_010101300237  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           House Brand
+          " data-auto="page-text-style">House Brand<span class="icon icon-angle-right"></span>
+                                              </span>
+                                            </a>
+                                            <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="1" data-auto="sub-pages">
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/in-house#Fusion" class="unifiednav__item  dmUDNavigationItem_010101204143  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Fusion
+            " data-auto="page-text-style">Fusion<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/in-house#Tritec" class="unifiednav__item  dmUDNavigationItem_010101174571  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Tritec
+            " data-auto="page-text-style">Tritec<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                              <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="2"> <a href="/in-house#Cobra" class="unifiednav__item  dmUDNavigationItem_010101934011  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Cobra
+            " data-auto="page-text-style">Cobra<span class="icon icon-angle-right"></span>
+                                                  </span>
+                                                </a>
+                                              </li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                  </nav>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-new="true"></div>
+                      <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow ">
+                        <div class="dmRespColsWrapper">
+                          <div class="large-12 dmRespCol">
+                            <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None">
+                              <div class="titleLine display_None">
+                                <hr />
+                              </div>
+                              <!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts -->
+                              <div id="pageTitleText">
+                                <div class="innerPageTitle">About Us</div>
+                              </div>
+                              <div class="titleLine display_None">
+                                <hr />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div dmwrapped="true" id="1582363842" themewaschanged="true" desktop-global-classes="" tablet-global-classes="" mobile-global-classes="" class="dmBody u_dmStyle_template_about-us">
+                        <div id="allWrapper" class="allWrapper">
+                          <!-- navigation placeholders -->
+                          <div id="dm_content" class="dmContent">
+                            <div dm:templateorder="100" class="dmAboutusRespTmpl mainBorder" id="1683814473">
+                              <div class="innerPageTmplBox dmRespRowsWrapper" id="1396310947">
+                                <div class="u_1640311487 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1640311487">
+                                  <div class="dmRespColsWrapper" id="1872416492">
+                                    <div class="u_1900687984 dmRespCol small-12 medium-12 large-12" id="1900687984">
+                                      <div class="u_1956611239 dmNewParagraph" id="1956611239" style="transition: none 0s ease 0s; text-align: center; display: block;" data-element-type="paragraph" data-version="5">
+                                        <h2 class="text-align-left size-50 m-size-40"><span style="font-weight: 700; color: rgb(255, 255, 255); display: initial; text-transform: uppercase;" class="font-size-50 m-font-size-40">About Us</span></h2>
+                                      </div>
+                                      <div class="u_1053499902 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1053499902" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJlbnRyYW5jZSIsImFuaW1hdGlvbiI6InNsaWRlSW5Db21ibyIsImR1cmF0aW9uIjoxLCJkZWxheSI6MCwiaW50ZW5zaXR5IjoxLCJyZXZlcnNlIjpmYWxzZSwiZGlyIjoibGVmdCJ9fQ==" data-anim-desktop="slideInCombo"><img src="https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/Untitled--28Facebook-Cover-29-3cd2f949-1920w.png" alt="" id="1524649339" class="" data-dm-image-path="https://irp.cdn-website.com/e02d5775/dms3rep/multi/Untitled--28Facebook-Cover-29-3cd2f949.png" width="1332" height="64" onerror="handleImageLoadError(this)" /></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="u_1835569252 dmRespRow mobile-columns-reversed" id="1835569252">
+                                  <div class="dmRespColsWrapper" id="1477437667">
+                                    <div class="u_1621698449 dmRespCol small-12 large-6 medium-6" id="1621698449">
+                                      <div class="u_1758604060 dmNewParagraph" id="1758604060" data-element-type="paragraph" data-version="5" background-image":""}"="" style="transition: none 0s ease 0s; text-align: left; display: block;">
+                                        <h3 class="text-align-left m-size-26"><span style="color: rgb(68, 150, 203); display: initial;" m-font-size-set="true" class="m-font-size-26">Who</span><span class="m-font-size-26" style="display: initial;"> <span style="display: initial;" m-font-size-set="true" class="m-font-size-26">We Are</span></span></h3>
+                                      </div>
+                                      <div class="u_1465700246 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1465700246" style="transition: opacity 1s ease-in-out 0s;">
+                                        <p class="text-align-left"><span style="display: initial;">Kapatal Brands although a relatively young company is a pioneer in the coatings market sector, established as a wholesaled company with the vision of being Southern Africa's leading strategic improting partner for international brands of excellence. Through exemplary service and superior industry-leading product offerings. Kapatal Brands can add value to its customers<br /><br />Our Values can be seen through our structural integrity built into our fundamental principles of service excellence and building lasting customer relationships by offering the best possible value-added services and products to our customer's specifications.</span></p>
+                                      </div>
+                                    </div>
+                                    <div class="u_1562165050 dmRespCol small-12 large-6 medium-6" id="1562165050">
+                                      <div class="u_1002009148 widget-f6a6cd dmCustomWidget" data-lazy-load="" data-title="" id="1002009148" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="f6a6cdf9cb5c46769b5603c7960cc686" data-widget-version="162" data-widget-config="eyJsb3R0aWUiOiJodHRwczovL2Fzc2V0czEwLmxvdHRpZWZpbGVzLmNvbS9wYWNrYWdlcy9sZjIwX2Jxb2pkYm1uLmpzb24iLCJsb3R0aWVPcHRpb25zIjoibG9vcCJ9">
+                                        <div class="lottie"></div>
+                                        <div class="lottie-link"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="u_1588863408 dmRespRow" id="1588863408">
+                                  <div class="dmRespColsWrapper" id="1684211535">
+                                    <div class="dmRespCol large-6 medium-6 small-12" id="1963705159">
+                                      <div class="u_1849693312 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1849693312"><img src="https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/WhatsApp+Image+2022-08-23+at+1.48.03+PM+%281%29-1920w.jpeg" alt="" id="1540600369" class="" data-dm-image-path="https://irp.cdn-website.com/e02d5775/dms3rep/multi/WhatsApp+Image+2022-08-23+at+1.48.03+PM+%281%29.jpeg" width="1024" height="724" onerror="handleImageLoadError(this)" /></div>
+                                    </div>
+                                    <div class="dmRespCol large-6 medium-6 small-12" id="1676334614">
+                                      <div class="u_1505639096 dmNewParagraph" id="1505639096" data-element-type="paragraph" data-version="5" background-image":""}"="" style="transition: none 0s ease 0s; text-align: left; display: block;">
+                                        <h3 class="m-size-26 text-align-left"><span class="m-font-size-26" m-font-size-set="true" style="color: rgb(10, 15, 41); display: initial;">Our</span><span single-space="true" class="m-font-size-26" style="display: initial; color: rgb(10, 15, 41);"> <span class="m-font-size-26" style="display: initial; color: rgb(10, 15, 41);"></span>
+                                          </span><span class="m-font-size-26" style="display: initial; color: rgb(68, 150, 203);" m-font-size-set="true">Team</span></h3>
+                                      </div>
+                                      <div class="u_1672302523 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1672302523" style="transition: opacity 1s ease-in-out 0s; text-align: left; display: block;">
+                                        <p style="line-height: 1.5rem; letter-spacing: 0.14px;"><span style="display: initial; color: rgb(10, 15, 41);">We are the Kapatal Brand Team, and we are passionate about bringing you the best products and service possible. We are a team of diverse professionals who come from different backgrounds and have a shared love for helping people improve their business</span></p>
+                                        <p style="letter-spacing: 0.14px;"><span style="display: initial; color: rgb(10, 15, 41);">&nbsp; <br /></span></p>
+                                        <p class="text-align-justify"><span style="display: initial; color: rgb(10, 15, 41);">We are a close-knit family, and everyone plays an integral part in the business. We are unique in our culture and try to portray that through our work ethic and our commitment to excellent customer service.</span></p>
+                                        <p class="text-align-justify"><span style="display: initial; color: rgb(10, 15, 41);"><br /></span></p>
+                                        <p style="line-height: 1.5rem; letter-spacing: 0.14px;"><span style="display: initial; color: rgb(10, 15, 41);">Our aim is to provide the best possible service to our customers, no matter what their needs may be.</span></p>
+                                        <p class="text-align-justify"><span style="display: initial;"><br /></span></p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="dmRespRow u_1325151477 mobile-columns-reversed" id="1325151477">
+                                  <div class="dmRespColsWrapper" id="1319795915">
+                                    <div class="dmRespCol large-6 medium-6 small-12 u_1730571227" id="1730571227">
+                                      <div class="u_1019975624 dmNewParagraph" id="1019975624" data-element-type="paragraph" data-version="5" background-image":""}"="" style="transition: none 0s ease 0s; text-align: left; display: block;">
+                                        <h3 class="text-align-left"><span class="" style="display: initial; color: rgb(255, 255, 255);"><span style="display: initial; color: rgb(255, 255, 255);">What We</span>
+                                          </span><span style="display: initial; color: rgb(68, 150, 203);">Offer</span></h3>
+                                      </div>
+                                      <div class="u_1903788713 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1903788713" style="transition: none 0s ease 0s; text-align: left; display: block;">
+                                        <p><span style="color: rgb(255, 255, 255); display: initial;">Kapital Brands Pty (Ltd) is the leader in quality, innovative products. We are the Leading Importer of International and Local Coatings Brands in Southern Africa, some of our products include Automotive Paint, Abrasives, Sprayguns and accessories.<br /><br />Some of the brands we do include, Mipa, Smirdex, Tuba, Tritec, Miarco, Fusion and Cobra.</span></p>
+                                      </div>
+                                    </div>
+                                    <div class="dmRespCol small-12 large-6 medium-6 u_1511640900 dmSectionNoParallax" id="1511640900" data-gallery-bg="eyJzbGlkZXMiOlsiaHR0cHM6Ly9saXJwLmNkbi13ZWJzaXRlLmNvbS9lMDJkNTc3NS9kbXMzcmVwL211bHRpL29wdC85LTE5MjB3LmpwZyIsImh0dHBzOi8vbGlycC5jZG4td2Vic2l0ZS5jb20vZTAyZDU3NzUvZG1zM3JlcC9tdWx0aS9vcHQvNi1kNzRkMmY4OS0xOTIwdy5wbmciLCJodHRwczovL2xpcnAuY2RuLXdlYnNpdGUuY29tL2UwMmQ1Nzc1L2RtczNyZXAvbXVsdGkvb3B0LzEtYTUxNDYzNzMtMTkyMHcucG5nIiwiaHR0cHM6Ly9saXJwLmNkbi13ZWJzaXRlLmNvbS9lMDJkNTc3NS9kbXMzcmVwL211bHRpL29wdC84LTE5MjB3LmpwZyIsImh0dHBzOi8vbGlycC5jZG4td2Vic2l0ZS5jb20vZTAyZDU3NzUvZG1zM3JlcC9tdWx0aS9vcHQvMTAtMTkyMHcuanBnIiwiaHR0cHM6Ly9saXJwLmNkbi13ZWJzaXRlLmNvbS9lMDJkNTc3NS9kbXMzcmVwL211bHRpL29wdC9VbnRpdGxlZCtkZXNpZ24rJTI4NCUyOS0xOTIwdy5qcGciLCJodHRwczovL2xpcnAuY2RuLXdlYnNpdGUuY29tL2UwMmQ1Nzc1L2RtczNyZXAvbXVsdGkvb3B0LzctMmRjNjUzNjYtMTkyMHcucG5nIl19">
+                                      <div data-element-type="spacer" class="u_1825016937 dmSpacer" id="1825016937"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="u_1415869778 dmRespRow dmSectionNoParallax hide-for-small" id="1415869778">
+                                  <div class="dmRespColsWrapper" id="1063829783">
+                                    <div class="dmRespCol empty-column large-12 medium-12 small-12" id="1116508651"></div>
+                                  </div>
+                                </div>
+                                <div class="dmRespRow u_1743880298" id="1743880298">
+                                  <div class="dmRespColsWrapper" id="1966358868">
+                                    <div class="dmRespCol large-12 medium-12 small-12" id="1202628908">
+                                      <div data-element-type="html" class="dmCustomHtml" id="1036054345">
+                                        <script src="https://apps.elfsight.com/p/platform.js" defer="">
+
+                                        </script>
+                                        <div class="elfsight-app-140c8f9b-aa7c-4ffe-a911-e759c3d5ccc5"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="dmRespRow u_1215167274 fullBleedChanged fullBleedMode" id="1215167274">
+                                  <div class="dmRespColsWrapper" id="1750916682">
+                                    <div class="u_1430550065 dmRespCol small-12 medium-12 large-12" id="1430550065">
+                                      <div class="u_1388272068 dmNewParagraph" id="1388272068" data-element-type="paragraph" data-version="5" background-image":""}"="" style="transition: none 0s ease 0s; text-align: left; display: block;">
+                                        <h3 class="text-align-center"><span class="" style="display: initial; font-weight: bold;"><span style="display: initial; font-weight: bold;">Our</span>
+                                          </span><span style="display: initial; font-weight: bold; color: rgb(68, 150, 203);">Brands</span></h3>
+                                      </div>
+                                      <div class="u_1303286331 flex-container dmImageSlider dmNoMargin dmNoMark" data-widget-type="imageSlider" dmle_volatile_widget="true" data-element-type="dSliderId" id="1303286331">
+                                        <div class="flexslider ed-version nav-layout-2" sliderscriptparams="{'stretch':true,'animation':true,'randomize':false,'directionNav':true,'isAutoPlay':false,'isFade':false,'controlNav':false,'slideshowSpeed':2000,'animationDuration':600,'pausePlay':true}" id="1389506539" layout="empty">
+                                          <ul class="slides" id="1778118106">
+                                            <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1513727753"><img dm="true" src="https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/clientK2-eea0b5be-1920w.png" id="1537785803" onerror="handleImageLoadError(this)" />
+                                              <div class="color-overlay" id="1533569254"></div>
+                                              <div class="slide-inner" id="1455667411">
+                                                <div class="text-wrapper" id="1532511368">
+                                                  <h3 class="slide-title" id="1901640548">Slide title</h3>
+                                                  <div class="slide-text richText" id="1520727565">Write your caption here</div>
+                                                </div>
+                                                <div class="slide-button dmWidget clearfix" id="1282928944"> <span class="iconBg" id="1721548077"> <span class="icon hasFontIcon icon-star" id="1978680650"></span>
+                                                  </span>
+                                                  <span class="text" id="1102268743">Button</span>
+                                                </div>
+                                              </div>
+                                            </li>
+                                            <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1645247266"><img dm="true" src="https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/clientK1-1920w.png" id="1656524400" onerror="handleImageLoadError(this)" />
+                                              <div class="color-overlay" id="1033507232"></div>
+                                              <div class="slide-inner" id="1344062431">
+                                                <div class="text-wrapper" id="1154732945">
+                                                  <h3 class="slide-title" id="1391547467">Slide title</h3>
+                                                  <div class="slide-text richText" id="1947206964">Write your caption here</div>
+                                                </div>
+                                                <div class="slide-button dmWidget clearfix" id="1963966463"> <span class="iconBg" id="1017240437"> <span class="icon hasFontIcon icon-star" id="1517647575"></span>
+                                                  </span>
+                                                  <span class="text" id="1477594817">Button</span>
+                                                </div>
+                                              </div>
+                                            </li>
+                                            <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1378475639"><img dm="true" src="https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/Cobralogo-5a8ee342-1920w.png" id="1493342255" onerror="handleImageLoadError(this)" />
+                                              <div class="color-overlay" id="1887722049"></div>
+                                              <div class="slide-inner" id="1902506792">
+                                                <div class="text-wrapper" id="1671919113">
+                                                  <h3 class="slide-title" id="1969655202">Slide title</h3>
+                                                  <div class="slide-text richText" id="1090006059">Write your caption here</div>
+                                                </div>
+                                                <div class="slide-button dmWidget clearfix" id="1432109314"> <span class="iconBg" id="1310626473"> <span class="icon hasFontIcon icon-star" id="1810311863"></span>
+                                                  </span>
+                                                  <span class="text" id="1983730849">Button</span>
+                                                </div>
+                                              </div>
+                                            </li>
+                                            <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1621376135" class="u_1621376135"><img dm="true" src="https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/Tuba+logo-1920w.png" id="1830767226" class="" onerror="handleImageLoadError(this)" />
+                                              <div class="color-overlay" id="1136301828"></div>
+                                              <div class="slide-inner" id="1681437820">
+                                                <div class="text-wrapper" id="1280304643">
+                                                  <h3 class="slide-title" id="1059027262">Slide title</h3>
+                                                  <div class="slide-text richText" id="1024570837">Write your caption here</div>
+                                                </div>
+                                                <div class="slide-button dmWidget clearfix" id="1727426053"> <span class="iconBg" id="1649094939"> <span class="icon hasFontIcon icon-star" id="1102372353"></span>
+                                                  </span>
+                                                  <span class="text" id="1106496336">Button</span>
+                                                </div>
+                                              </div>
+                                            </li>
+                                            <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1104846886"><img dm="true" src="https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/Screenshot+2022-06-15+at+16.40.32-1920w.png" id="1240904716" onerror="handleImageLoadError(this)" />
+                                              <div class="color-overlay" id="1535062817"></div>
+                                              <div class="slide-inner" id="1050884656">
+                                                <div class="text-wrapper" id="1072892542">
+                                                  <h3 class="slide-title" id="1994167523">Slide title</h3>
+                                                  <div class="slide-text richText" id="1142260195">Write your caption here</div>
+                                                </div>
+                                                <div class="slide-button dmWidget clearfix" id="1344551623"> <span class="iconBg" id="1592975489"> <span class="icon hasFontIcon icon-star" id="1165221640"></span>
+                                                  </span>
+                                                  <span class="text" id="1179510759">Button</span>
+                                                </div>
+                                              </div>
+                                            </li>
+                                            <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1117978262"><img dm="true" src="https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/clientK3-4cd32512-1920w.png" id="1867745348" onerror="handleImageLoadError(this)" />
+                                              <div class="color-overlay" id="1167712974"></div>
+                                              <div class="slide-inner" id="1686012155">
+                                                <div class="text-wrapper" id="1838039893">
+                                                  <h3 class="slide-title" id="1173306087">Slide title</h3>
+                                                  <div class="slide-text richText" id="1040316100">Write your caption here</div>
+                                                </div>
+                                                <div class="slide-button dmWidget clearfix" id="1579635767"> <span class="iconBg" id="1229123446"> <span class="icon hasFontIcon icon-star" id="1220048074"></span>
+                                                  </span>
+                                                  <span class="text" id="1548967665">Button</span>
+                                                </div>
+                                              </div>
+                                            </li>
+                                            <li layout="center" position="center" animation="fadeInUp" show-content="true" color-overlay="true" text-background="true" id="1857966926"><img dm="true" src="https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/fusionlogo-8e192c63-1920w.png" id="1284980735" onerror="handleImageLoadError(this)" />
+                                              <div class="color-overlay" id="1593169093"></div>
+                                              <div class="slide-inner" id="1011454681">
+                                                <div class="text-wrapper" id="1966874224">
+                                                  <h3 class="slide-title" id="1758745388">Slide title</h3>
+                                                  <div class="slide-text richText" id="1365273779">Write your caption here</div>
+                                                </div>
+                                                <div class="slide-button dmWidget clearfix" id="1772180596"> <span class="iconBg" id="1412192930"> <span class="icon hasFontIcon icon-star" id="1513184967"></span>
+                                                  </span>
+                                                  <span class="text" id="1803069100">Button</span>
+                                                </div>
+                                              </div>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dmFooterContainer">
+                        <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer">
+                          <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428">
+                            <div class="dmRespRow u_1982402246 fullBleedChanged fullBleedMode" id="1982402246">
+                              <div class="dmRespColsWrapper" id="1451647285">
+                                <div class="dmRespCol large-12 medium-12 small-12 u_1598582872" id="1598582872">
+                                  <div class="u_1007234151 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1007234151"><img src="https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/Untitled--28Facebook-Cover-29-3cd2f949-31745089-1920w.png" alt="" id="1763368344" class="" data-dm-image-path="https://irp.cdn-website.com/e02d5775/dms3rep/multi/Untitled--28Facebook-Cover-29-3cd2f949-31745089.png" width="1332" height="64" onerror="handleImageLoadError(this)" /></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="u_1686005289 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1686005289">
+                              <div class="dmRespColsWrapper" id="1837856251">
+                                <div class="u_1449882040 dmRespCol small-12 large-4 medium-4" id="1449882040">
+                                  <div class="u_1241002874 dmNewParagraph" id="1241002874" style="transition: none 0s ease 0s; text-align: left; display: block;" data-element-type="paragraph" data-version="5">
+                                    <p><span style="text-transform: uppercase; color: rgb(255, 255, 255); font-weight: bold; display: initial;">About Us</span></p>
+                                  </div>
+                                  <div class="u_1770227947 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1770227947" style="transition: none 0s ease 0s; text-align: left; display: block;">
+                                    <p class="m-size-14 size-14"><span class="m-font-size-14 font-size-14" m-font-size-set="true" style="display: unset; color: rgb(255, 255, 255);">Our goal is to provide you with the best possible products and services so that you can complete your projects with ease. We offer a wide range of products from a variety of brands, so you can find the perfect fit for your needs.</span></p>
+                                  </div>
+                                  <div class="u_1505141765 widget-1f5975 hide-for-small dmCustomWidget" data-lazy-load="" data-title="" id="1505141765" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="1f5975986930429f819d4cd2154b5c4a" data-widget-version="22" data-widget-config="eyJjb3B5cmlnaHRUZXh0IjoiPHAgY2xhc3M9XCJydGVCbG9ja1wiPkFsbCBSaWdodHMgUmVzZXJ2ZWQgfCBLYXBhdGFsIDxhIHZhbHVlPVwicHJpdmFjeVwiIGxhYmVsPVwiXCIgdHlwZT1cInBhZ2VcIiBocmVmPVwiL3ByaXZhY3lcIiBkYXRhLXJ1bnRpbWUtdXJsPVwiL3ByaXZhY3lcIj5Qcml2YWN5IFBvbGljeTwvYT48L3A+In0=">
+                                    <div class="copyright">
+                                      <div>&copy; 2023&nbsp;</div>
+                                      <div>
+                                        <p class="rteBlock">All Rights Reserved | Kapatal <a value="privacy" label="" type="page" href="/privacy" data-runtime-url="/privacy">Privacy Policy</a></p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="u_1870598539 dmRespCol small-12 large-4 medium-4" id="1870598539">
+                                  <div class="u_1301775373 dmNewParagraph" id="1301775373" data-element-type="paragraph" data-version="5">
+                                    <p><span style="text-transform: uppercase; display: initial; color: rgb(255, 255, 255); font-weight: bold;">Contact Info</span></p>
+                                  </div>
+                                  <div class="u_1556899872 dmNewParagraph" id="1556899872" data-element-type="paragraph" data-version="5" data-styletopreserve="{" background-image":""}"="">
+                                    <p class="text-align-left size-14 m-size-14"><span class="m-font-size-14 font-size-14" m-font-size-set="true" style="display: initial; color: rgb(255, 255, 255);">Phone:</span><span single-space="true" class="m-font-size-14 font-size-14" style="display: initial; color: rgb(255, 255, 255);"> <span class="m-font-size-14 font-size-14" style="display: initial; color: rgb(255, 255, 255);"></span>
+                                      </span><a href="tel:+27 64 752 8017" runtime_url="tel:+27 64 752 8017" type="call" class="m-font-size-14 font-size-14" m-font-size-set="true" style="display: initial;">+27 64 752 8017</a><span class="m-font-size-14 font-size-14" style="display: initial; color: rgb(255, 255, 255);"> <span class="m-font-size-14 font-size-14" style="display: initial; color: rgb(255, 255, 255);" m-font-size-set="true">or</span>
+                                      </span><a href="tel:0114930309" runtime_url="tel:0114930309" type="call" m-font-size-set="true" class="m-font-size-14 font-size-14" style="display: initial;">011 4930309</a><span class="m-font-size-14 font-size-14" style="display: initial; color: rgb(255, 255, 255);" m-font-size-set="true"><br /></span></p>
+                                    <p class="m-size-14 text-align-left size-14"><span class="m-font-size-14 font-size-14" m-font-size-set="true" style="display: initial; color: rgb(255, 255, 255);">For orders:</span><span single-space="true" class="m-font-size-14 font-size-14" style="display: initial; color: rgb(255, 255, 255);"> <span class="m-font-size-14 font-size-14" style="display: initial; color: rgb(255, 255, 255);"></span>
+                                      </span><a href="mailto:info@kapatal.co.za" target="_blank" type="email" class="m-font-size-14 font-size-14" m-font-size-set="true" style="display: initial;">info@kapatal.co.za</a><span class="m-font-size-14 font-size-14" m-font-size-set="true" style="display: initial; color: rgb(255, 255, 255);"><br /></span></p>
+                                  </div>
+                                  <div class="u_1293768610 dmNewParagraph" id="1293768610" data-element-type="paragraph" data-version="5" style="text-align: center; transition: none 0s ease 0s; display: block;">
+                                    <p class="text-align-left size-14 m-size-14"><span class="font-size-14 m-font-size-14" style="color: rgb(255, 255, 255); display: initial;" m-font-size-set="true">Cnr Fraser and Ophir-Booysens Road,<br />Booysens, Johannesburg, 2091</span></p>
+                                  </div>
+                                  <div class="u_1401349438 align-center text-align-center dmSocialHub" id="1401349438" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords="">
+                                    <div class="socialHubWrapper">
+                                      <div class="socialHubInnerDiv "> <a href="mailto:candice@kapatal.co.za" dm_dont_rewrite_url="true" aria-label="email" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Email&apos;)"> <span class="dmSocialEmail dm-social-icons-email oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span>
+                                        </a>
+                                        <a href="https://web.whatsapp.com/send?phone=+27647528017" target="_blank" dm_dont_rewrite_url="true" aria-label="whatsapp" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Whatsapp&apos;)"> <span class="dmSocialWhatsapp dm-social-icons-whatsapp oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span>
+                                        </a>
+                                        <a href="https://www.facebook.com/KapatalBrands/?ref=pages_you_manage" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span>
+                                        </a>
+                                        <a href="https://www.google.com/maps/place/Kapatal+Brands/@-26.2292299,28.0196413,17z/data=!3m1!4b1!4m5!3m4!1s0x1e950ecba28ef341:0xc82d2cda01e7ea2d!8m2!3d-26.2292299!4d28.02183?hl=en" target="_blank" dm_dont_rewrite_url="true" aria-label="google_my_business" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;GoogleMyBusiness&apos;)"> <span class="dmSocialGoogleMyBusiness dm-social-icons-google-my-business oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span>
+                                        </a>
+                                        <a href="https://www.instagram.com/kapatalbrands/" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span>
+                                        </a>
+                                        <a href="https://www.linkedin.com/company/kapatalbrands/" target="_blank" dm_dont_rewrite_url="true" aria-label="linkedin" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Linkedin&apos;)"> <span class="dmSocialLinkedin icon-linkedin oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="u_1158390646 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1158390646" style="transition: none 0s ease 0s; text-align: left; display: block;">
+                                    <p class="size-12 m-size-14"><span class="font-size-12 m-font-size-14" style="color: rgb(255, 255, 255); display: unset;"><span style="color: rgb(255, 255, 255); display: unset;" class="font-size-12 m-font-size-14" m-font-size-set="true">Website Developed by</span>
+                                      </span><a href="https://www.webshure.com/" target="_blank" runtime_url="https://www.webshure.com/" type="url" class="font-size-12 m-font-size-14" style="color: rgb(202, 172, 107); display: unset; font-weight: bold; text-decoration: underline;" m-font-size-set="true">WEBSHURE</a></p>
+                                  </div>
+                                </div>
+                                <div class="u_1738521024 dmRespCol small-12 large-2 medium-2" id="1738521024">
+                                  <div class="u_1072020399 dmNewParagraph" id="1072020399" data-element-type="paragraph" data-version="5">
+                                    <p><span style="text-transform: uppercase; display: initial; color: rgb(255, 255, 255); font-weight: bold;">Quick Links</span></p>
+                                  </div>
+                                  <nav class="u_1580976667 unifiednav_vertical effect-bottom2 main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_2" layout-sub="" data-show-vertical-sub-items="HOVER" id="1580976667" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/logo+%282%29-1920w.png" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav">
+                                    <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages">
+                                      <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Home
+        " data-auto="page-text-style">Home<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/about-us" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         About Us
+        " data-auto="page-text-style">About Us<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/automotive-paint" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Automotive Paint
+          " data-auto="page-text-style">Automotive Paint<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/abrasives" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Abrasives
+        " data-auto="page-text-style">Abrasives<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/spray-guns-and-accessories" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Spray Guns and Accessories
+        " data-auto="page-text-style">Spray Guns and Accessories<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/#Contactus" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Contact us
+          " data-auto="page-text-style">Contact us<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </nav>
+                                </div>
+                                <div class="u_1188157081 dmRespCol small-12 large-2 medium-2" id="1188157081">
+                                  <div class="u_1226296094 dmNewParagraph" id="1226296094" data-element-type="paragraph" data-version="5">
+                                    <p><span style="text-transform: uppercase; display: initial; font-weight: bold; color: rgb(255, 255, 255);">Brands</span></p>
+                                  </div>
+                                  <nav class="u_1183029880 unifiednav_vertical effect-bottom2 main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_2" layout-sub="" data-show-vertical-sub-items="HOVER" id="1183029880" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://lirp.cdn-website.com/e02d5775/dms3rep/multi/opt/logo+%282%29-1920w.png" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav">
+                                    <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages">
+                                      <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact#Mipa" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Mipa
+            " data-auto="page-text-style">Mipa<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact#Smirdex" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Smirdex
+            " data-auto="page-text-style">Smirdex<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact#Fusion" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Fusion" data-auto="page-text-style">Fusion<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact#Miarco" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+             Miarco
+            " data-auto="page-text-style">Miarco<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact#Tri-tec" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Tri-tec" data-auto="page-text-style">Tri-tec<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact#Tuba" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Tuba" data-auto="page-text-style">Tuba<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact#Cobra" class="unifiednav__item    " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Cobra" data-auto="page-text-style">Cobra<span class="icon icon-angle-down"></span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </nav>
+                                  <div class="u_1810216384 widget-1f5975 hide-for-medium hide-for-large dmCustomWidget" data-lazy-load="" data-title="" id="1810216384" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="1f5975986930429f819d4cd2154b5c4a" data-widget-version="22" data-widget-config="eyJjb3B5cmlnaHRUZXh0IjoiPHAgY2xhc3M9XCJydGVCbG9ja1wiPkFsbCBSaWdodHMgUmVzZXJ2ZWQgfCBLYXBhdGFsPC9wPiJ9">
+                                    <div class="copyright">
+                                      <div>&copy; 2023&nbsp;</div>
+                                      <div>
+                                        <p class="rteBlock">All Rights Reserved | Kapatal</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--  Add full CSS and Javascript before the close tag of the body if needed -->
+  <!-- ========= JS Section ========= -->
+
+  <script>
+    var isWLR = true;
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "ENGLISH"
+    window.isSitePreview = false;
+  </script>
+  <script>
+    window.customWidgetsFunctions["f6a6cdf9cb5c46769b5603c7960cc686~162"] = function(element, data, api) {
+      var animation;
+      var started = false;
+      var frames;
+      var linkHref = element.querySelector('a') && element.querySelector('a').href;
+      if (!linkHref && data.config.lottieOptions === 'loop') {
+        element.classList.add('noCursor');
+      }
+      if (!window.bodymovin && !window.bodymovinProsmie) {
+        var script = document.createElement('script');
+        script.src = "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js";
+        document.head.appendChild(script);
+        window.bodymovinProsmie = new Promise(function(resolve) {
+          script.onload = function() {
+            resolve();
+            animation = createAnimation();
+            startAnimation();
+          }
+        })
+      } else if (window.bodymovin) {
+        animation = createAnimation();
+        startAnimation();
+      } else if (window.bodymovinProsmie) {
+        window.bodymovinProsmie.then(function() {
+          animation = createAnimation();
+          startAnimation();
+        })
+      }
+      var lottieOptionsMap = {
+        'loop': onLoop,
+        'hover': onHover,
+        'click': onClick
+      }
+
+      function startAnimation() {
+        animation.addEventListener('data_ready', function() {
+          frames = animation.getDuration(true);
+          lottieOptionsMap[data.config.lottieOptions]();
+          started = true;
+        })
+      }
+
+      function onLoop() {
+        initiateLink()
+        animation.play();
+      }
+
+      function createAnimation() {
+        var lottieAnimation = element.querySelector('.lottie svg');
+        var container = element.querySelector('.lottie')
+        if (lottieAnimation) {
+          container.removeChild(lottieAnimation)
+        }
+        return bodymovin.loadAnimation({
+          container: container, // Required
+          path: data.config.lottie, // Required
+          renderer: 'svg', // Required
+          loop: data.config.lottieOptions === 'loop', // Optional
+          autoplay: data.config.lottieOptions === 'loop', // Optional
+        })
+      }
+
+      function onClick() {
+        var clicked = false;
+        var savedEvent = null;
+        var eventName = data.device === 'mobile' ? 'touchend' : 'click'
+        element.addEventListener(eventName, function(event) {
+          savedEvent = event;
+          if (window.parent.$ && window.parent.$.Editor && !window.parent.document.body.classList.contains('previewMode')) {
+            return;
+          }
+          if (clicked) {
+            return;
+          }
+          event.preventDefault();
+          event.stopPropagation();
+          clicked = true;
+          animation.play();
+        }, {
+          capture: true
+        })
+        animation.addEventListener('complete', function(event) {
+          var link = element.querySelector('.lottie-link a');
+          if (link) {
+            var href = link.href;
+            if (/^(mailto:|sms:|tel:)/.test(href)) {
+              document.location.href = href;
+              return;
+            }
+            if (link.type === 'url' || link.type === 'file') {
+              link.click();
+              return;
+            }
+            window._modules.runtime.routerAPI.navigationService.ajaxNavigationService._ajaxNavigateToLink(href, link, savedEvent);
+            delete savedEvent;
+          }
+        });
+      }
+
+      function initiateLink() {
+        var eventName = data.device === 'mobile' ? 'touchend' : 'click'
+        var savedEvent = null;
+        var lottieElement = element.querySelector('.lottie');
+        if (!lottieElement) {
+          return;
+        }
+        lottieElement.addEventListener(eventName, function(event) {
+          var link = element.querySelector('.lottie-link a');
+          if (link) {
+            var href = link.href;
+            if (/^(mailto:|sms:|tel:)/.test(href)) {
+              document.location.href = href;
+              return;
+            }
+            if (link.type === 'url' || link.type === 'file') {
+              link.click();
+              return;
+            }
+            window._modules.runtime.routerAPI.navigationService.ajaxNavigationService._ajaxNavigateToLink(link.href, link, event);
+          }
+        }, {
+          capture: true
+        })
+      }
+
+      function onHover() {
+        initiateLink();
+        var rect = element.getBoundingClientRect();
+        element.addEventListener('mousemove', function(event) {
+          if (!frames) {
+            return;
+          }
+          var relativeLocation = frames * ((event.clientX - rect.left) / rect.width);
+          var currentFrame = Math.max(Math.min(Math.floor(relativeLocation), frames), 0);
+          window.requestAnimationFrame(function() {
+            animation.goToAndStop(currentFrame, true)
+          })
+        }, {
+          capture: true
+        });
+      }
+    };
+  </script>
+  <script type="text/javascript">
+    var d_version = "22..74";
+    var build = "2023-06-15T12_54_09";
+    window['v' + 'ersion'] = d_version;
+
+    function buildEditorParent() {
+      window.isMultiScreen = true;
+      window.editorParent = {};
+      window.previewParent = {};
+      window.assetsCacheQueryParam = "?version=2023-06-15T12_54_09";
+      try {
+        var _p = window.parent;
+        if (_p && _p.document && _p.$ && _p.$.dmfw) {
+          window.editorParent = _p;
+        } else if (_p.isSitePreview) {
+          window.previewParent = _p;
+        }
+      } catch (e) {}
+    }
+    buildEditorParent();
+  </script>
+  <!-- Load jQuery -->
+  <script type="text/javascript" id='d-js-jquery' src="https://static.cdn-website.com/libs/jquery/jquery-3.7.0.min.js"></script>
+  <!-- End Load jQuery -->
+
+  <!-- Injecting site-wide before scripts -->
+  <!-- End Injecting site-wide to the head -->
+
+  <script>
+    var _jquery = window.$;
+    var jqueryAliases = ['$', 'jquery', 'jQuery'];
+    jqueryAliases.forEach((alias) => {
+      Object.defineProperty(window, alias, {
+        get() {
+          return _jquery;
+        },
+        set() {
+          console.warn("Trying to over-write the global jquery object!");
+        }
+      });
+    });
+  </script>
+  <script>
+    window.cookiesNotificationMarkupPreview = ' <div> <p class=\"rteBlock\">We use cookies to ensure that we give you the best experience on our website. To learn more, go to the <a value=\"privacy\" label=\"\" type=\"page\" href=\"\/privacy\" data-runtime-url=\"\/privacy\">Privacy Page.<\/a> \n<\/p> \n<\/div> \n';
+  </script>
+
+  <!-- HEAD RT JS Include -->
+  <script id='d-js-params'>
+    window.jQuery.migrateMute = true;
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] = true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["inlineEditGrid.snap"] = true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] = true;
+    rtCommonProps["google.places.key"] = 'AIzaSyBAwUOqPUB1CU31yDztoZYaUE7sPv4ktEI';
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] = false;
+    rtCommonProps["common.opencage.token"] = '319e14f32bcce967ba55cd263478796d';
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] = false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] = false;
+    rtCommonProps["common.resources.dist.cdn"] = true;
+    rtCommonProps["common.build.dist.folder"] = 'production/3514';
+    rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/3514';
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] = true;
+    rtCommonProps["feature.flag.runtime.photoswipe.fix"] = true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"] = true;
+    rtCommonProps["feature.flag.runtime.newAnimation.respectCssAnimationProps.enabled"] = true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] = true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"] = true;
+    rtCommonProps["feature.flag.runOnReadyNewTask"] = true;
+    rtCommonProps["feature.flag.addTargetBlankToExternalLinks"] = true;
+    rtCommonProps["unsuspendEcwidStoreOnRuntime.enabled"] = true;
+    rtCommonProps["keyboard.navigation.enabled"] = true;
+    rtCommonProps["runtime.navigationWidget.menu.clipPath"] = true;
+    rtCommonProps["scripts.widgetCount.enabled"] = true;
+    rtCommonProps["maps.cookiebot.enabled"] = true;
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'here';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] = 160;
+    rtCommonProps["images.sizes.mobile"] = 640;
+    rtCommonProps["images.sizes.tablet"] = 1280;
+    rtCommonProps["images.sizes.desktop"] = 1920;
+    rtCommonProps["modules.resources.cdn"] = true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+    rtCommonProps["ecom.ecwid.categoryPage.modifyLinks"] = true;
+    rtCommonProps["ecom.ecwidNewUrlStructure.enabled"] = false;
+    rtCommonProps["ecom.ecwid.fixFacebookLink"] = true;
+    rtCommonProps["facebook.api.version"] = '7.0';
+    rtCommonProps["runtime.save.restore.function.bind"] = true;
+    rtCommonProps["feature.flag.photo.gallery.exact.size"] = false;
+    rtCommonProps["new.store.fix.ecwid.back.bug"] = true;
+    rtCommonProps["new.store.accountPage.ecwid.signIn.fix"] = true;
+    rtCommonProps["fix.ecwid.sign.in.page.with.return.url"] = true;
+    rtCommonProps["site.runtime.video.background.ssr"] = true;
+    rtCommonProps["geocode.search.localize"] = false;
+    rtCommonProps["facebook.runtime.widgets.upgrade"] = true;
+    rtCommonProps["feature.flag.runtime.inp.threshold"] = 150;
+    rtCommonProps["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] = false;
+    rtCommonProps["feature.flag.performance.logs"] = true;
+    rtCommonProps["site.contact.form.fix.for.attribute"] = true;
+    rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+    rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+    rtCommonProps["contact.form.date.format.enabled"] = true;
+    rtCommonProps["platform.monolith.personalization.userVisitsCondition.inClient.enabled"] = true;
+    rtCommonProps["ecom.widgets.menu.categories.toggles.enabled"] = true;
+    rtCommonProps["filestack.uploadToTempBucket.enabled"] = true;
+    rtCommonProps["platform.monolith.loginBar.getUserLoggedIn.enabled"] = true;
+  </script>
+  <script src="https://static.cdn-website.com/mnlt/production/3514/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js" id="d-js-core"></script>
+  <!-- End of HEAD RT JS Include -->
+  <script src="https://static.cdn-website.com/mnlt/production/3514/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js"></script>
+  <script>
+    jQuery.DM.updateWidthAndHeight();
+    $(window).resize(function() {});
+    $(window).bind("orientationchange", function(e) {
+      $.layoutManager.initLayout();
+    });
+    $(document).resize(function() {});
+  </script>
+  <script type="text/javascript" id="d_track_campaign">
+    (function() {
+      var campaign = (/utm_campaign=([^&]*)/).exec(window.location.search);
+      if (campaign && campaign != null && campaign.length > 1) {
+        campaign = campaign[1];
+        document.cookie = "_dm_rt_campaign=" + campaign + ";expires=" + new Date().getTime() + 24 * 60 * 60 * 1000 + ";domain=" + window.location.hostname + ";path=/";
+      }
+    }());
+  </script>
+  <script type="text/javascript">
+    var _dm_gaq = {};
+    var _gaq = _gaq || [];
+    var _dm_insite = [];
+  </script>
+
+  </script>
+  <script type="text/javascript" id="d_track_sp">
+    ;
+    (function(p, l, o, w, i, n, g) {
+      if (!p[i]) {
+        p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
+        p.GlobalSnowplowNamespace.push(i);
+        p[i] = function() {
+          (p[i].q = p[i].q || []).push(arguments)
+        };
+        p[i].q = p[i].q || [];
+        n = l.createElement(o);
+        g = l.getElementsByTagName(o)[0];
+        n.async = 1;
+        n.src = w;
+        g.parentNode.insertBefore(n, g)
+      }
+    }(window, document, "script", "//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js", "snowplow"));
+    window.dmsnowplow = window.snowplow;
+    dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+      appId: 'e02d5775'
+    });
+    dmsnowplow('trackPageView')
+    $.each(_dm_insite, function(idx, rule) {
+      //('trackStructEvent', 'category','action','label','property','value');
+      // Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+      // the tracking is in popup.js
+      if (rule.actionName !== "popup") {
+        dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+      }
+      $(document).ready(function() {
+        $.DM.events.trigger('event-ruleTriggered', {
+          value: rule
+        })
+      });
+    });
+  </script>
+  <div style="display:none;" id="P6iryBW0Wu"></div>
+
+  <!-- photoswipe markup -->
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+        </button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+        </button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div id="fb-root" data-locale="en"></div>
+  <!-- Alias: e02d5775 -->
+  <div class="dmPopupMask" id="dmPopupMask"></div>
+  <div id="dmPopup" class="dmPopup">
+    <div class="dmPopupCloseWrapper">
+      <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div>
+    </div>
+    <div class="dmPopupTitle"> <span></span> Share by:</div>
+    <div class="data"></div>
+  </div>
+  <script id="d_track_personalization">
+    // Collects client data and updates cookies used by smart sites
+    var expireDays = 365,
+      visitLength = 30 * 60000;
+    $.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), expireDays);
+
+    function setSmartSiteCookies() {
+      setSmartSiteCookiesInternal("dm_this_page_view", "dm_last_page_view", "dm_total_visits", "dm_last_visit");
+    }
+    $.DM.events.on("afterAjax", setSmartSiteCookies);
+    setSmartSiteCookies();
+  </script>
+  <script type="text/javascript">
+    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+    Parameters.HomeLinkText = 'Home';
+  </script>
+  <script>
+    jQuery(window).on('load', function() {
+      try {
+        jQuery.DM.updateIOSHeight();
+      } catch (e) {}
+    });
+  </script>
+  <script>
+    dmAPI.loadScript(
+      window.rtCommonProps['common.resources.cdn.host'] + '/libs/lozad/1.15.0/lozad.min.js',
+      function() {
+        dmAPI.runOnReady('lozadInit', function() {
+          window.document.querySelectorAll('img.lazy').forEach(function(img) {
+            img.addEventListener('load', function(event) {
+              var img = event.target;
+              img.style.filter = 'blur(0)';
+              setTimeout(function() {
+                $(img).closest('.imageWidget').addClass('lazyLoaded');
+              }, 250)
+            });
+          });
+          lozad('.lazy', {
+            threshold: 0.1,
+            loaded: function(element) {
+              if (element.getAttribute('data-background-image')) {
+                element.style.setProperty(
+                  'background-image',
+                  "url('" + element.getAttribute('data-background-image') + "')",
+                  "important"
+                );
+              }
+            }
+          }).observe();
+        });
+      }
+    );
+  </script>
+  <!--  End Script tags -->
+
+  <!--  Begin Body End Markup -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N77KDK9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!--  End Body End Markup -->
+
+  <!--  Site Wide Html Markup -->
+  <!--  Site Wide Html Markup -->
+</body>
+
+</html>

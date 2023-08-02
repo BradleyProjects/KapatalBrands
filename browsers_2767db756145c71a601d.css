@@ -1,0 +1,715 @@
+/*! Copyright (c) 2023 WhatsApp Inc. All Rights Reserved. */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+  outline: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/*  End reset css */
+/* stylelint-disable-next-line no-duplicate-selectors */
+body {
+  font-family: "Segoe UI", "Helvetica Neue", "Helvetica", "Lucida Grande", Arial, "Ubuntu", "Cantarell", "Fira Sans", sans-serif;
+  color: var(--primary);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: var(--app-background);
+  background-image: linear-gradient(to bottom, var(--app-background), var(--app-background-deeper));
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+}
+
+body.voip {
+  background-color: transparent;
+  background-image: none;
+}
+
+body.text-rendering-bug-fix {
+  text-rendering: unset;
+}
+
+body.native.darwin,
+.os-mac {
+  font-family: system, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", "Kohinoor Devanagari", sans-serif;
+}
+
+.os-mac.font-fix {
+  font-family: "SF Pro Text", "SF Pro Icons", system, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", "Kohinoor Devanagari", sans-serif;
+}
+
+html[dir=rtl] {
+  direction: rtl;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+code {
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, "Courier New", Courier, monospace;
+}
+
+input,
+button {
+  margin: 0;
+  font-family: "Segoe UI", "Helvetica Neue", "Helvetica", "Lucida Grande", Arial, "Ubuntu", "Cantarell", "Fira Sans", sans-serif;
+}
+
+body.native.darwin input,
+.os-mac input,
+body.native.darwin button,
+.os-mac button {
+  font-family: system, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", "Kohinoor Devanagari", sans-serif;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  outline: none;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+/**
+ * Firefox does not support full scrollbar styling yet
+ * This is an alternative way to make scrollbars look
+ * better on Firefox
+ */
+:global(.dark) * {
+  scrollbar-color: rgba(var(--white-rgb), 0.16) transparent;
+}
+*, :global(.light) * {
+  scrollbar-color: rgba(var(--black-rgb), 0.2) rgba(var(--white-rgb), 0.1);
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+:global(.dark) *::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--white-rgb), 0.16);
+}
+*::-webkit-scrollbar-thumb, :global(.light) *::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--black-rgb), 0.2);
+}
+
+:global(.dark) *::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+*::-webkit-scrollbar-track, :global(.light) *::-webkit-scrollbar-track {
+  background: rgba(var(--white-rgb), 0.1);
+}
+
+svg {
+  display: block;
+  pointer-events: none;
+}
+
+div[data-list-scroll-container] {
+  transform: translateZ(0);
+}
+
+.lexical-rich-text-input code {
+  line-height: 0.9;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+#app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "SF Pro Text", "SF Pro Icons", system, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", "Ubuntu", "Cantarell", "Fira Sans", sans-serif;
+}
+
+.app-wrapper {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+@media screen and (max-width: 748px) {
+  .app-wrapper {
+    overflow-x: auto;
+  }
+}
+.app-wrapper::-webkit-scrollbar-track {
+  background-color: var(--app-background);
+}
+
+.browsers-title {
+  margin-bottom: 42px;
+}
+
+.version-title {
+  padding-top: 3px;
+  margin-bottom: 5px;
+}
+
+.landing-wrapper {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 92px;
+  cursor: default;
+}
+
+.landing-wrapper-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 222px;
+  background-color: #00a884;
+}
+.landing-wrapper-before.deprecated-electron {
+  background-color: var(--electron-deprecation-app-expired-header);
+}
+
+.landing-window {
+  z-index: 2;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 17px 50px 0 rgba(11, 20, 26, 0.19), 0 12px 15px 0 rgba(11, 20, 26, 0.24);
+}
+.landing-window.deprecated-electron {
+  background-color: var(--electron-deprecation-app-expired-window);
+  box-shadow: 0 17px 50px 0 rgba(var(--shadow-rgb), 0.19), 0 12px 15px 0 rgba(var(--shadow-rgb), 0.24);
+}
+
+.landing-main {
+  position: relative;
+  padding: 64px 60px 60px 60px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.landing-header {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1000px;
+  min-height: 39px;
+  margin: 27px auto 28px auto;
+}
+
+.landing-headerTitle {
+  display: inline-block;
+  margin-left: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  color: white;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.landing-header-upgradeCompleteText {
+  position: absolute;
+  padding: 10px 12px;
+  margin: 27px auto 28px auto;
+  color: #0b141a;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(11, 20, 26, 0.2);
+}
+
+.edge-fix .landing-headerTitle {
+  font-weight: 600;
+}
+
+.landing-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.landing-logo {
+  display: block;
+  width: 39px;
+  height: 39px;
+}
+
+.landing-title {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: normal;
+  color: #41525d;
+}
+
+.landing-text-secondary {
+  color: #667781;
+}
+
+@media screen and (min-height: 760px) and (min-width: 1095px) {
+  .landing-header {
+    margin-bottom: 66px;
+  }
+}
+@media screen and (min-height: 760px) and (min-width: 780px) and (max-width: 1095px) {
+  .landing-header {
+    margin-bottom: 68px;
+  }
+}
+@media screen and (max-width: 1095px) {
+  .landing-header {
+    width: 100%;
+  }
+
+  .landing-wrapper {
+    box-sizing: border-box;
+    padding-right: 36px;
+    padding-left: 36px;
+  }
+
+  .landing-window {
+    width: 100%;
+  }
+
+  .landing-main {
+    padding: 58px 52px 52px 52px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .landing-wrapper {
+    position: relative;
+  }
+
+  .headline {
+    font-size: 26px;
+  }
+
+  .listItem {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .headline {
+    margin-bottom: 36px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .landing-window {
+    width: 100%;
+  }
+
+  .landing-main {
+    padding-bottom: 82px;
+  }
+
+  .text {
+    flex: none;
+    order: 1;
+    width: 100%;
+  }
+
+  .hint {
+    position: relative;
+    bottom: unset;
+    left: unset;
+    order: 2;
+    width: 100%;
+    margin-top: 28px;
+    margin-bottom: 52px;
+    font-size: unset;
+  }
+
+  .qr {
+    order: 3;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .toggle {
+    position: relative;
+    right: unset;
+    bottom: unset;
+    order: 4;
+    width: 100%;
+    margin-top: 28px;
+  }
+
+  .headline {
+    margin-bottom: 28px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .landing-wrapper {
+    position: relative;
+    min-width: 520px;
+    padding: 0;
+  }
+
+  .landing-header {
+    box-sizing: border-box;
+    padding-right: 36px;
+    padding-left: 36px;
+  }
+
+  .landing-window {
+    border-radius: 0;
+  }
+
+  .landing-main {
+    padding: 36px 36px 36px 36px;
+  }
+}
+html[dir=rtl] .landing-headerTitle {
+  margin-right: 14px;
+  margin-left: 0;
+}
+
+.image {
+  display: table-cell;
+  width: 52px;
+  vertical-align: middle;
+}
+
+.image-logo {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.text-tip {
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--secondary);
+}
+.text-tip a {
+  color: var(--teal);
+}
+.text-tip a:hover {
+  text-decoration: underline;
+}
+
+.browsers {
+  margin-bottom: 32px;
+  margin-left: -3px;
+}
+
+.browsers:after {
+  display: table;
+  clear: both;
+  content: " ";
+}
+
+.browser {
+  display: table;
+  float: left;
+  width: 220px;
+}
+
+.browser-safari {
+  width: 300px;
+}
+
+.browser-title {
+  display: table-cell;
+  height: 52px;
+  padding-left: 6px;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--secondary-lighter);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.page-version .window-text {
+  padding-left: 176px;
+}
+.page-version .image {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: top;
+  background-color: var(--panel-background-lighter);
+  border-radius: 50%;
+}
+.page-version .image-logo {
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  margin-top: 29px;
+}
+.page-version .browser {
+  width: auto;
+}
+
+@media screen and (max-width: 880px), screen and (max-height: 400px) {
+  .browsers {
+    margin: 0 auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .browser {
+    display: inline-block;
+    margin: 0 5px;
+    margin-bottom: 20px;
+  }
+
+  .browser:last-child {
+    margin-bottom: 0;
+  }
+
+  .page-version .window-text {
+    padding-left: 156px;
+  }
+}
+@media screen and (max-width: 518px) {
+  .page-version .window-text {
+    padding-left: 112px;
+  }
+  .page-version .image {
+    width: auto;
+    height: auto;
+    background: transparent;
+  }
+  .page-version .browser {
+    width: auto;
+  }
+}
+.action {
+  margin-top: 26px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  font-size: 14px;
+  color: var(--inverse);
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: var(--button-primary-background);
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.btn:hover {
+  background-color: var(--button-primary-background-hover);
+  box-shadow: 0 1px 1px 0 rgba(var(--shadow-rgb), 0.06), 0 2px 5px 0 rgba(var(--shadow-rgb), 0.2);
+  transition: box-shadow 0.18s ease-out, background 0.18s ease-out, color 0.18s ease-out;
+}
+
+html[dir=rtl] .browser {
+  float: right;
+}
+html[dir=rtl] .browsers {
+  margin-right: -3px;
+  margin-left: 0;
+}
+html[dir=rtl] .browser-title {
+  padding-right: 6px;
+  padding-left: 0;
+  text-align: right;
+}
+html[dir=rtl] .page-version .window-text {
+  padding-right: 176px;
+  padding-left: 0;
+}
+html[dir=rtl] .page-version .browser {
+  float: right;
+}
+@media screen and (max-width: 880px), screen and (max-height: 400px) {
+  html[dir=rtl] .page-version .window-text {
+    padding-right: 156px;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 518px) {
+  html[dir=rtl] .page-version .window-text {
+    padding-right: 112px;
+    padding-left: 0;
+  }
+}
+
+.browsers-last {
+  margin-bottom: 0;
+}
+
+.page-browsers .landing-main,
+.page-version .landing-main {
+  padding-bottom: 86px;
+}
+
+@media screen and (max-width: 1095px) {
+  .page-browsers .landing-main,
+.page-version .landing-main {
+    padding-bottom: 72px;
+  }
+}
